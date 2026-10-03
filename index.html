@@ -353,11 +353,11 @@
     // Normalizzazione parlata per il TTS
     function sanitizeForSpeech(text) {
       if (!text) return "";
-      const ORD = { 1: "prima", 2: "seconda", 3: "terza", 4: "quarta", 5: "quinta" };
+      const ORD = { 1: "prima", 2: "seconda", 3: "terza", 4: "quarta", 5: "quinta", 6: "sesta", 7: "settima", 8: "ottava" };
       return text
         .replace(/\bLab\.?\s+/gi, "Laboratorio ")
-        .replace(/\b([1-5])([A-Z]{2,5})\b/g, (m, d, l) => `${ORD[d]} ${l.split("").join(" ")}`)
-        .replace(/\bIrc\b/g, "I R C")
+        .replace(/\b([1-8])([A-Z]{2,5})\b/g, (m, d, l) => `${ORD[d] || d} ${l.split("").join(" ")}`)
+        .replace(/\bIrc\b/gi, "I R C")
         .replace(/\s+/g, " ")
         .trim();
     }
@@ -373,7 +373,7 @@
       utterance.rate = 1.0;
 
       const voices = window.speechSynthesis.getVoices();
-      const itVoice = voices.find(v => v.lang.toLowerCase().startsWith('it'));
+      const itVoice = voices.find(v => v.lang && v.lang.toLowerCase().startsWith('it'));
       if (itVoice) utterance.voice = itVoice;
 
       utterance.onstart = () => { isSpeaking = true; };
@@ -448,44 +448,52 @@
     async function init() {
       await loadSchedule();
 
-      const head = new TalkingHead(avatarContainer, {
-        ttsEndpoint: "https://dummy-tts.local",
-        cameraView: "upper"
-      });
+      try {
+        const head = new TalkingHead(avatarContainer, {
+          ttsEndpoint: "https://dummy-tts.local",
+          cameraView: "upper"
+        });
 
-      await head.showAvatar({
-        url: './public/models/avatar.glb',
-        body: 'F',
-        avatarMood: 'neutral'
-      });
+        await head.showAvatar({
+          url: './public/models/avatar.glb',
+          body: 'F',
+          avatarMood: 'neutral'
+        });
 
-      if (head.renderer) {
-        head.renderer.setClearColor(0x000000, 0);
-        head.renderer.domElement.style.background = 'transparent';
-      }
-      if (head.scene) head.scene.background = null;
-
-      head.scene.traverse((node) => {
-        if (node.isMesh && node.morphTargetDictionary) {
-          const dict = node.morphTargetDictionary;
-          const jawIdx = dict['jawOpen'] ?? dict['mouthOpen'] ?? dict['viseme_aa'];
-          const funnelIdx = dict['mouthFunnel'] ?? dict['viseme_O'];
-
-          if (jawIdx !== undefined) {
-            morphMeshes.push({ mesh: node, jawIdx, funnelIdx });
-            node.onBeforeRender = () => {
-              updateMouthAnimation(performance.now());
-              node.morphTargetInfluences[jawIdx] = currentJaw;
-              if (funnelIdx !== undefined) node.morphTargetInfluences[funnelIdx] = currentJaw * 0.3;
-            };
-          }
+        if (head.renderer) {
+          head.renderer.setClearColor(0x000000, 0);
+          head.renderer.domElement.style.background = 'transparent';
         }
-      });
+        if (head.scene) head.scene.background = null;
 
-      statusOverlay.style.display = 'none';
-      inputField.disabled = false;
-      searchBtn.disabled = false;
-      micBtn.disabled = false;
+        head.scene.traverse((node) => {
+          if (node.isMesh && node.morphTargetDictionary) {
+            const dict = node.morphTargetDictionary;
+            const jawIdx = dict['jawOpen'] ?? dict['mouthOpen'] ?? dict['viseme_aa'];
+            const funnelIdx = dict['mouthFunnel'] ?? dict['viseme_O'];
+
+            if (jawIdx !== undefined) {
+              morphMeshes.push({ mesh: node, jawIdx, funnelIdx });
+              node.onBeforeRender = () => {
+                updateMouthAnimation(performance.now());
+                node.morphTargetInfluences[jawIdx] = currentJaw;
+                if (funnelIdx !== undefined) node.morphTargetInfluences[funnelIdx] = currentJaw * 0.3;
+              };
+            }
+          }
+        });
+
+        window.addEventListener('resize', () => {
+          if (head && typeof head.onResize === 'function') head.onResize();
+        });
+      } catch (err) {
+        console.warn("Avatar 3D non caricato o non supportato su questo dispositivo:", err);
+      } finally {
+        statusOverlay.style.display = 'none';
+        inputField.disabled = false;
+        searchBtn.disabled = false;
+        micBtn.disabled = false;
+      }
 
       function submitSearch() {
         const val = inputField.value.trim();
@@ -531,10 +539,6 @@
       } else {
         micBtn.style.display = 'none';
       }
-
-      window.addEventListener('resize', () => {
-        if (head && typeof head.onResize === 'function') head.onResize();
-      });
     }
 
     init();
