@@ -1,0 +1,39 @@
+{
+ "classi_tabelle_ignorate": [],
+ "classi_righe_sconosciute": [],
+ "classi_slot_senza_docente": [],
+ "docenti_tabelle_ignorate": [],
+ "docenti_celle_non_riconosciute": [],
+ "docenti_classe_inesistente": [],
+ "docenti_slot_assente_in_classi": [],
+ "docenti_non_presente_nella_classe": [],
+ "conflitti_aula": [
+  "DE ZEN DAVIDE giovedi ora 8 4AS: docenti=LAB INFORMATICA 2 classi=LAB INFORMATICA 1"
+ ],
+ "classi_articolate": [
+  "VASTA ETTORE lunedi ora 4: 3VE + 3PTA",
+  "BALDIN SILVIA martedi ora 1: 3VE + 3PTA",
+  "BITTANTE ANNAMARIA martedi ora 3: 3VE + 3PTA",
+  "BITTANTE ANNAMARIA martedi ora 4: 3VE + 3PTA",
+  "DE BENEDET KIM martedi ora 5: 3VE + 3PTA",
+  "VASTA ETTORE martedi ora 6: 3VE + 3PTA",
+  "VANZO BRIAN mercoledi ora 5: 3VE + 3PTA",
+  "VASTA ETTORE mercoledi ora 6: 3VE + 3PTA",
+  "BALDIN SILVIA mercoledi ora 7: 3VE + 3PTA",
+  "DE BENEDET KIM mercoledi ora 8: 3VE + 3PTA",
+  "VASTA ETTORE giovedi ora 3: 3VE + 3PTA",
+  "BALDIN SILVIA giovedi ora 6: 3VE + 3PTA",
+  "BALDIN SILVIA venerdi ora 2: 3VE + 3PTA",
+  "DE BENEDET KIM venerdi ora 4: 3VE + 3PTA",
+  "VASTA ETTORE venerdi ora 5: 3VE + 3PTA",
+  "VASTA ETTORE venerdi ora 6: 3VE + 3PTA"
+ ],
+ "docenti_solo_in_classi": [],
+ "slot_classi_mancanti_in_docenti": [],
+ "nomi_ambigui": [],
+ "alias_codici": [
+  "A026 -> SPEZZATI MARIA (14/14 slot)"
+ ],
+ "codici_non_risolti": [],
+ "slot_duplicati_docente": []
+}

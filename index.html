@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content" />
+  <title>Assistente Orario IIS Parolini</title>
+  <style>
+    :root {
+      --bg-dark: #0b0d13;
+      --card-bg: rgba(22, 27, 39, 0.92);
+      --card-border: rgba(56, 68, 100, 0.6);
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      background: var(--bg-dark);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #main-container {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      width: 100%;
+      position: relative;
+    }
+
+    /* Pannello Avatar (52% su mobile) */
+    #avatar-panel {
+      flex: 1.15;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+    }
+
+    .blurred-background {
+      position: absolute;
+      inset: -15px;
+      background-image: url('./public/img/sfondo.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(6px) brightness(0.68) saturate(1.1);
+      transform: scale(1.05);
+      z-index: 1;
+    }
+
+    .vignette-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, transparent 30%, rgba(11, 13, 19, 0.85) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    #avatar-view {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+    }
+
+    #avatar-view canvas {
+      background: transparent !important;
+    }
+
+    #status-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+      color: var(--text-muted);
+      z-index: 4;
+      pointer-events: none;
+      background: rgba(15, 23, 42, 0.85);
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(6px);
+    }
+
+    /* Pannello Dati */
+    #info-panel {
+      flex: 0.85;
+      min-height: 0;
+      background: var(--bg-dark);
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      padding: 10px 14px;
+      gap: 6px;
+      z-index: 10;
+    }
+
+    #user-profile-bar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(18, 22, 34, 0.8);
+      padding: 6px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    #user-profile-bar label {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    #my-surname-input {
+      flex: 1;
+      background: #090b10;
+      border: 1px solid #2e384f;
+      color: #fff;
+      font-size: 16px;
+      padding: 6px 8px;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    #my-surname-input:focus {
+      border-color: var(--primary);
+    }
+
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      backdrop-filter: blur(10px);
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+    }
+
+    #info-card h3 { margin: 0 0 4px 0; font-size: 18px; color: var(--accent); line-height: 1.3; }
+    #card-note { font-size: 14px; color: #cbd5e1; line-height: 1.5; margin-top: 6px; }
+    #card-desc { font-size: 15px; color: #cbd5e1; line-height: 1.5; }
+
+    .row {
+      display: grid;
+      grid-template-columns: 84px 1fr;
+      gap: 10px;
+      padding: 8px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .row.heading { display: block; font-weight: 700; color: var(--accent); }
+    .row .when { font-size: 14px; font-weight: 700; color: var(--accent); }
+    .row .main { font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.4; }
+    .row .sub { font-size: 14px; color: var(--text-muted); line-height: 1.4; }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      background: var(--primary);
+      color: white;
+      margin-top: 4px;
+    }
+
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+    button.action-btn, #mic-btn { min-width: 44px; min-height: 44px; }
+
+    /* Barra Input Fisso in Basso */
+    #ui-bar {
+      flex-shrink: 0;
+      width: 100%;
+      background: #11141c;
+      padding: 10px 14px;
+      padding-bottom: max(10px, env(safe-area-inset-bottom));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 50;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    input[type="text"]#query-input {
+      flex: 1;
+      max-width: 480px;
+      padding: 11px 14px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      background: #0a0c10;
+      color: #fff;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input[type="text"]#query-input:focus {
+      border-color: var(--primary);
+    }
+
+    button.action-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 11px 16px;
+      font-size: 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    button.action-btn:hover { background: var(--primary-hover); }
+    button.action-btn:disabled { background: #334155; cursor: not-allowed; }
+
+    #mic-btn {
+      background: #1e293b;
+      border: 1px solid #334155;
+      font-size: 16px;
+      padding: 11px 14px;
+    }
+
+    #mic-btn.listening {
+      background: #dc2626;
+      border-color: #ef4444;
+      animation: pulse-mic 1.2s infinite;
+    }
+
+    @keyframes pulse-mic {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+
+    @media (max-width: 900px) {
+      #main-container { flex-direction: column; overflow: hidden; }
+      #avatar-panel { flex: none; height: 42dvh; min-height: 42dvh; width: 100%; }
+      #info-panel {
+        flex: 1; min-height: 0; width: 100%; border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 8px 12px; gap: 6px;
+      }
+    }
+
+  </style>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+        "talkinghead": "https://cdn.jsdelivr.net/gh/met4citizen/TalkingHead@1.1.0/modules/talkinghead.mjs"
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <div id="main-container">
+    <div id="avatar-panel">
+      <div class="blurred-background"></div>
+      <div class="vignette-overlay"></div>
+      <div id="avatar-view"></div>
+      <div id="status-overlay">Caricamento assistente...</div>
+    </div>
+
+    <div id="info-panel">
+      <div id="user-profile-bar">
+        <label for="my-surname-input">👤 Il tuo cognome:</label>
+        <input type="text" id="my-surname-input" placeholder="Es. Gemin..." />
+      </div>
+
+      <div class="card" id="info-card" aria-live="polite">
+        <h3 id="card-title">In attesa di richiesta...</h3>
+        <span id="card-badge" style="display:none;" class="badge"></span>
+        <div id="card-desc">Chiedi: «Dove si trova la 4AS alla terza ora?», «Cosa ha Gemin domani?» o «Quali aule sono libere mercoledì alla seconda ora?»</div>
+        <div id="result-lines"></div>
+        <div id="card-note"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ui-bar">
+    <input type="text" id="query-input" aria-label="Domanda" placeholder="Es. Dove si trova la 4AS alla terza ora?" disabled />
+    <button class="action-btn" id="search-btn" disabled>Cerca</button>
+    <button class="action-btn" id="mic-btn" disabled title="Voce" aria-label="Dettatura vocale">🎙️</button>
+  </div>
+
+
+  <script type="module">
+    import { TalkingHead } from 'talkinghead';
+    import { buildIndex, parseQuery, answer } from './public/js/query-engine.js';
+
+    const avatarContainer = document.getElementById('avatar-view');
+    const statusOverlay = document.getElementById('status-overlay');
+    const inputField = document.getElementById('query-input');
+    const mySurnameInput = document.getElementById('my-surname-input');
+    const searchBtn = document.getElementById('search-btn');
+    const micBtn = document.getElementById('mic-btn');
+    const cardTitle = document.getElementById('card-title');
+    const cardDesc = document.getElementById('card-desc');
+    const cardBadge = document.getElementById('card-badge');
+    const cardNote = document.getElementById('card-note');
+    const resultLines = document.getElementById('result-lines');
+
+    let orarioIdx = null;
+    let isSpeaking = false;
+    let isListening = false;
+    let currentJaw = 0;
+    let lastJawUpdate = 0;
+    let activeUtterance = null;
+    const morphMeshes = [];
+
+    let myTeacherName = localStorage.getItem('parolini_my_surname') || "";
+    mySurnameInput.value = myTeacherName;
+
+    mySurnameInput.addEventListener('change', () => {
+      myTeacherName = mySurnameInput.value.trim();
+      localStorage.setItem('parolini_my_surname', myTeacherName);
+      if (myTeacherName && orarioIdx) handleQuery("cosa ho oggi");
+    });
+
+    async function loadSchedule() {
+      try {
+        const res = await fetch('./public/data/orario_completo.json');
+        if (!res.ok) throw new Error();
+        orarioIdx = buildIndex(await res.json());
+      } catch (e) {
+        console.warn("Database orario_completo.json non disponibile.");
+      }
+    }
+
+    // Normalizzazione parlata per il TTS
+    function sanitizeForSpeech(text) {
+      if (!text) return "";
+      const ORD = { 1: "prima", 2: "seconda", 3: "terza", 4: "quarta", 5: "quinta" };
+      return text
+        .replace(/\bLab\.?\s+/gi, "Laboratorio ")
+        .replace(/\b([1-5])([A-Z]{2,5})\b/g, (m, d, l) => `${ORD[d]} ${l.split("").join(" ")}`)
+        .replace(/\bIrc\b/g, "I R C")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function speak(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      currentJaw = 0;
+
+      const utterance = new SpeechSynthesisUtterance(sanitizeForSpeech(text));
+      activeUtterance = utterance;
+      utterance.lang = 'it-IT';
+      utterance.rate = 1.0;
+
+      const voices = window.speechSynthesis.getVoices();
+      const itVoice = voices.find(v => v.lang.toLowerCase().startsWith('it'));
+      if (itVoice) utterance.voice = itVoice;
+
+      utterance.onstart = () => { isSpeaking = true; };
+      utterance.onend = () => { isSpeaking = false; activeUtterance = null; currentJaw = 0; };
+      utterance.onerror = () => { isSpeaking = false; activeUtterance = null; currentJaw = 0; };
+
+      window.speechSynthesis.speak(utterance);
+    }
+
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); };
+    }
+
+    // Rendering sicuro (textContent, niente innerHTML)
+    function renderAnswer(a) {
+      cardTitle.textContent = a.title;
+      cardBadge.style.display = a.badge ? "inline-block" : "none";
+      cardBadge.textContent = a.badge || "";
+      cardDesc.style.display = "none";
+      cardNote.textContent = a.note || "";
+      resultLines.replaceChildren(...(a.lines || []).map(l => {
+        const row = document.createElement('div');
+        row.className = 'row' + (l.heading ? ' heading' : '');
+        const when = document.createElement('div');
+        when.className = 'when';
+        when.textContent = l.when || "";
+        row.appendChild(when);
+        if (!l.heading) {
+          const body = document.createElement('div');
+          const main = document.createElement('div');
+          main.className = 'main';
+          main.textContent = l.main || "";
+          body.appendChild(main);
+          if (l.sub) {
+            const sub = document.createElement('div');
+            sub.className = 'sub';
+            sub.textContent = l.sub;
+            body.appendChild(sub);
+          }
+          row.appendChild(body);
+        }
+        return row;
+      }));
+    }
+
+    function handleQuery(text) {
+      if (!orarioIdx) {
+        speak("Il database dell'orario non è ancora disponibile.");
+        return;
+      }
+      const parsed = parseQuery(text, orarioIdx, { now: new Date(), me: myTeacherName });
+      const a = answer(parsed, orarioIdx);
+      renderAnswer(a);
+      speak(a.speech);
+    }
+
+    function updateMouthAnimation(now) {
+      if (now === lastJawUpdate) return;
+      lastJawUpdate = now;
+
+      if (isSpeaking) {
+        const t = now * 0.015;
+        const rawWave = Math.sin(t) * 0.5 + Math.sin(t * 1.8) * 0.3 + Math.sin(t * 0.4) * 0.2;
+        const targetJaw = Math.max(0, Math.min(0.75, rawWave * 1.2));
+        currentJaw += (targetJaw - currentJaw) * 0.35;
+      } else {
+        currentJaw += (0 - currentJaw) * 0.25;
+        if (currentJaw < 0.005) currentJaw = 0;
+      }
+    }
+
+    async function init() {
+      await loadSchedule();
+
+      const head = new TalkingHead(avatarContainer, {
+        ttsEndpoint: "https://dummy-tts.local",
+        cameraView: "upper"
+      });
+
+      await head.showAvatar({
+        url: './public/models/avatar.glb',
+        body: 'F',
+        avatarMood: 'neutral'
+      });
+
+      if (head.renderer) {
+        head.renderer.setClearColor(0x000000, 0);
+        head.renderer.domElement.style.background = 'transparent';
+      }
+      if (head.scene) head.scene.background = null;
+
+      head.scene.traverse((node) => {
+        if (node.isMesh && node.morphTargetDictionary) {
+          const dict = node.morphTargetDictionary;
+          const jawIdx = dict['jawOpen'] ?? dict['mouthOpen'] ?? dict['viseme_aa'];
+          const funnelIdx = dict['mouthFunnel'] ?? dict['viseme_O'];
+
+          if (jawIdx !== undefined) {
+            morphMeshes.push({ mesh: node, jawIdx, funnelIdx });
+            node.onBeforeRender = () => {
+              updateMouthAnimation(performance.now());
+              node.morphTargetInfluences[jawIdx] = currentJaw;
+              if (funnelIdx !== undefined) node.morphTargetInfluences[funnelIdx] = currentJaw * 0.3;
+            };
+          }
+        }
+      });
+
+      statusOverlay.style.display = 'none';
+      inputField.disabled = false;
+      searchBtn.disabled = false;
+      micBtn.disabled = false;
+
+      function submitSearch() {
+        const val = inputField.value.trim();
+        if (val) handleQuery(val);
+      }
+
+      searchBtn.addEventListener('click', submitSearch);
+      inputField.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') submitSearch();
+      });
+
+      // Microfono Web Speech
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (SpeechRecognition) {
+        const recognizer = new SpeechRecognition();
+        recognizer.lang = 'it-IT';
+        recognizer.continuous = false;
+
+        micBtn.addEventListener('click', () => {
+          if (isListening) {
+            try { recognizer.stop(); } catch (e) {}
+            isListening = false;
+            micBtn.classList.remove('listening');
+          } else {
+            try {
+              recognizer.start();
+              isListening = true;
+              micBtn.classList.add('listening');
+            } catch (e) {
+              isListening = false;
+              micBtn.classList.remove('listening');
+            }
+          }
+        });
+
+        recognizer.onresult = (evt) => {
+          const spokenText = evt.results[0][0].transcript;
+          inputField.value = spokenText;
+          handleQuery(spokenText);
+        };
+        recognizer.onend = () => { isListening = false; micBtn.classList.remove('listening'); };
+        recognizer.onerror = () => { isListening = false; micBtn.classList.remove('listening'); };
+      } else {
+        micBtn.style.display = 'none';
+      }
+
+      window.addEventListener('resize', () => {
+        if (head && typeof head.onResize === 'function') head.onResize();
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>
