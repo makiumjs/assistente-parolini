@@ -22,7 +22,7 @@ r = ask("quali laboratori sono liberi lunedì"); assert.equal(r.p.hour, null); c
 r = ask("il laboratorio di chimica 1 è libero giovedì alla quarta ora?"); console.log(r.a.speech);
 r = ask("chi c'è in palestra martedì alla seconda ora"); assert.equal(r.p.intent, "aula"); console.log(r.a.speech);
 
-r = ask("Dove si trova Anzalone lunedì alla prima ora"); assert.equal(r.p.intent, "docente"); console.log(r.a.speech);
+r = ask("Dove si trova Anzalone lunedì alla prima ora"); assert.equal(r.p.intent, "docente"); assert.match(r.a.speech, /in 1AP in aula T1/); console.log(r.a.speech);
 r = ask("cosa ha anzolin domani"); console.log(r.a.speech);
 r = ask("cosa ho domani", "Gemin"); assert.ok(r.p.isSelf); console.log(r.a.speech);
 r = ask("dov'è romina"); assert.equal(r.p.intent, "ambiguo");

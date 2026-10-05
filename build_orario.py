@@ -68,6 +68,45 @@ def cell(c):
     return re.sub(r"\s+", " ", c.replace("\n", " ")).strip() if c else ""
 
 
+def parse_griglia_classi():
+    """Legge data/GRIGLIA CLASSI 26 27.csv o data/*.csv e restituisce {classe: aula_ordinaria}"""
+    csv_files = [f for f in os.listdir("data") if f.endswith(".csv")]
+    if not csv_files:
+        return {}
+    
+    mapping = {}
+    csv_path = os.path.join("data", csv_files[0])
+    import csv
+    with open(csv_path, encoding="utf-8") as f:
+        rows = list(csv.reader(f))
+
+    def add_pair(aula, classe):
+        aula = norm_aula(aula)
+        raw_c = (classe or "").strip()
+        if not aula or not raw_c or raw_c.upper() in (
+            "CLASSE", "BANCHI", "POLIVALENTE", "LABORATORIO DI INFORMATICA", "CANTINA", "INFO 2"
+        ):
+            return
+        for part in raw_c.split("/"):
+            c = norm_classe(part)
+            if c:
+                mapping[c] = aula
+                if c.endswith("AT") and not c.endswith("AET"):
+                    mapping[c.replace("AT", "AET")] = aula
+
+    for row in rows:
+        if len(row) >= 3:
+            add_pair(row[0], row[1])
+        if len(row) >= 7:
+            add_pair(row[4], row[5])
+
+    if "3PT" in mapping and "3PTA" not in mapping:
+        mapping["3PTA"] = mapping["3PT"]
+
+    return mapping
+
+
+
 # ---------------------------------------------------------------- estrazione
 def pages_tables(pdf_path):
     """Yield (testo_pagina, tabelle) con dedupe dei caratteri del finto grassetto."""
@@ -227,18 +266,20 @@ def risolvi_docenti(classi_raw, docenti_raw, report):
     return uniti, canon
 
 
-def riconcilia(classi_raw, docenti_raw, report):
+def riconcilia(classi_raw, docenti_raw, report, aule_classi=None):
+    aule_classi = aule_classi or {}
     docenti_raw, canon = risolvi_docenti(classi_raw, docenti_raw, report)
 
     classi = {}
     for cid, sched in classi_raw.items():
+        default_aula = aule_classi.get(cid)
         classi[cid] = {g: {} for g in GIORNI}
         for g, ore in sched.items():
             for ora, s in ore.items():
                 classi[cid][g][ora] = {
                     "materia": s["materia"],
                     "docenti": [canon(d) for d in s["docenti"]],
-                    "aula": s["aula"],
+                    "aula": s["aula"] or default_aula,
                 }
 
     docenti = {n: {g: {} for g in GIORNI} for n in docenti_raw}
@@ -250,22 +291,23 @@ def riconcilia(classi_raw, docenti_raw, report):
                 if s["tipo"] == "disposizione":
                     docenti[nome][g][ora] = {"tipo": "disposizione"}
                     continue
+                default_aula = aule_classi.get(s["classe"])
                 cl = classi.get(s["classe"])
                 if cl is None:
                     report["docenti_classe_inesistente"].append(f"{nome} {g} ora {ora}: {s['classe']}")
                     docenti[nome][g][ora] = {"tipo": "lezione", "classe": s["classe"], "materia": None,
-                                             "aula": s["aula"], "copresenza": [], "fonte": "docenti"}
+                                             "aula": s["aula"] or default_aula, "copresenza": [], "fonte": "docenti"}
                     continue
                 cs = cl[g].get(ora)
                 if cs is None:
                     report["docenti_slot_assente_in_classi"].append(f"{nome} {g} ora {ora}: {s['classe']}")
                     docenti[nome][g][ora] = {"tipo": "lezione", "classe": s["classe"], "materia": None,
-                                             "aula": s["aula"], "copresenza": [], "fonte": "docenti"}
+                                             "aula": s["aula"] or default_aula, "copresenza": [], "fonte": "docenti"}
                     continue
                 if nome not in cs["docenti"]:
                     report["docenti_non_presente_nella_classe"].append(
                         f"{nome} {g} ora {ora}: {s['classe']} ha {cs['docenti']}")
-                aula = cs["aula"] or s["aula"]  # il PDF classi prevale sull'aula
+                aula = cs["aula"] or s["aula"] or default_aula  # il PDF classi prevale sull'aula
                 if s["aula"] and cs["aula"] and s["aula"] != cs["aula"]:
                     report["conflitti_aula"].append(
                         f"{nome} {g} ora {ora} {s['classe']}: docenti={s['aula']} classi={cs['aula']}")
@@ -280,6 +322,7 @@ def riconcilia(classi_raw, docenti_raw, report):
 
     # 2) Slot presenti nelle classi ma assenti dal PDF docenti
     for cid, sched in classi.items():
+        default_aula = aule_classi.get(cid)
         for g, ore in sched.items():
             for ora, cs in ore.items():
                 for d in cs["docenti"]:
@@ -290,7 +333,7 @@ def riconcilia(classi_raw, docenti_raw, report):
                         report["slot_classi_mancanti_in_docenti"].append(f"{d} {g} ora {ora}: {cid}")
                         docenti[d][g][ora] = {
                             "tipo": "lezione" if cs["docenti"][0] == d else "compresenza",
-                            "classe": cid, "materia": cs["materia"], "aula": cs["aula"],
+                            "classe": cid, "materia": cs["materia"], "aula": cs["aula"] or default_aula,
                             "copresenza": [x for x in cs["docenti"] if x != d], "fonte": "classi"}
                     elif docenti[d][g][ora].get("classe") not in (None, cid):
                         # stesso docente in due classi nella stessa ora: classi articolate (es. 3VE+3PTA)
@@ -339,9 +382,10 @@ def run():
             "nomi_ambigui", "alias_codici", "codici_non_risolti", "slot_duplicati_docente"]
     report = {k: [] for k in keys}
 
+    aule_classi = parse_griglia_classi()
     classi_raw = parse_classi(report)
     docenti_raw, periodo = parse_docenti(report)
-    classi, docenti = riconcilia(classi_raw, docenti_raw, report)
+    classi, docenti = riconcilia(classi_raw, docenti_raw, report, aule_classi)
     aule = costruisci_aule(classi, docenti)
 
     def ids(d):
@@ -354,8 +398,10 @@ def run():
                     for n, s in sorted(docenti.items())},
         "classi": dict(sorted(classi.items())),
         "aule": aule,
+        "aule_classi": aule_classi,
         "aule_libere": aule_libere(aule),
     }
+
     assert len(ids(docenti)) == len(docenti), "collisione id docenti"
 
     os.makedirs(os.path.dirname(OUT_JSON), exist_ok=True)

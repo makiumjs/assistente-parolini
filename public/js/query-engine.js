@@ -200,12 +200,14 @@ function answerDocente(p, idx) {
     const cls = [s.classe, ...extra].join(" + ");
     const con = s.copresenza?.length ? s.copresenza.map(titleCase).join(", ") : "";
     const mat = s.materia ? titleCase(s.materia) : "materia non indicata";
-    const aula = s.aula ? titleCase(s.aula) : "aula ordinaria";
-    const verb = s.tipo === "compresenza" ? "è in compresenza" : "ha lezione";
+    const rawAula = s.aula;
+    const isSpecialRoom = rawAula && (rawAula.toUpperCase().startsWith("LAB") || rawAula.toUpperCase().startsWith("PALESTRA"));
+    const aulaStr = rawAula ? (isSpecialRoom ? titleCase(rawAula) : `aula ${rawAula}`) : "aula ordinaria";
+    const verb = s.tipo === "compresenza" ? "è in compresenza" : "è";
     return {
-      main: `${aula} • ${cls}`,
+      main: `${rawAula ? (isSpecialRoom ? titleCase(rawAula) : `Aula ${rawAula}`) : "Aula ordinaria"} • ${cls}`,
       sub: `${mat}${con ? " · con " + con : ""}${s.tipo === "compresenza" ? " (compresenza)" : ""}`,
-      say: `${p.isSelf ? (s.tipo === "compresenza" ? "sarai in compresenza" : "avrai lezione") : verb} di ${mat} con la ${cls}, in ${aula}${con ? ", insieme a " + con : ""}`,
+      say: `${p.isSelf ? (s.tipo === "compresenza" ? "sarai in compresenza" : "sarai") : verb} in ${cls} in ${aulaStr}${con ? ", insieme a " + con : ""}`,
     };
   };
 
@@ -241,8 +243,11 @@ function answerClasse(p, idx) {
     const describe = (s) => {
       const doc = s.docenti.map(titleCase).join(" e ");
       const mat = titleCase(s.materia);
-      const where = s.aula ? `in ${titleCase(s.aula)}` : "nella sua aula (non indicata nell'orario)";
-      return { main: `${mat}${doc ? " • " + doc : ""}`, sub: s.aula ? titleCase(s.aula) : "Aula ordinaria",
+      const rawAula = s.aula;
+      const isSpecialRoom = rawAula && (rawAula.toUpperCase().startsWith("LAB") || rawAula.toUpperCase().startsWith("PALESTRA"));
+      const aulaStr = rawAula ? (isSpecialRoom ? titleCase(rawAula) : `aula ${rawAula}`) : "aula ordinaria";
+      const where = `in ${aulaStr}`;
+      return { main: `${mat}${doc ? " • " + doc : ""}`, sub: rawAula ? (isSpecialRoom ? titleCase(rawAula) : `Aula ${rawAula}`) : "Aula ordinaria",
         say: `ha ${mat}${doc ? " con " + doc : ""}, ${where}`, mat, doc, where };
     };
     if (p.day === "sabato" || p.day === "domenica") { out.push(closedDay(p, `Classe ${cid}`)); continue; }

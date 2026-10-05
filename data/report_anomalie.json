@@ -8,6 +8,7 @@
  "docenti_slot_assente_in_classi": [],
  "docenti_non_presente_nella_classe": [],
  "conflitti_aula": [
+  "B011 mercoledi ora 7 3AS: docenti=LAB CHIMICA 1 classi=C1",
   "DE ZEN DAVIDE giovedi ora 8 4AS: docenti=LAB INFORMATICA 2 classi=LAB INFORMATICA 1"
  ],
  "classi_articolate": [
