@@ -7,33 +7,37 @@
   <link rel="icon" type="image/png" href="./public/img/logo_parolini.png" />
   <style>
     :root {
-      /* Palette Istituzionale IIS Alberto Parolini - Minimalista & Utilitaria */
-      --bg-dark: #070d0b;
-      --surface: #0e1a16;
-      --surface-elevated: #13241f;
-      --surface-border: rgba(45, 95, 78, 0.35);
-      --surface-border-focus: rgba(45, 212, 191, 0.6);
+      /* Palette Istituzionale IIS Alberto Parolini - Chiara, Luminosa & Ottimizzata Smartphone */
+      --bg-page: #f8faf9;
+      --surface: #ffffff;
+      --surface-elevated: #f1f5f3;
+      --surface-border: #dbe4e0;
+      --surface-border-focus: #0f5c4a;
       
-      --primary: #0f5c4a;        /* Verde Pino / Agrario Istituzionale */
-      --primary-hover: #0b4739;
+      --primary: #0f5c4a;        /* Verde Bosco / Agrario Istituzionale */
+      --primary-hover: #0a4336;
       --accent: #9b283a;         /* Granata / Enologia */
-      --accent-soft: rgba(155, 40, 58, 0.18);
-      --accent-muted: #e0586f;
-      --leaf: #2dd4bf;           /* Menta / Germoglio per focus ed evidenze */
-      --leaf-soft: rgba(45, 212, 191, 0.14);
-      --leaf-glow: rgba(45, 212, 191, 0.25);
+      --accent-soft: #fdf2f4;
+      --accent-muted: #b91c1c;
+      --leaf: #0d9488;           /* Menta / Germoglio per focus ed evidenze */
+      --leaf-soft: #f0fdfa;
+      --leaf-glow: rgba(15, 92, 74, 0.15);
       
-      --text: #f8fafc;
-      --text-secondary: #cbd5e1;
-      --text-muted: #8ca39b;
+      --text: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
       
-      --tag-lab-bg: rgba(45, 212, 191, 0.15);
-      --tag-lab-text: #5eead4;
-      --tag-lab-border: rgba(45, 212, 191, 0.35);
+      --tag-lab-bg: #ecfdf5;
+      --tag-lab-text: #065f46;
+      --tag-lab-border: #a7f3d0;
       
-      --tag-duty-bg: rgba(217, 119, 6, 0.18);
-      --tag-duty-text: #fcd34d;
-      --tag-duty-border: rgba(245, 158, 11, 0.35);
+      --tag-duty-bg: #fffbeb;
+      --tag-duty-text: #92400e;
+      --tag-duty-border: #fde68a;
+
+      --tag-room-bg: #f1f5f9;
+      --tag-room-text: #1e293b;
+      --tag-room-border: #cbd5e1;
 
       --radius-sm: 6px;
       --radius-md: 10px;
@@ -48,7 +52,7 @@
       padding: 0;
       width: 100%;
       min-height: 100%;
-      background: var(--bg-dark);
+      background: var(--bg-page);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
@@ -71,10 +75,11 @@
       align-items: center;
       justify-content: space-between;
       gap: 14px;
-      padding: 10px 14px;
+      padding: 12px 16px;
       background: var(--surface);
       border: 1px solid var(--surface-border);
       border-radius: var(--radius-lg);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     }
 
     .brand-group {
@@ -87,7 +92,7 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      border: 1.5px solid var(--leaf);
+      border: 1.5px solid var(--primary);
       background: #ffffff;
       padding: 2px;
       object-fit: contain;
@@ -98,7 +103,7 @@
       margin: 0;
       font-size: 16px;
       font-weight: 700;
-      color: #fff;
+      color: #0f172a;
       letter-spacing: -0.2px;
       line-height: 1.2;
     }
@@ -106,8 +111,8 @@
     .brand-text p {
       margin: 2px 0 0 0;
       font-size: 12px;
-      color: var(--leaf);
-      font-weight: 500;
+      color: var(--primary);
+      font-weight: 600;
       letter-spacing: 0.1px;
     }
 
@@ -123,12 +128,12 @@
       align-items: center;
       gap: 7px;
       padding: 6px 12px;
-      background: rgba(15, 92, 74, 0.25);
-      border: 1px solid rgba(45, 212, 191, 0.35);
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
       border-radius: var(--radius-pill);
       font-size: 12.5px;
       font-weight: 600;
-      color: #e2e8f0;
+      color: #166534;
       white-space: nowrap;
     }
 
@@ -136,8 +141,8 @@
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: #22c55e;
-      box-shadow: 0 0 6px #22c55e;
+      background: #16a34a;
+      box-shadow: 0 0 6px rgba(22, 163, 74, 0.5);
       animation: pulse-dot 2s infinite ease-in-out;
     }
 
@@ -160,14 +165,14 @@
 
     .profile-pill label {
       color: var(--text-muted);
-      font-weight: 500;
+      font-weight: 600;
       white-space: nowrap;
     }
 
     .profile-input {
-      background: #050b09;
-      border: 1px solid #23473b;
-      color: #fff;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #0f172a;
       font-size: 13px;
       padding: 4px 8px;
       border-radius: 4px;
@@ -177,7 +182,8 @@
     }
 
     .profile-input:focus {
-      border-color: var(--leaf);
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px var(--leaf-glow);
     }
 
     /* =========================================================================
@@ -198,12 +204,12 @@
       border-radius: var(--radius-lg);
       padding: 6px 8px 6px 16px;
       transition: all 0.2s ease;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
 
     .search-bar-container:focus-within {
-      border-color: var(--leaf);
-      box-shadow: 0 0 0 3px var(--leaf-glow), 0 6px 24px rgba(0, 0, 0, 0.45);
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--leaf-glow), 0 4px 12px rgba(0, 0, 0, 0.06);
     }
 
     .search-icon {
@@ -219,7 +225,7 @@
       background: transparent;
       border: none;
       outline: none;
-      color: #ffffff;
+      color: #0f172a;
       font-size: 16.5px;
       font-weight: 500;
       padding: 8px 0;
@@ -227,7 +233,7 @@
     }
 
     .search-input::placeholder {
-      color: var(--text-muted);
+      color: #94a3b8;
       font-weight: 400;
     }
 
@@ -245,15 +251,15 @@
       font-size: 11px;
       font-weight: 600;
       color: var(--text-muted);
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
       border-radius: 4px;
       margin-right: 4px;
     }
 
     .btn-search {
       background: var(--primary);
-      color: #fff;
+      color: #ffffff;
       border: none;
       padding: 10px 18px;
       font-size: 14.5px;
@@ -272,7 +278,7 @@
 
     .btn-mic {
       background: var(--surface-elevated);
-      color: #fff;
+      color: #1e293b;
       border: 1px solid var(--surface-border);
       padding: 10px 14px;
       font-size: 16px;
@@ -287,63 +293,21 @@
     }
 
     .btn-mic:hover {
-      background: rgba(45, 95, 78, 0.4);
-      border-color: var(--leaf);
+      background: #e2e8e5;
+      border-color: var(--primary);
     }
 
     .btn-mic.listening {
       background: var(--accent);
+      color: #ffffff;
       border-color: var(--accent-muted);
       animation: pulse-mic 1.2s infinite;
-      box-shadow: 0 0 14px rgba(155, 40, 58, 0.6);
+      box-shadow: 0 0 14px rgba(155, 40, 58, 0.4);
     }
 
     @keyframes pulse-mic {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.08); }
-    }
-
-    /* Smart Chips di Consultazione Rapida */
-    .chips-shelf {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-
-    .chip-btn {
-      background: rgba(14, 26, 22, 0.8);
-      border: 1px solid var(--surface-border);
-      color: #d1fae5;
-      padding: 6px 12px;
-      border-radius: var(--radius-pill);
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
-      user-select: none;
-      transition: all 0.18s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      min-height: 34px;
-    }
-
-    .chip-btn:hover {
-      background: var(--primary);
-      border-color: var(--leaf);
-      color: #fff;
-      transform: translateY(-1px);
-    }
-
-    .chip-btn.highlight {
-      background: rgba(45, 212, 191, 0.12);
-      border-color: rgba(45, 212, 191, 0.45);
-      color: #5eead4;
-      font-weight: 600;
-    }
-
-    .chip-btn.highlight:hover {
-      background: var(--primary);
-      color: #fff;
     }
 
     /* =========================================================================
@@ -354,12 +318,12 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      background: rgba(15, 92, 74, 0.22);
-      border: 1px solid rgba(45, 212, 191, 0.4);
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
       border-radius: var(--radius-md);
       padding: 8px 14px;
       font-size: 13px;
-      color: #e2e8f0;
+      color: #14532d;
       animation: fadeIn 0.25s ease;
     }
 
@@ -373,7 +337,7 @@
     .wave-bar {
       width: 3.5px;
       height: 100%;
-      background: var(--leaf);
+      background: var(--primary);
       border-radius: 2px;
       animation: wave-pulse 1s infinite ease-in-out;
     }
@@ -387,9 +351,9 @@
     }
 
     .btn-stop-speech {
-      background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #cbd5e1;
+      background: #ffffff;
+      border: 1px solid #bbf7d0;
+      color: #166534;
       padding: 3px 9px;
       font-size: 11.5px;
       font-weight: 600;
@@ -398,8 +362,7 @@
       transition: background 0.15s;
     }
     .btn-stop-speech:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
+      background: #dcfce7;
     }
 
     /* =========================================================================
@@ -409,8 +372,8 @@
       background: var(--surface);
       border: 1px solid var(--surface-border);
       border-radius: var(--radius-lg);
-      padding: 20px 22px;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+      padding: 22px 24px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
       display: flex;
       flex-direction: column;
       gap: 14px;
@@ -442,7 +405,7 @@
       margin: 0;
       font-size: 21px;
       font-weight: 700;
-      color: #ffffff;
+      color: #0f172a;
       letter-spacing: -0.3px;
     }
 
@@ -455,7 +418,7 @@
       letter-spacing: 0.4px;
       background: var(--accent);
       color: #ffffff;
-      box-shadow: 0 2px 8px rgba(155, 40, 58, 0.3);
+      box-shadow: 0 2px 6px rgba(155, 40, 58, 0.2);
     }
 
     /* Timeline Tabellare delle Ore */
@@ -476,16 +439,16 @@
     }
 
     .flow-row:hover {
-      background: rgba(255, 255, 255, 0.02);
+      background: #f8fafc;
     }
 
     .flow-row:not(:last-child) {
-      border-bottom: 1px solid rgba(45, 95, 78, 0.2);
+      border-bottom: 1px solid #f1f5f9;
     }
 
     .flow-row.is-active-now {
-      background: rgba(45, 212, 191, 0.08);
-      border: 1px solid rgba(45, 212, 191, 0.35);
+      background: #f0fdf4;
+      border: 1px solid #86efac;
     }
 
     .flow-time {
@@ -497,7 +460,7 @@
     .time-slot {
       font-size: 14px;
       font-weight: 700;
-      color: var(--leaf);
+      color: var(--primary);
       letter-spacing: 0.1px;
     }
 
@@ -554,9 +517,9 @@
     }
 
     .loc-tag.room {
-      background: rgba(255, 255, 255, 0.08);
-      color: #f1f5f9;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: var(--tag-room-bg);
+      color: var(--tag-room-text);
+      border: 1px solid var(--tag-room-border);
     }
 
     .schedule-note {
@@ -566,7 +529,7 @@
       font-style: italic;
       margin-top: 4px;
       padding-top: 8px;
-      border-top: 1px dashed rgba(45, 95, 78, 0.25);
+      border-top: 1px dashed var(--surface-border);
     }
 
     /* Schermata Iniziale / Default */
@@ -594,13 +557,13 @@
       justify-content: space-between;
       gap: 12px;
       padding-top: 12px;
-      border-top: 1px solid rgba(45, 95, 78, 0.25);
+      border-top: 1px solid var(--surface-border);
       font-size: 12px;
       color: var(--text-muted);
     }
 
     :focus-visible {
-      outline: 2.5px solid var(--leaf);
+      outline: 2.5px solid var(--primary);
       outline-offset: 2px;
     }
 
@@ -706,16 +669,6 @@
         </div>
         <button class="btn-stop-speech" id="stop-speech-btn" type="button">Ferma audio ✕</button>
       </div>
-
-      <!-- Smart Chips per Consultazione Istantanea a 1-Tap -->
-      <nav class="chips-shelf" aria-label="Ricerche immediate consigliate">
-        <button type="button" class="chip-btn highlight" id="chip-my-schedule" style="display:none;" data-q="Cosa ho oggi?">⚡ La mia giornata</button>
-        <button type="button" class="chip-btn" data-q="Quali laboratori sono liberi adesso?">🧪 Laboratori liberi ora</button>
-        <button type="button" class="chip-btn" data-q="Dove si trova la 4AS alla 3ª ora?">4AS alla 3ª ora</button>
-        <button type="button" class="chip-btn" data-q="Chi c'è in palestra oggi alla 2ª ora?">Palestra oggi 2ª ora</button>
-        <button type="button" class="chip-btn" data-q="Cosa ha Anzalone giovedì?">Orario prof. Anzalone</button>
-        <button type="button" class="chip-btn" data-q="Orario 4GRFA venerdì">4GRFA venerdì</button>
-      </nav>
     </section>
 
     <!-- Card Risultati (Focalizzata sui Dati & Leggibilità) -->
@@ -735,7 +688,7 @@
             <li><strong>Classi:</strong> <em>«Dove si trova la 4AS alla terza ora?»</em> oppure <em>«Orario 4GRFA venerdì»</em></li>
             <li><strong>Docenti:</strong> <em>«Cosa ha Gemin domani?»</em> oppure <em>«Orario Anzalone giovedì»</em></li>
             <li><strong>Laboratori &amp; Aule:</strong> <em>«Quali laboratori sono liberi mercoledì alla 2ª ora?»</em> o <em>«Chi c'è in palestra martedì?»</em></li>
-            <li><strong>Personale:</strong> Imposta il tuo cognome in alto per visualizzare al volo il tuo orario di oggi con 1 tap.</li>
+            <li><strong>Personale:</strong> Imposta il tuo cognome in alto per visualizzare al volo il tuo orario.</li>
           </ul>
         </div>
 
@@ -767,10 +720,7 @@
     const emptyStateView = document.getElementById('empty-state-view');
     const timetableResults = document.getElementById('timetable-results');
     const scheduleNote = document.getElementById('schedule-note');
-    const chipMySchedule = document.getElementById('chip-my-schedule');
-    const chips = document.querySelectorAll('.chip-btn[data-q]');
     const liveHourText = document.getElementById('live-hour-text');
-    const liveHourBadge = document.getElementById('live-hour-badge');
     const voiceStatusBar = document.getElementById('voice-status-bar');
     const stopSpeechBtn = document.getElementById('stop-speech-btn');
 
@@ -831,21 +781,10 @@
     // GESTIONE PROFILO DOCENTE
     // -------------------------------------------------------------------------
     teacherInput.value = myTeacherName;
-    updateTeacherChip();
-
-    function updateTeacherChip() {
-      if (myTeacherName) {
-        chipMySchedule.style.display = "inline-flex";
-        chipMySchedule.textContent = `⚡ Orario prof. ${myTeacherName}`;
-      } else {
-        chipMySchedule.style.display = "none";
-      }
-    }
 
     teacherInput.addEventListener('change', () => {
       myTeacherName = teacherInput.value.trim();
       localStorage.setItem('parolini_my_surname', myTeacherName);
-      updateTeacherChip();
       if (myTeacherName && orarioIdx) {
         handleQuery("cosa ho oggi");
       }
@@ -1053,20 +992,6 @@
         inputField.focus();
         inputField.select();
       }
-    });
-
-    // Click sui Chips di ricerca rapida
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        const q = chip.dataset.q;
-        inputField.value = q;
-        handleQuery(q);
-      });
-    });
-
-    chipMySchedule.addEventListener('click', () => {
-      inputField.value = "Cosa ho oggi?";
-      handleQuery("Cosa ho oggi?");
     });
 
     // -------------------------------------------------------------------------
