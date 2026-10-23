@@ -4,20 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>Assistente Orario • IIS Alberto Parolini</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+  <link rel="icon" type="image/png" href="./public/img/logo_parolini.png" />
   <style>
     :root {
-      --bg-dark: #090c15;
-      --card-bg: rgba(18, 24, 38, 0.92);
-      --card-border: rgba(56, 75, 115, 0.45);
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --accent: #38bdf8;
-      --accent-muted: #7dd3fc;
+      /* Palette Istituzionale IIS Alberto Parolini */
+      --bg-dark: #08110e;
+      --panel-bg: rgba(11, 23, 19, 0.95);
+      --card-bg: rgba(16, 28, 24, 0.94);
+      --card-border: rgba(45, 95, 78, 0.45);
+      --primary: #0f5c4a;        /* Verde Bosco / Agrario Istituzionale */
+      --primary-hover: #0a4336;
+      --accent: #9b283a;         /* Granata / Enologia Istituzionale */
+      --accent-hover: #b93247;
+      --accent-muted: #e0586f;
+      --leaf: #2dd4bf;           /* Verde Germoglio / Menta per focus e badge */
+      --leaf-glow: rgba(45, 212, 191, 0.25);
       --text: #f8fafc;
-      --text-muted: #94a3b8;
-      --chip-bg: rgba(30, 41, 59, 0.7);
-      --chip-border: rgba(71, 85, 105, 0.5);
+      --text-muted: #94a8a0;     /* Grigio Salvia per contrasto rilassante */
+      --chip-bg: rgba(18, 38, 32, 0.85);
+      --chip-border: rgba(45, 95, 78, 0.55);
+      --input-bg: #050b09;
+      --input-border: #23473b;
     }
 
     * { box-sizing: border-box; }
@@ -37,30 +44,37 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Header superiore */
+    /* Header Superiore */
     #app-header {
       flex-shrink: 0;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
-      padding: 12px 18px;
-      background: rgba(13, 17, 28, 0.9);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(8px);
-      z-index: 20;
+      gap: 12px;
+      padding: 10px 18px;
+      background: rgba(8, 17, 14, 0.96);
+      border-bottom: 1px solid rgba(45, 95, 78, 0.35);
+      backdrop-filter: blur(10px);
+      z-index: 30;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
-    .brand-icon {
-      font-size: 24px;
-      line-height: 1;
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1.5px solid var(--leaf);
+      background: #ffffff;
+      padding: 2px;
+      object-fit: contain;
+      box-shadow: 0 0 12px rgba(45, 212, 191, 0.25);
+      flex-shrink: 0;
     }
 
     .brand-title {
@@ -68,19 +82,21 @@
       font-weight: 700;
       color: #fff;
       letter-spacing: -0.2px;
+      line-height: 1.2;
     }
 
     .brand-sub {
       font-size: 12px;
-      color: var(--text-muted);
+      color: var(--leaf);
       font-weight: 500;
+      letter-spacing: 0.1px;
     }
 
     #user-profile-bar {
       display: flex;
       align-items: center;
       gap: 8px;
-      background: rgba(22, 28, 44, 0.9);
+      background: rgba(16, 32, 26, 0.85);
       padding: 5px 12px;
       border-radius: 8px;
       border: 1px solid var(--card-border);
@@ -94,36 +110,110 @@
     }
 
     #my-surname-input {
-      background: #0b0f1a;
-      border: 1px solid #334155;
+      background: var(--input-bg);
+      border: 1px solid var(--input-border);
       color: #fff;
       font-size: 14px;
       padding: 6px 10px;
       border-radius: 6px;
       outline: none;
       width: 140px;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
 
     #my-surname-input:focus {
-      border-color: var(--accent);
+      border-color: var(--leaf);
+      box-shadow: 0 0 0 2px var(--leaf-glow);
     }
 
-    /* Contenitore Principale */
-    #main-container {
+    /* Layout Principale a Due Colonne (Desktop) o Colonna (Mobile) */
+    #app-layout {
       flex: 1;
       min-height: 0;
       display: flex;
-      flex-direction: column;
-      max-width: 860px;
       width: 100%;
+      max-width: 1380px;
       margin: 0 auto;
-      padding: 16px 18px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Pannello Sinistro Mascotte 3D (ParoliniBot) */
+    #avatar-panel {
+      flex: 0 0 420px;
+      position: relative;
+      background: radial-gradient(circle at 50% 35%, rgba(15, 92, 74, 0.35) 0%, rgba(8, 17, 14, 0.95) 75%);
+      border-right: 1px solid rgba(45, 95, 78, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    .bot-ambient-bg {
+      position: absolute;
+      top: -20%; left: -20%; width: 140%; height: 140%;
+      background: radial-gradient(circle at 50% 50%, rgba(45, 212, 191, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    #avatar-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    #bot-badge {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(11, 23, 19, 0.85);
+      border: 1px solid rgba(45, 95, 78, 0.5);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      backdrop-filter: blur(8px);
+      z-index: 10;
+      pointer-events: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .bot-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px #22c55e;
+      animation: pulse-dot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.25); opacity: 0.7; }
+    }
+
+    /* Pannello Destro Contenuto e Risultati */
+    #content-panel {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 16px 20px;
       gap: 14px;
       overflow-y: auto;
     }
 
-    /* Suggerimenti rapidi */
+    /* Chips Suggerimenti */
     #chips-container {
       display: flex;
       flex-wrap: wrap;
@@ -134,34 +224,37 @@
     .chip {
       background: var(--chip-bg);
       border: 1px solid var(--chip-border);
-      color: #cbd5e1;
-      padding: 6px 12px;
+      color: #d1fae5;
+      padding: 7px 14px;
       border-radius: 20px;
       font-size: 13px;
+      font-weight: 500;
       cursor: pointer;
       user-select: none;
       transition: all 0.2s ease;
-      min-height: 36px;
+      min-height: 38px;
       display: inline-flex;
       align-items: center;
+      text-align: left;
     }
 
     .chip:hover {
-      background: rgba(37, 99, 235, 0.25);
-      border-color: var(--accent);
+      background: var(--primary);
+      border-color: var(--leaf);
       color: #fff;
+      transform: translateY(-1px);
     }
 
     /* Scheda Risultati */
     .card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 18px 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      border-radius: 14px;
+      padding: 20px 22px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
       backdrop-filter: blur(12px);
       flex: 1;
-      min-height: 180px;
+      min-height: 200px;
       display: flex;
       flex-direction: column;
       overflow-y: auto;
@@ -174,31 +267,32 @@
       justify-content: space-between;
       gap: 10px;
       padding-bottom: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(45, 95, 78, 0.3);
     }
 
     #card-title {
       margin: 0;
       font-size: 20px;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--leaf);
       letter-spacing: -0.3px;
     }
 
     .badge {
       display: inline-block;
-      padding: 4px 10px;
+      padding: 4px 11px;
       border-radius: 6px;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.4px;
-      background: var(--primary);
+      background: var(--accent);
       color: #fff;
+      box-shadow: 0 2px 8px rgba(155, 40, 58, 0.35);
     }
 
     #card-desc {
       font-size: 15px;
-      color: #94a3b8;
+      color: var(--text-muted);
       line-height: 1.6;
       margin-top: 14px;
     }
@@ -211,10 +305,10 @@
 
     .row {
       display: grid;
-      grid-template-columns: 90px 1fr;
-      gap: 12px;
-      padding: 10px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      grid-template-columns: 95px 1fr;
+      gap: 14px;
+      padding: 11px 0;
+      border-top: 1px solid rgba(45, 95, 78, 0.2);
       align-items: baseline;
     }
 
@@ -225,14 +319,14 @@
     .row.heading {
       display: block;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--leaf);
       padding-top: 14px;
     }
 
     .row .when {
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 700;
-      color: var(--accent-muted);
+      color: var(--leaf);
       letter-spacing: 0.2px;
     }
 
@@ -247,14 +341,14 @@
       font-size: 13.5px;
       color: var(--text-muted);
       line-height: 1.4;
-      margin-top: 2px;
+      margin-top: 3px;
     }
 
     #card-note {
       font-size: 13px;
-      color: #64748b;
+      color: #718880;
       line-height: 1.5;
-      margin-top: 14px;
+      margin-top: 16px;
       font-style: italic;
     }
 
@@ -262,21 +356,21 @@
     #ui-bar {
       flex-shrink: 0;
       width: 100%;
-      background: #0d111c;
-      padding: 12px 16px;
+      background: rgba(8, 17, 14, 0.98);
+      padding: 12px 18px;
       padding-bottom: max(12px, env(safe-area-inset-bottom));
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 10px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(45, 95, 78, 0.35);
       z-index: 50;
-      box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.5);
     }
 
     .input-wrapper {
       flex: 1;
-      max-width: 720px;
+      max-width: 820px;
       display: flex;
       gap: 10px;
     }
@@ -285,8 +379,8 @@
       flex: 1;
       padding: 12px 16px;
       border-radius: 10px;
-      border: 1px solid #334155;
-      background: #06080f;
+      border: 1px solid var(--input-border);
+      background: var(--input-bg);
       color: #fff;
       font-size: 16px;
       outline: none;
@@ -294,15 +388,15 @@
     }
 
     input[type="text"]#query-input:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+      border-color: var(--leaf);
+      box-shadow: 0 0 0 3px var(--leaf-glow);
     }
 
     button.action-btn {
       background: var(--primary);
       color: #fff;
       border: none;
-      padding: 12px 20px;
+      padding: 12px 22px;
       font-size: 15px;
       border-radius: 10px;
       cursor: pointer;
@@ -313,39 +407,64 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      transition: background 0.2s, transform 0.1s;
+      transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
     }
 
-    button.action-btn:hover { background: var(--primary-hover); }
+    button.action-btn:hover {
+      background: var(--primary-hover);
+      box-shadow: 0 4px 12px rgba(15, 92, 74, 0.4);
+    }
     button.action-btn:active { transform: scale(0.98); }
-    button.action-btn:disabled { background: #334155; cursor: not-allowed; }
+    button.action-btn:disabled { background: #233830; cursor: not-allowed; }
 
     #mic-btn {
-      background: #1e293b;
-      border: 1px solid #334155;
+      background: #142a23;
+      border: 1px solid var(--input-border);
       font-size: 18px;
       padding: 12px 16px;
     }
 
     #mic-btn.listening {
-      background: #dc2626;
-      border-color: #ef4444;
+      background: var(--accent);
+      border-color: var(--accent-muted);
       animation: pulse-mic 1.2s infinite;
+      box-shadow: 0 0 16px rgba(155, 40, 58, 0.6);
     }
 
     @keyframes pulse-mic {
       0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.06); }
+      50% { transform: scale(1.08); }
     }
 
     :focus-visible {
-      outline: 3px solid var(--accent);
+      outline: 2.5px solid var(--leaf);
       outline-offset: 2px;
     }
 
-    @media (max-width: 600px) {
+    /* Ottimizzazione Mobile & Schermi Compatti */
+    @media (max-width: 820px) {
+      #app-layout {
+        flex-direction: column;
+        overflow-y: auto;
+      }
+      #avatar-panel {
+        flex: 0 0 190px;
+        min-height: 190px;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(45, 95, 78, 0.35);
+      }
+      #bot-badge {
+        bottom: 8px;
+        font-size: 11px;
+        padding: 4px 10px;
+      }
+      #content-panel {
+        padding: 12px 14px;
+        overflow-y: visible;
+      }
       #app-header {
-        padding: 10px 14px;
+        padding: 8px 12px;
       }
       #user-profile-bar {
         width: 100%;
@@ -354,23 +473,30 @@
       #my-surname-input {
         width: 50%;
       }
-      #main-container {
-        padding: 12px 14px;
-      }
       .row {
-        grid-template-columns: 75px 1fr;
+        grid-template-columns: 80px 1fr;
       }
     }
   </style>
+
+  <!-- Three.js ESM per rendering 3D procedurale a 0 KB di asset pesanti -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
 </head>
 <body>
 
+  <!-- Header Istituzionale -->
   <header id="app-header">
     <div class="brand">
-      <span class="brand-icon">🏛️</span>
+      <img src="./public/img/logo_parolini.png" alt="Logo IIS Alberto Parolini" class="brand-logo" width="40" height="40" />
       <div>
         <div class="brand-title">IIS Alberto Parolini</div>
-        <div class="brand-sub">Assistente Orario &amp; Laboratori</div>
+        <div class="brand-sub">Assistente Orario &amp; Laboratori • Bassano del Grappa</div>
       </div>
     </div>
     <div id="user-profile-bar">
@@ -379,26 +505,41 @@
     </div>
   </header>
 
-  <main id="main-container">
-    <section id="chips-container" aria-label="Ricerche suggerite">
-      <div class="chip" data-q="Dove si trova la 4AS alla terza ora?">Dove si trova la 4AS alla 3ª ora?</div>
-      <div class="chip" data-q="Cosa ho oggi?">Cosa ho oggi?</div>
-      <div class="chip" data-q="Quali aule sono libere mercoledì alla seconda ora?">Aule libere mercoledì alla 2ª ora</div>
-      <div class="chip" data-q="Chi c'è in palestra martedì alla seconda ora?">Chi c'è in palestra martedì alla 2ª?</div>
-      <div class="chip" data-q="Cosa ha Anzalone giovedì?">Orario prof. Anzalone giovedì</div>
+  <!-- Layout Applicazione -->
+  <div id="app-layout">
+    <!-- Mascotte 3D Ufficiale ParoliniBot (Procedurale, ultra-leggera, 0 KB GLB) -->
+    <section id="avatar-panel" aria-label="Mascotte 3D ParoliniBot">
+      <div class="bot-ambient-bg"></div>
+      <div id="avatar-container"></div>
+      <div id="bot-badge">
+        <span class="bot-badge-dot"></span>
+        <span class="bot-badge-text">ParoliniBot • Online</span>
+      </div>
     </section>
 
-    <article class="card" id="info-card" aria-live="polite">
-      <div class="card-header">
-        <h1 id="card-title">In attesa di richiesta...</h1>
-        <span id="card-badge" style="display:none;" class="badge"></span>
-      </div>
-      <div id="card-desc">Chiedi ad esempio: «Dove si trova la 4AS alla terza ora?», «Cosa ha Gemin domani?» o «Quali laboratori sono liberi mercoledì alla seconda ora?». Puoi anche usare la dettatura vocale 🎙️.</div>
-      <div id="result-lines"></div>
-      <div id="card-note"></div>
-    </article>
-  </main>
+    <!-- Contenuto e Risultati Query Orario -->
+    <main id="content-panel">
+      <section id="chips-container" aria-label="Ricerche suggerite">
+        <button type="button" class="chip" data-q="Dove si trova la 4AS alla terza ora?">Dove si trova la 4AS alla 3ª ora?</button>
+        <button type="button" class="chip" data-q="Cosa ho oggi?">Cosa ho oggi?</button>
+        <button type="button" class="chip" data-q="Quali laboratori sono liberi mercoledì alla seconda ora?">Laboratori liberi mercoledì 2ª ora</button>
+        <button type="button" class="chip" data-q="Chi c'è in palestra martedì alla seconda ora?">Chi c'è in palestra martedì alla 2ª?</button>
+        <button type="button" class="chip" data-q="Cosa ha Anzalone giovedì?">Orario prof. Anzalone giovedì</button>
+      </section>
 
+      <article class="card" id="info-card" aria-live="polite">
+        <div class="card-header">
+          <h1 id="card-title">In attesa di richiesta...</h1>
+          <span id="card-badge" style="display:none;" class="badge"></span>
+        </div>
+        <div id="card-desc">Chiedi ad esempio: «Dove si trova la 4AS alla terza ora?», «Cosa ha Gemin domani?» o «Quali laboratori sono liberi mercoledì alla seconda ora?». Puoi anche usare la dettatura vocale 🎙️.</div>
+        <div id="result-lines"></div>
+        <div id="card-note"></div>
+      </article>
+    </main>
+  </div>
+
+  <!-- Barra Input & Voce -->
   <footer id="ui-bar">
     <div class="input-wrapper">
       <input type="text" id="query-input" aria-label="Domanda sull'orario" placeholder="Es. Dove si trova la 4AS alla terza ora?" />
@@ -408,6 +549,7 @@
   </footer>
 
   <script type="module">
+    import * as THREE from 'three';
     import { buildIndex, parseQuery, answer } from './public/js/query-engine.js';
 
     const inputField = document.getElementById('query-input');
@@ -420,11 +562,13 @@
     const cardNote = document.getElementById('card-note');
     const resultLines = document.getElementById('result-lines');
     const chips = document.querySelectorAll('.chip');
+    const avatarContainer = document.getElementById('avatar-container');
 
     let orarioIdx = null;
     let isSpeaking = false;
     let isListening = false;
     let activeUtterance = null;
+    let triggerBotReaction = () => {};
 
     let myTeacherName = localStorage.getItem('parolini_my_surname') || "";
     mySurnameInput.value = myTeacherName;
@@ -526,6 +670,7 @@
         speak("Il database dell'orario non è ancora disponibile.");
         return;
       }
+      triggerBotReaction();
       const parsed = parseQuery(text, orarioIdx, { now: new Date(), me: myTeacherName });
       const a = answer(parsed, orarioIdx);
       renderAnswer(a);
@@ -577,7 +722,351 @@
       micBtn.style.display = 'none';
     }
 
+    /* =========================================================================
+     * STEP 2: Mascotte 3D Procedurale Ufficiale ("ParoliniBot")
+     * Zero KB di file GLB esterni, caricamento immediato e 60 FPS garantiti.
+     * Incorpora lo stemma ufficiale, il germoglio botanico e sincronizzazione lipsync.
+     * ========================================================================= */
+    function initParoliniBot(container) {
+      if (!container) return;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(42, container.clientWidth / container.clientHeight, 0.1, 50);
+      camera.position.set(0, 0.15, 3.8);
+
+      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.2;
+      container.replaceChildren(renderer.domElement);
+
+      // Illuminazione Botanica & Ambientale
+      const ambientLight = new THREE.AmbientLight(0xf2fbf7, 2.2);
+      scene.add(ambientLight);
+
+      const keyLight = new THREE.DirectionalLight(0xffffff, 2.6);
+      keyLight.position.set(2.5, 4.5, 3.5);
+      scene.add(keyLight);
+
+      const fillLight = new THREE.DirectionalLight(0xd1fae5, 1.8);
+      fillLight.position.set(-3.0, 2.0, 2.5);
+      scene.add(fillLight);
+
+      const rimLight = new THREE.DirectionalLight(0xfecdd3, 1.2);
+      rimLight.position.set(0, -2.5, -2.5);
+      scene.add(rimLight);
+
+      const robotGroup = new THREE.Group();
+      scene.add(robotGroup);
+
+      // Materiali Istituzionali Parolini
+      const bodyWhiteMat = new THREE.MeshStandardMaterial({ color: 0xf8fafc, roughness: 0.22, metalness: 0.12 });
+      const forestGreenMat = new THREE.MeshStandardMaterial({ color: 0x0f5c4a, roughness: 0.35, metalness: 0.25 });
+      const granataMat = new THREE.MeshStandardMaterial({ color: 0x9b283a, roughness: 0.30, metalness: 0.30 });
+      const goldMat = new THREE.MeshStandardMaterial({ color: 0xd97706, roughness: 0.25, metalness: 0.65 });
+      const visorMat = new THREE.MeshStandardMaterial({ color: 0x061410, roughness: 0.12, metalness: 0.45 });
+      const ledEyeMat = new THREE.MeshStandardMaterial({ color: 0x2dd4bf, emissive: 0x14b8a6, emissiveIntensity: 2.2, roughness: 0.2 });
+      const mouthMat = new THREE.MeshStandardMaterial({ color: 0x2dd4bf, emissive: 0x14b8a6, emissiveIntensity: 2.0, roughness: 0.2 });
+      const sproutStemMat = new THREE.MeshStandardMaterial({ color: 0x166534, roughness: 0.4 });
+      const sproutLeafMat = new THREE.MeshStandardMaterial({ color: 0x22c55e, emissive: 0x15803d, emissiveIntensity: 0.75, roughness: 0.35, side: THREE.DoubleSide });
+
+      // Torso Ceramica
+      const torsoGeo = new THREE.CylinderGeometry(0.55, 0.44, 0.78, 32);
+      const torso = new THREE.Mesh(torsoGeo, bodyWhiteMat);
+      torso.position.y = -0.48;
+      robotGroup.add(torso);
+
+      // Fascia Inferiore Forest Green e Finitura Granata
+      const beltGeo = new THREE.CylinderGeometry(0.46, 0.46, 0.12, 32);
+      const belt = new THREE.Mesh(beltGeo, forestGreenMat);
+      belt.position.y = -0.83;
+      robotGroup.add(belt);
+
+      const granataStripeGeo = new THREE.CylinderGeometry(0.48, 0.48, 0.03, 32);
+      const granataStripe = new THREE.Mesh(granataStripeGeo, granataMat);
+      granataStripe.position.y = -0.77;
+      robotGroup.add(granataStripe);
+
+      // Stemma Ufficiale IIS Alberto Parolini sul Petto (Texture circolare ad alta definizione)
+      const textureLoader = new THREE.TextureLoader();
+      const logoTexture = textureLoader.load('./public/img/logo_parolini.png');
+      logoTexture.colorSpace = THREE.SRGBColorSpace;
+      logoTexture.anisotropy = 16;
+
+      const badgeGroup = new THREE.Group();
+      badgeGroup.position.set(0, -0.40, 0.50);
+
+      const badgeRimGeo = new THREE.CylinderGeometry(0.24, 0.24, 0.04, 48);
+      badgeRimGeo.rotateX(Math.PI / 2);
+      const badgeRim = new THREE.Mesh(badgeRimGeo, forestGreenMat);
+      badgeGroup.add(badgeRim);
+
+      const badgeGoldRingGeo = new THREE.TorusGeometry(0.23, 0.015, 16, 48);
+      const badgeGoldRing = new THREE.Mesh(badgeGoldRingGeo, goldMat);
+      badgeGoldRing.position.z = 0.022;
+      badgeGroup.add(badgeGoldRing);
+
+      const badgeFaceGeo = new THREE.CircleGeometry(0.21, 48);
+      const badgeFaceMat = new THREE.MeshStandardMaterial({
+        map: logoTexture,
+        roughness: 0.2,
+        metalness: 0.1,
+        emissive: 0xffffff,
+        emissiveMap: logoTexture,
+        emissiveIntensity: 0.25
+      });
+      const badgeFace = new THREE.Mesh(badgeFaceGeo, badgeFaceMat);
+      badgeFace.position.z = 0.024;
+      badgeGroup.add(badgeFace);
+
+      robotGroup.add(badgeGroup);
+
+      // Spalline
+      const shoulderGeo = new THREE.SphereGeometry(0.16, 20, 20);
+      const leftShoulder = new THREE.Mesh(shoulderGeo, forestGreenMat);
+      leftShoulder.position.set(-0.64, -0.24, 0);
+      robotGroup.add(leftShoulder);
+
+      const rightShoulder = new THREE.Mesh(shoulderGeo, forestGreenMat);
+      rightShoulder.position.set(0.64, -0.24, 0);
+      robotGroup.add(rightShoulder);
+
+      // Collare / Collo
+      const neckGeo = new THREE.CylinderGeometry(0.16, 0.18, 0.14, 20);
+      const neck = new THREE.Mesh(neckGeo, goldMat);
+      neck.position.y = -0.06;
+      robotGroup.add(neck);
+
+      const collarTorusGeo = new THREE.TorusGeometry(0.20, 0.025, 16, 32);
+      collarTorusGeo.rotateX(Math.PI / 2);
+      const collarTorus = new THREE.Mesh(collarTorusGeo, granataMat);
+      collarTorus.position.y = -0.02;
+      robotGroup.add(collarTorus);
+
+      // Testa
+      const headGroup = new THREE.Group();
+      headGroup.position.y = 0.36;
+      robotGroup.add(headGroup);
+
+      const headGeo = new THREE.BoxGeometry(0.88, 0.74, 0.68, 8, 8, 8);
+      const headMesh = new THREE.Mesh(headGeo, bodyWhiteMat);
+      headGroup.add(headMesh);
+
+      // Visore Occhi
+      const visorGeo = new THREE.BoxGeometry(0.74, 0.40, 0.08);
+      const visor = new THREE.Mesh(visorGeo, visorMat);
+      visor.position.set(0, 0.04, 0.31);
+      headGroup.add(visor);
+
+      // Occhi LED Germoglio
+      const eyeGeo = new THREE.SphereGeometry(0.085, 20, 20);
+      const leftEye = new THREE.Mesh(eyeGeo, ledEyeMat);
+      leftEye.scale.set(1, 1, 0.35);
+      leftEye.position.set(-0.19, 0.07, 0.35);
+      headGroup.add(leftEye);
+
+      const rightEye = new THREE.Mesh(eyeGeo, ledEyeMat);
+      rightEye.scale.set(1, 1, 0.35);
+      rightEye.position.set(0.19, 0.07, 0.35);
+      headGroup.add(rightEye);
+
+      // Bocca LED Parlante
+      const mouthGeo = new THREE.BoxGeometry(0.32, 0.04, 0.02);
+      const mouthMesh = new THREE.Mesh(mouthGeo, mouthMat);
+      mouthMesh.position.set(0, -0.10, 0.36);
+      headGroup.add(mouthMesh);
+
+      // Orecchie Laterali Sensori
+      const earGeo = new THREE.CylinderGeometry(0.08, 0.08, 0.08, 20);
+      earGeo.rotateZ(Math.PI / 2);
+      const leftEar = new THREE.Mesh(earGeo, forestGreenMat);
+      leftEar.position.set(-0.47, 0.04, 0);
+      headGroup.add(leftEar);
+
+      const rightEar = new THREE.Mesh(earGeo, forestGreenMat);
+      rightEar.position.set(0.47, 0.04, 0);
+      headGroup.add(rightEar);
+
+      // Germoglio Botanico Alberto Parolini in Testa ("Sprout")
+      const sproutGroup = new THREE.Group();
+      sproutGroup.position.set(0, 0.37, 0);
+
+      const sproutBaseGeo = new THREE.CylinderGeometry(0.06, 0.04, 0.06, 16);
+      const sproutBase = new THREE.Mesh(sproutBaseGeo, goldMat);
+      sproutBase.position.y = 0.03;
+      sproutGroup.add(sproutBase);
+
+      const stemGeo = new THREE.CylinderGeometry(0.02, 0.025, 0.16, 12);
+      const stem = new THREE.Mesh(stemGeo, sproutStemMat);
+      stem.position.y = 0.13;
+      sproutGroup.add(stem);
+
+      // Foglia Sinistra & Destra Modellate a Mano
+      const leafShape = new THREE.Shape();
+      leafShape.moveTo(0, 0);
+      leafShape.quadraticCurveTo(-0.08, 0.09, -0.04, 0.20);
+      leafShape.quadraticCurveTo(0, 0.25, 0.04, 0.20);
+      leafShape.quadraticCurveTo(0.08, 0.09, 0, 0);
+
+      const leafGeo = new THREE.ShapeGeometry(leafShape);
+
+      const leftLeaf = new THREE.Mesh(leafGeo, sproutLeafMat);
+      leftLeaf.position.set(0, 0.18, 0);
+      leftLeaf.rotation.z = 0.58;
+      leftLeaf.rotation.x = 0.25;
+      sproutGroup.add(leftLeaf);
+
+      const rightLeaf = new THREE.Mesh(leafGeo, sproutLeafMat);
+      rightLeaf.position.set(0, 0.18, 0);
+      rightLeaf.rotation.z = -0.58;
+      rightLeaf.rotation.x = -0.22;
+      sproutGroup.add(rightLeaf);
+
+      headGroup.add(sproutGroup);
+
+      // Badge Pop-Up Reazione (!)
+      const alertGroup = new THREE.Group();
+      alertGroup.position.set(0.95, 0.40, 0.25);
+      alertGroup.scale.set(0, 0, 0);
+
+      const alertMat = new THREE.MeshStandardMaterial({
+        color: 0x2dd4bf,
+        emissive: 0x0f5c4a,
+        emissiveIntensity: 2.8,
+        roughness: 0.1
+      });
+
+      const alertStem = new THREE.Mesh(new THREE.CylinderGeometry(0.10, 0.06, 0.34, 16), alertMat);
+      alertStem.position.y = 0.20;
+      alertGroup.add(alertStem);
+
+      const alertDot = new THREE.Mesh(new THREE.SphereGeometry(0.08, 16, 16), alertMat);
+      alertDot.position.y = -0.06;
+      alertGroup.add(alertDot);
+
+      robotGroup.add(alertGroup);
+
+      // Gestione Animazioni, Blink, Tracking Cursore e Reazione Query
+      let clock = new THREE.Clock();
+      let targetMouseX = 0, targetMouseY = 0;
+      let currMouseX = 0, currMouseY = 0;
+      let winkTimer = 0;
+      let nextWinkInterval = 3.5 + Math.random() * 3.0;
+      let isWinking = false;
+      let reactionTime = -1;
+
+      triggerBotReaction = function() {
+        reactionTime = 0;
+        isWinking = true;
+        winkTimer = 0;
+      };
+
+      window.addEventListener('pointermove', (e) => {
+        targetMouseX = (e.clientX / window.innerWidth - 0.5) * 0.9;
+        targetMouseY = (e.clientY / window.innerHeight - 0.5) * 0.7;
+      });
+
+      // Resize reattivo per mobile e desktop
+      window.addEventListener('resize', () => {
+        if (!container.clientHeight || !container.clientWidth) return;
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+      });
+
+      function animate() {
+        requestAnimationFrame(animate);
+        const delta = clock.getDelta();
+        const time = clock.getElapsedTime();
+
+        // Fluttuazione e respiro
+        let floatY = Math.sin(time * 2.2) * 0.07;
+        let sproutSway = Math.sin(time * 3.0) * 0.08;
+        sproutGroup.rotation.z = sproutSway;
+
+        // Reazione al comando (Spin 360° + Salto + Pop '!')
+        let jumpY = 0;
+        let spinY = 0;
+
+        if (reactionTime >= 0) {
+          reactionTime += delta;
+          const duration = 2.4;
+          if (reactionTime <= duration) {
+            const p = reactionTime / duration;
+            const spinCurve = Math.sin(p * Math.PI);
+            spinY = (1 - Math.cos(p * Math.PI)) * Math.PI; // Giro 360
+            jumpY = Math.sin(p * Math.PI) * 0.32;
+
+            if (p < 0.25) {
+              const s = p / 0.25;
+              alertGroup.scale.set(s, s, s);
+            } else if (p > 0.75) {
+              const s = (1 - p) / 0.25;
+              alertGroup.scale.set(s, s, s);
+            } else {
+              alertGroup.scale.set(1.1, 1.1, 1.1);
+            }
+          } else {
+            reactionTime = -1;
+            alertGroup.scale.set(0, 0, 0);
+          }
+        }
+
+        // Posizione finale robot
+        robotGroup.position.y = floatY + jumpY;
+
+        // Tracking cursore morbido
+        currMouseX += (targetMouseX - currMouseX) * 0.07;
+        currMouseY += (targetMouseY - currMouseY) * 0.07;
+
+        headGroup.rotation.y = currMouseX * 0.5;
+        headGroup.rotation.x = -currMouseY * 0.35;
+        robotGroup.rotation.y = spinY + currMouseX * 0.2;
+
+        // Ammiccamento (Blink occhi)
+        winkTimer += delta;
+        if (!isWinking && winkTimer >= nextWinkInterval) {
+          isWinking = true;
+          winkTimer = 0;
+          nextWinkInterval = 3.0 + Math.random() * 4.0;
+        }
+
+        if (isWinking) {
+          if (winkTimer < 0.12) {
+            leftEye.scale.y = 0.08;
+            rightEye.scale.y = 0.08;
+          } else {
+            leftEye.scale.y = 1.0;
+            rightEye.scale.y = 1.0;
+            isWinking = false;
+            winkTimer = 0;
+          }
+        }
+
+        // Sincronizzazione Parlato (Lipsync Bocca LED)
+        if (isSpeaking) {
+          const mouthOpen = 0.04 + Math.abs(Math.sin(time * 22)) * 0.09;
+          mouthMesh.scale.set(1.0 + Math.sin(time * 14) * 0.25, mouthOpen / 0.04, 1.0);
+          mouthMat.emissiveIntensity = 2.0 + Math.sin(time * 22) * 1.4;
+        } else {
+          mouthMesh.scale.set(1.0, 1.0, 1.0);
+          mouthMat.emissiveIntensity = 1.8;
+        }
+
+        renderer.render(scene, camera);
+      }
+
+      animate();
+    }
+
+    // Avvio asincrono sicuro
     loadSchedule();
+    try {
+      initParoliniBot(avatarContainer);
+    } catch (e) {
+      console.warn("Inizializzazione ParoliniBot 3D non riuscita:", e);
+    }
   </script>
 </body>
 </html>
