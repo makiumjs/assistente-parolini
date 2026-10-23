@@ -22,7 +22,11 @@ r = ask("quali laboratori sono liberi lunedì"); assert.equal(r.p.hour, null); c
 r = ask("il laboratorio di chimica 1 è libero giovedì alla quarta ora?"); console.log(r.a.speech);
 r = ask("chi c'è in palestra martedì alla seconda ora"); assert.equal(r.p.intent, "aula"); console.log(r.a.speech);
 
-r = ask("Dove si trova Anzalone lunedì alla prima ora"); assert.equal(r.p.intent, "docente"); assert.match(r.a.speech, /in 1AP in aula T1/); console.log(r.a.speech);
+r = ask("Dove si trova Anzalone giovedì alla prima ora"); assert.equal(r.p.intent, "docente"); assert.match(r.a.speech, /in 1AP in aula T1/); console.log(r.a.speech);
+r = ask("Dove si trova Anzalone lunedì alla prima ora"); assert.equal(r.p.intent, "docente"); assert.match(r.a.speech, /non ha lezioni/); console.log(r.a.speech);
+r = ask("Cosa fa Negrello mercoledì alla seconda ora"); assert.match(r.a.speech, /Staff di Dirigenza/); console.log(r.a.speech);
+r = ask("Cosa fa De Peron Enrico giovedì alla seconda ora"); assert.match(r.a.speech, /Ufficio Tecnico/); console.log(r.a.speech);
+r = ask("Cosa fa Zannini martedì alla seconda ora"); assert.match(r.a.speech, /Punto Vendita/); console.log(r.a.speech);
 r = ask("cosa ha anzolin domani"); console.log(r.a.speech);
 r = ask("cosa ho domani", "Gemin"); assert.ok(r.p.isSelf); console.log(r.a.speech);
 r = ask("dov'è romina"); assert.equal(r.p.intent, "ambiguo");

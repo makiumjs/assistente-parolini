@@ -15,6 +15,7 @@ import pdfplumber
 
 PDF_CLASSI = "data/Orario-Classi.pdf"
 PDF_DOCENTI = "data/Orario-Docenti.pdf"
+PDF_LABORATORI = "data/Orario-Laboratori.pdf"
 OUT_JSON = "public/data/orario_completo.json"
 OUT_REPORT = "data/report_anomalie.json"
 
@@ -83,8 +84,11 @@ def parse_griglia_classi():
     def add_pair(aula, classe):
         aula = norm_aula(aula)
         raw_c = (classe or "").strip()
-        if not aula or not raw_c or raw_c.upper() in (
-            "CLASSE", "BANCHI", "POLIVALENTE", "LABORATORIO DI INFORMATICA", "CANTINA", "INFO 2"
+        if not aula or not raw_c or aula in (
+            "LABORATORIO", "INFO 1", "INFO2", "INFO 2", "AULA", "PLESSO STORICO", "PLESSO NUOVO"
+        ) or raw_c.upper() in (
+            "CLASSE", "BANCHI", "POLIVALENTE", "LABORATORIO DI INFORMATICA", "CANTINA", "INFO 2",
+            "CHIMICA 1", "CHIMICA 2", "FITOPATOLOGIA", "BIOLOGIA", "ENOLOGIA"
         ):
             return
         for part in raw_c.split("/"):
@@ -171,8 +175,8 @@ def parse_docenti(report):
     out, periodo = {}, None
     for text, tables in pages_tables(PDF_DOCENTI):
         if periodo is None:
-            m = re.search(r"(\d{1,2}\s*-\s*\d{1,2}\s+[a-z]+\s+\d{4})", text, re.I)
-            periodo = m.group(1) if m else None
+            m = re.search(r"(?:ORARIO\s+)?(DAL\s+\d{1,2}\s+[A-Za-z]+\s+\d{4}|\d{1,2}\s*-\s*\d{1,2}\s+[a-z]+\s+\d{4})", text, re.I)
+            periodo = m.group(1).title() if m else None
         for tb in tables:
             if len(tb) < 2 or cell(tb[0][0]).upper() != "DOCENTE":
                 report["docenti_tabelle_ignorate"].append(cell(tb[0][0]) if tb else "")
@@ -188,8 +192,18 @@ def parse_docenti(report):
                     txt = cell(row[2 + i]) if 2 + i < len(row) else ""
                     if g is None or not txt or txt.upper() == "INTERVALLO":
                         continue
-                    if txt.upper() == "DISPOSIZIONE":
+                    txt_up = txt.upper()
+                    if txt_up == "DISPOSIZIONE":
                         sched[g][ORE[t]] = {"tipo": "disposizione"}
+                        continue
+                    if txt_up == "STAFF":
+                        sched[g][ORE[t]] = {"tipo": "staff"}
+                        continue
+                    if txt_up == "UFFICIO TECNICO":
+                        sched[g][ORE[t]] = {"tipo": "ufficio_tecnico"}
+                        continue
+                    if txt_up == "PUNTO VENDITA":
+                        sched[g][ORE[t]] = {"tipo": "punto_vendita"}
                         continue
                     m = RE_CELLA_DOC.match(txt)
                     if not m:
@@ -199,6 +213,40 @@ def parse_docenti(report):
                                         "classe": norm_classe(m.group(1) + m.group(2)),
                                         "aula": norm_aula(m.group(3)) or None}
     return out, periodo
+
+
+def parse_laboratori(report):
+    """Estrae l'orario ufficiale dei laboratori da data/Orario-Laboratori.pdf se presente."""
+    if not os.path.exists(PDF_LABORATORI):
+        return {}
+    labs = {}
+    with pdfplumber.open(PDF_LABORATORI) as pdf:
+        for page in pdf.pages:
+            tables = page.dedupe_chars(tolerance=1).extract_tables()
+            for tb in tables:
+                if len(tb) < 2 or not tb[0][1]:
+                    continue
+                lab_name = norm_aula(tb[0][1])
+                day_map = [("lunedi", 1, 2), ("martedi", 3, 4), ("mercoledi", 5, 6), ("giovedi", 7, 8), ("venerdi", 9, 10)]
+                lab_sched = labs.setdefault(lab_name, {g: {} for g in GIORNI})
+
+                for row in tb[2:]:
+                    ora_str = cell(row[0])
+                    if ora_str not in ORE:
+                        continue
+                    ora_num = ORE[ora_str]
+                    for g, c_doc, c_cls in day_map:
+                        doc = cell(row[c_doc]) if c_doc < len(row) else ""
+                        cls = cell(row[c_cls]) if c_cls < len(row) else ""
+                        if doc or cls:
+                            slot = lab_sched[g].setdefault(ora_num, {"docenti": [], "classi": []})
+                            if doc and doc not in slot["docenti"]:
+                                slot["docenti"].append(doc)
+                            if cls:
+                                norm_c = norm_classe(cls)
+                                if norm_c not in slot["classi"]:
+                                    slot["classi"].append(norm_c)
+    return labs
 
 
 # ---------------------------------------------------------------- riconciliazione
@@ -288,8 +336,8 @@ def riconcilia(classi_raw, docenti_raw, report, aule_classi=None):
     for nome, sched in docenti_raw.items():
         for g, ore in sched.items():
             for ora, s in ore.items():
-                if s["tipo"] == "disposizione":
-                    docenti[nome][g][ora] = {"tipo": "disposizione"}
+                if s["tipo"] in ("disposizione", "staff", "ufficio_tecnico", "punto_vendita"):
+                    docenti[nome][g][ora] = {"tipo": s["tipo"]}
                     continue
                 default_aula = aule_classi.get(s["classe"])
                 cl = classi.get(s["classe"])
@@ -344,27 +392,54 @@ def riconcilia(classi_raw, docenti_raw, report, aule_classi=None):
     return classi, docenti
 
 
-def costruisci_aule(classi, docenti):
-    """Occupazione per aula speciale, dedotta dalle classi e dai docenti (senza doppioni)."""
+def costruisci_aule(classi, docenti, labs_raw=None):
+    """Occupazione per aula speciale (laboratori, palestra, ecc.)."""
     occ = defaultdict(lambda: {g: {} for g in GIORNI})
+    labs_raw = labs_raw or {}
+
+    # 1. Base ufficiale dai Laboratori (se presente il PDF)
+    for lab_name, sched in labs_raw.items():
+        for g, ore in sched.items():
+            for ora, s in ore.items():
+                cls_str = " + ".join(s["classi"])
+                materia = ""
+                for c in s["classi"]:
+                    cl_slot = classi.get(c, {}).get(g, {}).get(ora)
+                    if cl_slot and cl_slot.get("materia"):
+                        materia = cl_slot["materia"]
+                        break
+                occ[lab_name][g][ora] = {
+                    "classe": cls_str,
+                    "materia": materia,
+                    "docenti": list(s["docenti"])
+                }
+
+    # 2. Integrazione da docenti per palestre e spazi non nel PDF laboratori
     for nome, sched in docenti.items():
         for g, ore in sched.items():
             for ora, s in ore.items():
                 aula = s.get("aula")
-                if s.get("tipo") == "disposizione" or not aula or not RE_AULA_SPECIALE.match(aula):
+                if s.get("tipo") in ("disposizione", "staff", "ufficio_tecnico", "punto_vendita") or not aula or not RE_AULA_SPECIALE.match(aula):
                     continue
-                e = occ[aula][g].setdefault(ora, {"classe": s["classe"], "materia": s["materia"], "docenti": []})
+                e = occ[aula][g].setdefault(ora, {"classe": s.get("classe", ""), "materia": s.get("materia", ""), "docenti": []})
+                if not e.get("materia") and s.get("materia"):
+                    e["materia"] = s["materia"]
                 if nome not in e["docenti"]:
                     e["docenti"].append(nome)
+
+    # 3. Integrazione da classi per palestre e spazi speciali
     for cid, sched in classi.items():
         for g, ore in sched.items():
             for ora, s in ore.items():
-                aula = s["aula"]
+                aula = s.get("aula")
                 if aula and RE_AULA_SPECIALE.match(aula):
-                    e = occ[aula][g].setdefault(ora, {"classe": cid, "materia": s["materia"], "docenti": []})
-                    for d in s["docenti"]:
+                    e = occ[aula][g].setdefault(ora, {"classe": cid, "materia": s.get("materia", ""), "docenti": []})
+                    if not e.get("materia") and s.get("materia"):
+                        e["materia"] = s["materia"]
+                    for d in s.get("docenti", []):
                         if d not in e["docenti"]:
                             e["docenti"].append(d)
+
     return {a: occ[a] for a in sorted(occ)}
 
 
@@ -385,8 +460,9 @@ def run():
     aule_classi = parse_griglia_classi()
     classi_raw = parse_classi(report)
     docenti_raw, periodo = parse_docenti(report)
+    labs_raw = parse_laboratori(report)
     classi, docenti = riconcilia(classi_raw, docenti_raw, report, aule_classi)
-    aule = costruisci_aule(classi, docenti)
+    aule = costruisci_aule(classi, docenti, labs_raw)
 
     def ids(d):
         return {persona_id(n): n for n in d}

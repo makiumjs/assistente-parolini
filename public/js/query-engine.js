@@ -196,6 +196,9 @@ function answerDocente(p, idx) {
 
   const describe = (s) => {
     if (s.tipo === "disposizione") return { main: "Disposizione", sub: "", say: p.isSelf ? "sarai a disposizione" : "è a disposizione" };
+    if (s.tipo === "staff") return { main: "Staff di Dirigenza", sub: "", say: p.isSelf ? "sarai in servizio nello Staff di Dirigenza" : "è in servizio nello Staff di Dirigenza" };
+    if (s.tipo === "ufficio_tecnico") return { main: "Ufficio Tecnico", sub: "", say: p.isSelf ? "sarai in servizio in Ufficio Tecnico" : "è in servizio in Ufficio Tecnico" };
+    if (s.tipo === "punto_vendita") return { main: "Punto Vendita / Azienda", sub: "", say: p.isSelf ? "sarai in servizio al Punto Vendita" : "è in servizio al Punto Vendita dell'istituto" };
     const extra = [...(s.altre_classi || [])];
     const cls = [s.classe, ...extra].join(" + ");
     const con = s.copresenza?.length ? s.copresenza.map(titleCase).join(", ") : "";
