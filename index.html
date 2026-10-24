@@ -58,14 +58,19 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Contenitore Principale a Larghezza Ottimale (Consultazione Immediata) */
+    /* Contenitore Principale */
     .app-wrapper {
-      max-width: 860px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 16px 18px 48px 18px;
       display: flex;
       flex-direction: column;
       gap: 16px;
+      transition: max-width 0.25s ease;
+    }
+
+    .app-wrapper.no-avatar-mode {
+      max-width: 860px;
     }
 
     /* Header Superiore Compatto & Istituzionale */
@@ -118,8 +123,9 @@
 
     .header-controls {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 10px;
+      gap: 9px;
     }
 
     /* Badge Orario Live della Scuola */
@@ -149,6 +155,49 @@
     @keyframes pulse-dot {
       0%, 100% { transform: scale(1); opacity: 1; }
       50% { transform: scale(1.3); opacity: 0.7; }
+    }
+
+    /* Bottone Toggle Avatar Alberto Parolini (FONDAMENTALE) */
+    .avatar-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: var(--surface-elevated);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-pill);
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .avatar-toggle-btn:hover {
+      background: #e6ede9;
+      border-color: var(--primary);
+    }
+
+    .avatar-toggle-btn.active {
+      background: #ecfdf5;
+      border-color: #a7f3d0;
+      color: #065f46;
+      box-shadow: 0 1px 4px rgba(15, 92, 74, 0.1);
+    }
+
+    .toggle-indicator-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #94a3b8;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+
+    .avatar-toggle-btn.active .toggle-indicator-dot {
+      background: #10b981;
+      box-shadow: 0 0 6px #10b981;
     }
 
     /* Profilo Rapido Docente */
@@ -187,8 +236,193 @@
     }
 
     /* =========================================================================
-     * COMMAND & SEARCH HUB (Punto Focale di Consultazione Immediata)
+     * MAIN LAYOUT: COMPANION ALBERTO + SCHEDULE COLUMN
      * ========================================================================= */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 20px;
+      align-items: start;
+      transition: all 0.25s ease;
+    }
+
+    .main-layout.no-avatar {
+      grid-template-columns: 1fr;
+    }
+
+    /* =========================================================================
+     * STRADA 1: COMPANION 2.5D ALBERTO PAROLINI (Qualità Pixar Nascituro)
+     * ========================================================================= */
+    aside.alberto-companion {
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 16px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .companion-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      box-shadow: 0 2px 12px rgba(15, 92, 74, 0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-close-companion {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.04);
+      border: none;
+      color: var(--text-muted);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+      z-index: 5;
+    }
+
+    .btn-close-companion:hover {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+
+    /* Cornice Arcuata da Ritratto Botanico 2.5D */
+    .alberto-portrait-frame {
+      width: 220px;
+      height: 240px;
+      border-radius: 110px 110px 24px 24px;
+      border: 2.5px solid var(--primary);
+      overflow: hidden;
+      position: relative;
+      background: #e2ece7;
+      box-shadow: 0 8px 24px rgba(15, 92, 74, 0.14);
+      transform-style: preserve-3d;
+      transition: transform 0.2s ease-out;
+    }
+
+    .alberto-portrait-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      animation: alberto-breathe 4s ease-in-out infinite;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @keyframes alberto-breathe {
+      0%, 100% {
+        transform: translateY(0px) scale(1.0);
+      }
+      50% {
+        transform: translateY(-3px) scale(1.015);
+      }
+    }
+
+    /* Alone Luminoso Botanico durante la risposta o il parlato */
+    .botanical-glow {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      border-radius: inherit;
+      pointer-events: none;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .alberto-companion.is-speaking .botanical-glow {
+      box-shadow: inset 0 0 16px rgba(45, 212, 191, 0.6), 0 0 24px rgba(15, 92, 74, 0.3);
+      animation: speak-glow 1.2s infinite alternate;
+    }
+
+    @keyframes speak-glow {
+      0% { box-shadow: inset 0 0 10px rgba(45, 212, 191, 0.4), 0 0 16px rgba(15, 92, 74, 0.2); }
+      100% { box-shadow: inset 0 0 22px rgba(45, 212, 191, 0.8), 0 0 28px rgba(15, 92, 74, 0.4); }
+    }
+
+    .companion-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .companion-title-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .companion-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.2px;
+    }
+
+    .companion-role {
+      font-size: 11.5px;
+      color: var(--primary);
+      font-weight: 600;
+      letter-spacing: 0.1px;
+    }
+
+    /* Fumetto di Dialogo Interattivo (Speech Bubble) */
+    .speech-bubble {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: var(--radius-md);
+      padding: 10px 12px;
+      position: relative;
+      box-shadow: 0 1px 4px rgba(22, 101, 52, 0.06);
+    }
+
+    .speech-bubble::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      width: 10px;
+      height: 10px;
+      background: #f0fdf4;
+      border-left: 1px solid #bbf7d0;
+      border-top: 1px solid #bbf7d0;
+    }
+
+    .speech-bubble p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #166534;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    /* =========================================================================
+     * SCHEDULE COLUMN: SEARCH & TIMETABLE RESULTS
+     * ========================================================================= */
+    .schedule-column {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-width: 0;
+    }
+
     .search-hub {
       display: flex;
       flex-direction: column;
@@ -310,9 +544,7 @@
       50% { transform: scale(1.08); }
     }
 
-    /* =========================================================================
-     * VOICE WAVE VISUALIZER (Interazione vocale discreta e non ingombrante)
-     * ========================================================================= */
+    /* Barra di Stato Vocale */
     #voice-status-bar {
       display: none;
       align-items: center;
@@ -365,9 +597,7 @@
       background: #dcfce7;
     }
 
-    /* =========================================================================
-     * CARD RISULTATI (Struttura Dati Pulita, Immediata & Tabellare)
-     * ========================================================================= */
+    /* Card Risultati */
     .schedule-card {
       background: var(--surface);
       border: 1px solid var(--surface-border);
@@ -421,7 +651,7 @@
       box-shadow: 0 2px 6px rgba(155, 40, 58, 0.2);
     }
 
-    /* Timeline Tabellare delle Ore */
+    /* Timeline Tabellare */
     .timetable-flow {
       display: flex;
       flex-direction: column;
@@ -493,7 +723,7 @@
       gap: 8px;
     }
 
-    /* Tag Specializzati per Laboratori, Aule e Incarichi */
+    /* Tag Specializzati */
     .loc-tag {
       display: inline-flex;
       align-items: center;
@@ -532,7 +762,7 @@
       border-top: 1px dashed var(--surface-border);
     }
 
-    /* Schermata Iniziale / Default */
+    /* Schermata Iniziale */
     .empty-state {
       padding: 20px 0;
       color: var(--text-secondary);
@@ -550,7 +780,7 @@
     }
     .quick-start-list li { margin-bottom: 6px; }
 
-    /* Footer / Info di Sistema */
+    /* Footer */
     footer.site-footer {
       display: flex;
       align-items: center;
@@ -567,11 +797,57 @@
       outline-offset: 2px;
     }
 
-    /* Ottimizzazioni Mobile */
-    @media (max-width: 640px) {
+    /* =========================================================================
+     * ADATTAMENTI RESPONSIVE MOBILE
+     * ========================================================================= */
+    @media (max-width: 859px) {
       .app-wrapper {
         padding: 10px 12px 32px 12px;
         gap: 12px;
+      }
+      .main-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      aside.alberto-companion {
+        position: static;
+        width: 100%;
+      }
+      .companion-card {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 14px;
+        gap: 14px;
+      }
+      .alberto-portrait-frame {
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        box-shadow: 0 4px 12px rgba(15, 92, 74, 0.12);
+      }
+      .companion-info {
+        flex: 1;
+        align-items: flex-start;
+      }
+      .companion-title-row {
+        align-items: flex-start;
+        text-align: left;
+      }
+      .speech-bubble {
+        padding: 6px 10px;
+      }
+      .speech-bubble::before {
+        display: none;
+      }
+      .speech-bubble p {
+        font-size: 12px;
+        text-align: left;
+      }
+      .btn-close-companion {
+        top: 6px;
+        right: 6px;
       }
       header.site-header {
         padding: 10px 12px;
@@ -608,7 +884,7 @@
 </head>
 <body>
 
-  <div class="app-wrapper">
+  <div class="app-wrapper" id="app-wrapper">
     <!-- Header Istituzionale Compatto & Live Indicator -->
     <header class="site-header" role="banner">
       <div class="brand-group">
@@ -625,6 +901,12 @@
           <span id="live-hour-text">Caricamento ora...</span>
         </div>
 
+        <!-- Bottone Disattivazione / Attivazione Avatar (FONDAMENTALE) -->
+        <button id="toggle-avatar-btn" class="avatar-toggle-btn active" type="button" aria-pressed="true" title="Mostra o nascondi l'assistente Alberto Parolini">
+          <span class="toggle-indicator-dot"></span>
+          <span id="toggle-avatar-text">🌿 Alberto: ON</span>
+        </button>
+
         <div class="profile-pill">
           <label for="docente-cognome-input">👤 Docente:</label>
           <input type="text" id="docente-cognome-input" class="profile-input" placeholder="Tuo cognome..." title="Imposta il tuo cognome per consultazione rapida" />
@@ -632,73 +914,110 @@
       </div>
     </header>
 
-    <!-- Barra di Ricerca & Comando (Command Hub Immediato) -->
-    <section class="search-hub" aria-label="Strumenti di ricerca orario">
-      <div class="search-bar-container">
-        <div class="search-icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </div>
-        <input 
-          type="text" 
-          id="query-input" 
-          class="search-input" 
-          aria-label="Cerca classe, docente, aula o laboratorio" 
-          placeholder="Cerca classe (es. 4AS), docente (es. Gemin), o laboratori..." 
-          autocomplete="off"
-        />
-        <div class="search-actions">
-          <span class="kbd-hint">/</span>
-          <button class="btn-search" id="search-btn" type="button">Cerca</button>
-          <button class="btn-mic" id="mic-btn" type="button" title="Dettatura vocale" aria-label="Attiva microfono">🎙️</button>
-        </div>
-      </div>
-
-      <!-- Barra di Stato Vocale (Leggera, compare solo durante parlato TTS) -->
-      <div id="voice-status-bar" role="status" aria-live="polite">
-        <div style="display:flex; align-items:center; gap:8px;">
-          <div class="voice-wave" aria-hidden="true">
-            <div class="wave-bar"></div>
-            <div class="wave-bar"></div>
-            <div class="wave-bar"></div>
-            <div class="wave-bar"></div>
+    <!-- Layout Principale: Companion Alberto + Colonna Orario -->
+    <div class="main-layout" id="main-layout">
+      <!-- Companion 2.5D Alta Fedeltà: Alberto Parolini -->
+      <aside class="alberto-companion" id="alberto-companion" aria-label="Assistente Virtuale Alberto Parolini">
+        <div class="companion-card">
+          <button class="btn-close-companion" id="btn-close-companion" type="button" title="Disattiva assistente" aria-label="Chiudi assistente">✕</button>
+          
+          <div class="alberto-portrait-frame" id="alberto-portrait-frame">
+            <img 
+              src="./public/img/alberto_parolini.webp" 
+              alt="Alberto Parolini - Naturalista e Botanico" 
+              class="alberto-portrait-img" 
+              id="alberto-portrait-img"
+              width="260" 
+              height="260" 
+              loading="eager"
+            />
+            <div class="botanical-glow" id="botanical-glow"></div>
           </div>
-          <span id="voice-status-text">Assistente sta parlando...</span>
-        </div>
-        <button class="btn-stop-speech" id="stop-speech-btn" type="button">Ferma audio ✕</button>
-      </div>
-    </section>
 
-    <!-- Card Risultati (Focalizzata sui Dati & Leggibilità) -->
-    <main>
-      <article class="schedule-card" id="info-card" aria-live="polite">
-        <div class="schedule-header">
-          <div class="schedule-title-group">
-            <h2 id="schedule-title">In attesa di richiesta...</h2>
+          <div class="companion-info">
+            <div class="companion-title-row">
+              <span class="companion-name">Alberto Parolini</span>
+              <span class="companion-role">Naturalista &amp; Guida Botanica</span>
+            </div>
+            
+            <div class="speech-bubble" id="alberto-speech-bubble">
+              <p id="alberto-bubble-text">«Benvenuto al Parolini! Chiedimi dove si trova una classe, l'orario di un docente o i laboratori liberi.»</p>
+            </div>
           </div>
-          <span id="schedule-badge" style="display:none;" class="badge-status"></span>
         </div>
+      </aside>
 
-        <!-- Vista Predefinita (In assenza di query) -->
-        <div id="empty-state-view" class="empty-state">
-          <p>Digita o detta una domanda per consultare subito l'orario ufficiale dell'Istituto:</p>
-          <ul class="quick-start-list">
-            <li><strong>Classi:</strong> <em>«Dove si trova la 4AS alla terza ora?»</em> oppure <em>«Orario 4GRFA venerdì»</em></li>
-            <li><strong>Docenti:</strong> <em>«Cosa ha Gemin domani?»</em> oppure <em>«Orario Anzalone giovedì»</em></li>
-            <li><strong>Laboratori &amp; Aule:</strong> <em>«Quali laboratori sono liberi mercoledì alla 2ª ora?»</em> o <em>«Chi c'è in palestra martedì?»</em></li>
-            <li><strong>Personale:</strong> Imposta il tuo cognome in alto per visualizzare al volo il tuo orario.</li>
-          </ul>
-        </div>
+      <!-- Colonna Ricerca & Risultati -->
+      <div class="schedule-column">
+        <!-- Barra di Ricerca & Comando -->
+        <section class="search-hub" aria-label="Strumenti di ricerca orario">
+          <div class="search-bar-container">
+            <div class="search-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <input 
+              type="text" 
+              id="query-input" 
+              class="search-input" 
+              aria-label="Cerca classe, docente, aula o laboratorio" 
+              placeholder="Cerca classe (es. 4AS), docente (es. Gemin), o laboratori..." 
+              autocomplete="off"
+            />
+            <div class="search-actions">
+              <span class="kbd-hint">/</span>
+              <button class="btn-search" id="search-btn" type="button">Cerca</button>
+              <button class="btn-mic" id="mic-btn" type="button" title="Dettatura vocale" aria-label="Attiva microfono">🎙️</button>
+            </div>
+          </div>
 
-        <!-- Righe Risultati Dettagliati -->
-        <div id="timetable-results" class="timetable-flow" style="display:none;"></div>
+          <!-- Barra di Stato Vocale -->
+          <div id="voice-status-bar" role="status" aria-live="polite">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <div class="voice-wave" aria-hidden="true">
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+              </div>
+              <span id="voice-status-text">Alberto sta parlando...</span>
+            </div>
+            <button class="btn-stop-speech" id="stop-speech-btn" type="button">Ferma audio ✕</button>
+          </div>
+        </section>
 
-        <!-- Note e Avvertenze Aule Ordinarie -->
-        <div id="schedule-note" class="schedule-note" style="display:none;"></div>
-      </article>
-    </main>
+        <!-- Card Risultati -->
+        <main>
+          <article class="schedule-card" id="info-card" aria-live="polite">
+            <div class="schedule-header">
+              <div class="schedule-title-group">
+                <h2 id="schedule-title">In attesa di richiesta...</h2>
+              </div>
+              <span id="schedule-badge" style="display:none;" class="badge-status"></span>
+            </div>
+
+            <!-- Vista Predefinita -->
+            <div id="empty-state-view" class="empty-state">
+              <p>Digita o detta una domanda per consultare subito l'orario ufficiale dell'Istituto:</p>
+              <ul class="quick-start-list">
+                <li><strong>Classi:</strong> <em>«Dove si trova la 4AS alla terza ora?»</em> oppure <em>«Orario 4GRFA venerdì»</em></li>
+                <li><strong>Docenti:</strong> <em>«Cosa ha Gemin domani?»</em> oppure <em>«Orario Anzalone giovedì»</em></li>
+                <li><strong>Laboratori &amp; Aule:</strong> <em>«Quali laboratori sono liberi mercoledì alla 2ª ora?»</em> o <em>«Chi c'è in palestra martedì?»</em></li>
+                <li><strong>Personale:</strong> Imposta il tuo cognome in alto per visualizzare al volo il tuo orario.</li>
+              </ul>
+            </div>
+
+            <!-- Righe Risultati Dettagliati -->
+            <div id="timetable-results" class="timetable-flow" style="display:none;"></div>
+
+            <!-- Note e Avvertenze Aule Ordinarie -->
+            <div id="schedule-note" class="schedule-note" style="display:none;"></div>
+          </article>
+        </main>
+      </div>
+    </div>
 
     <!-- Footer Istituzionale -->
     <footer class="site-footer">
@@ -724,10 +1043,70 @@
     const voiceStatusBar = document.getElementById('voice-status-bar');
     const stopSpeechBtn = document.getElementById('stop-speech-btn');
 
+    // Controlli Avatar Alberto Parolini (Strada 1)
+    const toggleAvatarBtn = document.getElementById('toggle-avatar-btn');
+    const toggleAvatarText = document.getElementById('toggle-avatar-text');
+    const btnCloseCompanion = document.getElementById('btn-close-companion');
+    const albertoCompanion = document.getElementById('alberto-companion');
+    const mainLayout = document.getElementById('main-layout');
+    const appWrapper = document.getElementById('app-wrapper');
+    const albertoBubbleText = document.getElementById('alberto-bubble-text');
+    const albertoPortraitFrame = document.getElementById('alberto-portrait-frame');
+
     let orarioIdx = null;
     let isSpeaking = false;
     let isListening = false;
     let myTeacherName = localStorage.getItem('parolini_my_surname') || "";
+
+    // -------------------------------------------------------------------------
+    // GESTIONE ATTIVAZIONE / DISATTIVAZIONE AVATAR (FONDAMENTALE)
+    // -------------------------------------------------------------------------
+    let isAvatarVisible = localStorage.getItem('parolini_avatar_visible') !== 'false';
+
+    function setAvatarVisibility(visible) {
+      isAvatarVisible = visible;
+      localStorage.setItem('parolini_avatar_visible', visible ? 'true' : 'false');
+      
+      if (visible) {
+        albertoCompanion.style.display = '';
+        mainLayout.classList.remove('no-avatar');
+        appWrapper.classList.remove('no-avatar-mode');
+        toggleAvatarBtn.classList.add('active');
+        toggleAvatarBtn.setAttribute('aria-pressed', 'true');
+        toggleAvatarText.textContent = '🌿 Alberto: ON';
+      } else {
+        albertoCompanion.style.display = 'none';
+        mainLayout.classList.add('no-avatar');
+        appWrapper.classList.add('no-avatar-mode');
+        toggleAvatarBtn.classList.remove('active');
+        toggleAvatarBtn.setAttribute('aria-pressed', 'false');
+        toggleAvatarText.textContent = '🌿 Alberto: OFF';
+      }
+    }
+
+    setAvatarVisibility(isAvatarVisible);
+
+    toggleAvatarBtn.addEventListener('click', () => {
+      setAvatarVisibility(!isAvatarVisible);
+    });
+
+    btnCloseCompanion.addEventListener('click', () => {
+      setAvatarVisibility(false);
+    });
+
+    // Effetto Parallasse & Micro-Inclinazione 2.5D con movimento cursore
+    if (albertoPortraitFrame) {
+      window.addEventListener('pointermove', (e) => {
+        if (!isAvatarVisible || window.innerWidth < 860) return;
+        const rect = albertoPortraitFrame.getBoundingClientRect();
+        if (rect.width === 0) return;
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const dx = (e.clientX - centerX) / (window.innerWidth / 2);
+        const dy = (e.clientY - centerY) / (window.innerHeight / 2);
+        albertoPortraitFrame.style.transform = `perspective(500px) rotateY(${dx * 9}deg) rotateX(${-dy * 7}deg)`;
+      });
+    }
 
     // -------------------------------------------------------------------------
     // ORE DI LEZIONE UFFICIALI PAROLINI
@@ -809,7 +1188,7 @@
     }
 
     // -------------------------------------------------------------------------
-    // SINTESI VOCALE (TTS) CON BARRA LIVE
+    // SINTESI VOCALE (TTS) CON BARRA LIVE & FEEDBACK COMPANION
     // -------------------------------------------------------------------------
     function sanitizeForSpeech(text) {
       if (!text) return "";
@@ -828,6 +1207,7 @@
       }
       isSpeaking = false;
       voiceStatusBar.style.display = "none";
+      albertoCompanion.classList.remove('is-speaking');
     }
 
     stopSpeechBtn.addEventListener('click', stopSpeaking);
@@ -847,14 +1227,17 @@
       utterance.onstart = () => {
         isSpeaking = true;
         voiceStatusBar.style.display = "flex";
+        albertoCompanion.classList.add('is-speaking');
       };
       utterance.onend = () => {
         isSpeaking = false;
         voiceStatusBar.style.display = "none";
+        albertoCompanion.classList.remove('is-speaking');
       };
       utterance.onerror = () => {
         isSpeaking = false;
         voiceStatusBar.style.display = "none";
+        albertoCompanion.classList.remove('is-speaking');
       };
 
       window.speechSynthesis.speak(utterance);
@@ -885,6 +1268,11 @@
         scheduleNote.style.display = "block";
       } else {
         scheduleNote.style.display = "none";
+      }
+
+      // Aggiorna il fumetto di Alberto con la risposta
+      if (albertoBubbleText) {
+        albertoBubbleText.textContent = `«${a.speech || a.title}»`;
       }
 
       timetableResults.replaceChildren(...(a.lines || []).map(l => {
