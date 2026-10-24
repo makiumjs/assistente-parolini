@@ -259,7 +259,7 @@
     }
 
     /* =========================================================================
-     * COMPANION ALBERTO PAROLINI (Mobile First: Banner Orizzontale Compatto)
+     * COMPANION ALBERTO PAROLINI (Mobile First: Living Avatar Prominente Senza Testo)
      * ========================================================================= */
     aside.alberto-companion {
       display: flex;
@@ -273,12 +273,12 @@
       background: linear-gradient(180deg, #ffffff 0%, #f4f8f5 100%);
       border: 1px solid var(--surface-border);
       border-radius: var(--radius-md);
-      padding: 10px 12px;
+      padding: 10px 12px 14px 12px;
       box-shadow: 0 2px 10px rgba(15, 92, 74, 0.06);
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
-      gap: 10px;
+      justify-content: center;
       position: relative;
       overflow: visible;
       transition: all 0.25s ease;
@@ -291,10 +291,10 @@
       background: rgba(0, 0, 0, 0.04);
       border: 1px solid rgba(0, 0, 0, 0.06);
       color: var(--text-muted);
-      width: 30px;
-      height: 30px;
-      min-width: 30px;
-      min-height: 30px;
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      min-height: 32px;
       border-radius: 50%;
       cursor: pointer;
       font-size: 13px;
@@ -314,11 +314,10 @@
       border-color: #fca5a5;
     }
 
-    /* Palcoscenico Trasparente Alberto (Mobile First) */
+    /* Palcoscenico Trasparente Alberto (Mobile First: Grande e Protagonista) */
     .alberto-stage {
-      width: 72px;
-      height: 86px;
-      flex-shrink: 0;
+      width: 100%;
+      height: 195px;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -334,35 +333,40 @@
       top: 10%;
       left: 50%;
       transform: translateX(-50%);
-      width: 64px;
-      height: 64px;
+      width: 155px;
+      height: 155px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(16, 185, 129, 0.16) 0%, rgba(15, 92, 74, 0) 70%);
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.18) 0%, rgba(15, 92, 74, 0) 70%);
       pointer-events: none;
       transition: all 0.3s ease;
       z-index: 1;
     }
 
     .alberto-character-img {
-      max-width: 70px;
-      height: 80px;
+      max-width: 175px;
+      height: 190px;
       width: auto;
       object-fit: contain;
       display: block;
       position: relative;
       z-index: 2;
-      filter: drop-shadow(0 6px 12px rgba(15, 92, 74, 0.22)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+      filter: drop-shadow(0 10px 18px rgba(15, 92, 74, 0.22)) drop-shadow(0 3px 6px rgba(0, 0, 0, 0.08));
       transform-origin: center bottom;
       animation: alberto-breathe 4s ease-in-out infinite;
       transition: transform 0.15s ease-out, filter 0.25s ease;
     }
 
+    .alberto-stage:hover .alberto-character-img,
+    .alberto-stage:active .alberto-character-img {
+      filter: drop-shadow(0 14px 24px rgba(15, 92, 74, 0.30)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+    }
+
     .alberto-ground-shadow {
-      width: 50px;
-      height: 6px;
+      width: 105px;
+      height: 10px;
       background: radial-gradient(ellipse at center, rgba(15, 92, 74, 0.24) 0%, rgba(15, 92, 74, 0) 75%);
       border-radius: 50%;
-      margin-top: -3px;
+      margin-top: -4px;
       z-index: 1;
       animation: shadow-breathe 4s ease-in-out infinite;
       pointer-events: none;
@@ -370,7 +374,7 @@
 
     @keyframes alberto-breathe {
       0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-      50% { transform: translateY(-3px) rotate(0.4deg) scale(1.012); }
+      50% { transform: translateY(-4px) rotate(0.4deg) scale(1.015); }
     }
 
     @keyframes shadow-breathe {
@@ -389,7 +393,7 @@
 
     @keyframes alberto-speak-anim {
       0% { transform: translateY(0px) rotate(0deg) scale(1); }
-      100% { transform: translateY(-4px) rotate(0.8deg) scale(1.02); }
+      100% { transform: translateY(-5px) rotate(0.8deg) scale(1.025); }
     }
 
     .alberto-companion.is-thinking .alberto-character-img {
@@ -398,7 +402,7 @@
 
     @keyframes alberto-think-anim {
       0%, 100% { transform: translateY(-2px) rotate(-1.5deg); }
-      50% { transform: translateY(-5px) rotate(-2.5deg) scale(1.015); }
+      50% { transform: translateY(-6px) rotate(-2.8deg) scale(1.018); }
     }
 
     .alberto-companion.is-nodding .alberto-character-img {
@@ -407,92 +411,9 @@
 
     @keyframes alberto-nod-anim {
       0% { transform: translateY(0) scale(1); }
-      30% { transform: translateY(5px) rotate(1deg) scale(0.98); }
-      60% { transform: translateY(-5px) rotate(-1deg) scale(1.03); }
+      30% { transform: translateY(6px) rotate(1deg) scale(0.98); }
+      60% { transform: translateY(-6px) rotate(-1deg) scale(1.03); }
       100% { transform: translateY(0) rotate(0deg) scale(1); }
-    }
-
-    .companion-info {
-      flex: 1;
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .companion-title-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 6px;
-      text-align: left;
-    }
-
-    .companion-name {
-      font-size: 13.5px;
-      font-weight: 700;
-      color: #0f172a;
-      letter-spacing: -0.2px;
-    }
-
-    .companion-role {
-      font-size: 11px;
-      color: var(--primary);
-      font-weight: 600;
-      letter-spacing: 0.1px;
-      display: none;
-    }
-
-    .companion-status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 3px;
-      font-size: 9.5px;
-      font-weight: 700;
-      color: #0f5c4a;
-      background: #e6f4ef;
-      border: 1px solid #bbf7d0;
-      border-radius: 999px;
-      padding: 1.5px 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.2px;
-      transition: all 0.2s ease;
-    }
-
-    .alberto-companion.is-speaking .companion-status-badge {
-      background: #dcfce7;
-      color: #15803d;
-      border-color: #86efac;
-      animation: pulse-badge 1s infinite alternate;
-    }
-
-    .alberto-companion.is-thinking .companion-status-badge {
-      background: #e0f2fe;
-      color: #0369a1;
-      border-color: #bae6fd;
-    }
-
-    .speech-bubble {
-      background: #f0fdf4;
-      border: 1.5px solid #bbf7d0;
-      border-radius: var(--radius-sm);
-      padding: 6px 10px;
-      position: relative;
-      box-shadow: 0 1px 4px rgba(22, 101, 52, 0.05);
-      transition: all 0.25s ease;
-    }
-
-    .speech-bubble::before {
-      display: none;
-    }
-
-    .speech-bubble p {
-      margin: 0;
-      font-size: 12px;
-      line-height: 1.35;
-      color: #166534;
-      font-weight: 500;
-      text-align: left;
     }
 
     /* =========================================================================
@@ -936,29 +857,21 @@
       .companion-card {
         padding: 14px 16px;
         border-radius: var(--radius-lg);
-        gap: 14px;
       }
       .alberto-stage {
-        width: 96px;
-        height: 110px;
+        height: 240px;
       }
       .alberto-halo {
-        width: 88px;
-        height: 88px;
+        width: 190px;
+        height: 190px;
       }
       .alberto-character-img {
-        max-width: 92px;
-        height: 104px;
+        max-width: 210px;
+        height: 230px;
       }
       .alberto-ground-shadow {
-        width: 66px;
-        height: 8px;
-      }
-      .companion-name {
-        font-size: 15px;
-      }
-      .speech-bubble p {
-        font-size: 13px;
+        width: 125px;
+        height: 12px;
       }
       .search-bar-container {
         border-radius: var(--radius-lg);
@@ -1018,58 +931,29 @@
       }
       .companion-card {
         flex-direction: column;
-        padding: 18px 16px 20px 16px;
-        gap: 12px;
+        padding: 20px 16px;
       }
       .alberto-stage {
         width: 100%;
-        height: 250px;
+        height: 360px;
       }
       .alberto-halo {
-        width: 180px;
-        height: 180px;
+        width: 240px;
+        height: 240px;
         top: 15%;
       }
       .alberto-character-img {
-        max-width: 205px;
-        height: 232px;
-        filter: drop-shadow(0 14px 20px rgba(15, 92, 74, 0.20)) drop-shadow(0 3px 6px rgba(0, 0, 0, 0.08));
+        max-width: 255px;
+        height: 350px;
+        filter: drop-shadow(0 16px 24px rgba(15, 92, 74, 0.22)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
       }
       .alberto-stage:hover .alberto-character-img {
-        filter: drop-shadow(0 18px 26px rgba(15, 92, 74, 0.28)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+        filter: drop-shadow(0 20px 30px rgba(15, 92, 74, 0.30)) drop-shadow(0 6px 12px rgba(0, 0, 0, 0.14));
       }
       .alberto-ground-shadow {
-        width: 130px;
-        height: 14px;
-        margin-top: -6px;
-      }
-      .companion-title-row {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 2px;
-      }
-      .speech-bubble {
-        padding: 10px 12px;
-        border-radius: var(--radius-md);
-      }
-      .speech-bubble::before {
-        display: block;
-        content: "";
-        position: absolute;
-        top: -7px;
-        left: 50%;
-        transform: translateX(-50%) rotate(45deg);
-        width: 12px;
-        height: 12px;
-        background: inherit;
-        border-left: 1.5px solid inherit;
-        border-top: 1.5px solid inherit;
-        border-color: inherit;
-      }
-      .speech-bubble p {
-        text-align: center;
-        font-size: 13px;
+        width: 155px;
+        height: 16px;
+        margin-top: -8px;
       }
       .schedule-card {
         padding: 24px 26px;
@@ -1142,36 +1026,24 @@
 
     <!-- Layout Principale: Companion Alberto + Colonna Orario -->
     <div class="main-layout" id="main-layout">
-      <!-- Companion 2.5D Alta Fedeltà: Alberto Parolini Sagomato Senza Sfondo -->
+      <!-- Companion 2.5D Alta Fedeltà: Alberto Parolini Sagomato Senza Sfondo (Massimo Risalto Visivo) -->
       <aside class="alberto-companion" id="alberto-companion" aria-label="Assistente Virtuale Alberto Parolini">
         <div class="companion-card" id="companion-card">
           <button class="btn-close-companion" id="btn-close-companion" type="button" title="Disattiva assistente" aria-label="Chiudi assistente">✕</button>
           
-          <!-- Palcoscenico Trasparente per Alberto 2.5D (Senza cornice con sfondo) -->
-          <div class="alberto-stage" id="alberto-stage" title="Clicca su Alberto per un consiglio!" role="button" tabindex="0" aria-label="Interagisci con Alberto Parolini">
+          <!-- Palcoscenico Trasparente per Alberto 2.5D -->
+          <div class="alberto-stage" id="alberto-stage" title="Tocca Alberto per un consiglio vocale!" role="button" tabindex="0" aria-label="Interagisci con Alberto Parolini">
             <div class="alberto-halo" id="alberto-halo" aria-hidden="true"></div>
             <img 
               src="./public/img/alberto_parolini_nobg.webp" 
               alt="Alberto Parolini - Naturalista e Guida Botanica" 
               class="alberto-character-img" 
               id="alberto-character-img"
-              width="240" 
-              height="280" 
+              width="260" 
+              height="350" 
               loading="eager"
             />
             <div class="alberto-ground-shadow" id="alberto-ground-shadow" aria-hidden="true"></div>
-          </div>
-
-          <div class="companion-info">
-            <div class="companion-title-row">
-              <span class="companion-name">Alberto Parolini</span>
-              <span class="companion-role">Naturalista &amp; Guida Botanica</span>
-              <span class="companion-status-badge" id="companion-status-badge">🌱 In ascolto</span>
-            </div>
-            
-            <div class="speech-bubble" id="alberto-speech-bubble">
-              <p id="alberto-bubble-text">«Benvenuto al Parolini! Chiedimi dove si trova una classe, l'orario di un docente o i laboratori liberi.»</p>
-            </div>
           </div>
         </div>
       </aside>
@@ -1345,7 +1217,7 @@
       
       const tip = BOTANICAL_TIPS[tipIndex % BOTANICAL_TIPS.length];
       tipIndex++;
-      albertoBubbleText.textContent = tip;
+      if (albertoBubbleText) albertoBubbleText.textContent = tip;
       speak(tip);
     }
 
