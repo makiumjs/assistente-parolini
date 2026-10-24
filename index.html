@@ -251,7 +251,7 @@
     }
 
     /* =========================================================================
-     * STRADA 1: COMPANION 2.5D ALBERTO PAROLINI (Qualità Pixar Nascituro)
+     * STRADA 1: COMPANION 2.5D ALBERTO PAROLINI (Sagoma Trasparente Senza Sfondo)
      * ========================================================================= */
     aside.alberto-companion {
       display: flex;
@@ -259,28 +259,30 @@
       position: sticky;
       top: 16px;
       animation: fadeIn 0.3s ease;
+      user-select: none;
     }
 
     .companion-card {
-      background: var(--surface);
+      background: linear-gradient(180deg, #ffffff 0%, #f4f8f5 100%);
       border: 1px solid var(--surface-border);
       border-radius: var(--radius-lg);
-      padding: 16px;
-      box-shadow: 0 2px 12px rgba(15, 92, 74, 0.06);
+      padding: 16px 14px 18px 14px;
+      box-shadow: 0 4px 16px rgba(15, 92, 74, 0.07);
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 12px;
       position: relative;
-      overflow: hidden;
+      overflow: visible;
+      transition: all 0.25s ease;
     }
 
     .btn-close-companion {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 8px;
+      right: 8px;
       background: rgba(0, 0, 0, 0.04);
-      border: none;
+      border: 1px solid rgba(0, 0, 0, 0.05);
       color: var(--text-muted);
       width: 26px;
       height: 26px;
@@ -292,72 +294,182 @@
       align-items: center;
       justify-content: center;
       transition: all 0.15s ease;
-      z-index: 5;
+      z-index: 10;
     }
 
     .btn-close-companion:hover {
-      background: #f1f5f9;
-      color: #0f172a;
+      background: #fee2e2;
+      color: #991b1b;
+      border-color: #fca5a5;
     }
 
-    /* Cornice Arcuata da Ritratto Botanico 2.5D */
-    .alberto-portrait-frame {
-      width: 220px;
-      height: 240px;
-      border-radius: 110px 110px 24px 24px;
-      border: 2.5px solid var(--primary);
-      overflow: hidden;
-      position: relative;
-      background: #e2ece7;
-      box-shadow: 0 8px 24px rgba(15, 92, 74, 0.14);
-      transform-style: preserve-3d;
-      transition: transform 0.2s ease-out;
-    }
-
-    .alberto-portrait-img {
+    /* Palcoscenico Trasparente per Alberto 2.5D (Senza cornice con sfondo) */
+    .alberto-stage {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
+      height: 250px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      cursor: pointer;
+      perspective: 700px;
+      touch-action: manipulation;
+    }
+
+    /* Alone botanico morbido dietro alla sagoma */
+    .alberto-halo {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.16) 0%, rgba(15, 92, 74, 0) 70%);
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+
+    /* Immagine Sagomata Trasparente di Alberto (Zero Sfondo) */
+    .alberto-character-img {
+      max-width: 205px;
+      height: 232px;
+      width: auto;
+      object-fit: contain;
       display: block;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 14px 20px rgba(15, 92, 74, 0.20)) drop-shadow(0 3px 6px rgba(0, 0, 0, 0.08));
+      transform-origin: center bottom;
       animation: alberto-breathe 4s ease-in-out infinite;
-      user-select: none;
+      transition: transform 0.15s ease-out, filter 0.25s ease;
+    }
+
+    .alberto-stage:hover .alberto-character-img {
+      filter: drop-shadow(0 18px 26px rgba(15, 92, 74, 0.28)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+    }
+
+    /* Ombra d'appoggio sul terreno per dare profondità 3D */
+    .alberto-ground-shadow {
+      width: 130px;
+      height: 14px;
+      background: radial-gradient(ellipse at center, rgba(15, 92, 74, 0.24) 0%, rgba(15, 92, 74, 0) 75%);
+      border-radius: 50%;
+      margin-top: -6px;
+      z-index: 1;
+      animation: shadow-breathe 4s ease-in-out infinite;
       pointer-events: none;
     }
 
+    /* Animazione Respiro (Idle naturale) */
     @keyframes alberto-breathe {
       0%, 100% {
-        transform: translateY(0px) scale(1.0);
+        transform: translateY(0px) rotate(0deg) scale(1);
       }
       50% {
-        transform: translateY(-3px) scale(1.015);
+        transform: translateY(-5px) rotate(0.4deg) scale(1.012);
       }
     }
 
-    /* Alone Luminoso Botanico durante la risposta o il parlato */
-    .botanical-glow {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      border-radius: inherit;
-      pointer-events: none;
-      transition: box-shadow 0.3s ease;
+    @keyframes shadow-breathe {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.65;
+      }
+      50% {
+        transform: scale(0.92);
+        opacity: 0.38;
+      }
     }
 
-    .alberto-companion.is-speaking .botanical-glow {
-      box-shadow: inset 0 0 16px rgba(45, 212, 191, 0.6), 0 0 24px rgba(15, 92, 74, 0.3);
-      animation: speak-glow 1.2s infinite alternate;
+    /* Animazione Parlato (Speaking state) */
+    .alberto-companion.is-speaking .alberto-character-img {
+      animation: alberto-speak-anim 0.45s ease-in-out infinite alternate !important;
     }
 
-    @keyframes speak-glow {
-      0% { box-shadow: inset 0 0 10px rgba(45, 212, 191, 0.4), 0 0 16px rgba(15, 92, 74, 0.2); }
-      100% { box-shadow: inset 0 0 22px rgba(45, 212, 191, 0.8), 0 0 28px rgba(15, 92, 74, 0.4); }
+    .alberto-companion.is-speaking .alberto-halo {
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.38) 0%, rgba(15, 92, 74, 0) 75%);
+      transform: translateX(-50%) scale(1.2);
+    }
+
+    @keyframes alberto-speak-anim {
+      0% {
+        transform: translateY(0px) rotate(0deg) scale(1);
+      }
+      100% {
+        transform: translateY(-4px) rotate(0.8deg) scale(1.02);
+      }
+    }
+
+    /* Animazione Ricerca / Pensiero (Thinking state) */
+    .alberto-companion.is-thinking .alberto-character-img {
+      animation: alberto-think-anim 1.4s ease-in-out infinite !important;
+    }
+
+    @keyframes alberto-think-anim {
+      0%, 100% {
+        transform: translateY(-2px) rotate(-1.5deg);
+      }
+      50% {
+        transform: translateY(-6px) rotate(-3deg) scale(1.015);
+      }
+    }
+
+    /* Animazione Cenno della testa al click (Nodding) */
+    .alberto-companion.is-nodding .alberto-character-img {
+      animation: alberto-nod-anim 0.55s ease forwards !important;
+    }
+
+    @keyframes alberto-nod-anim {
+      0% { transform: translateY(0) scale(1); }
+      30% { transform: translateY(7px) rotate(1deg) scale(0.98); }
+      60% { transform: translateY(-7px) rotate(-1deg) scale(1.03); }
+      100% { transform: translateY(0) rotate(0deg) scale(1); }
+    }
+
+    /* Badge Stato Assistente */
+    .companion-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #0f5c4a;
+      background: #e6f4ef;
+      border: 1px solid #bbf7d0;
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin-top: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      transition: all 0.2s ease;
+    }
+
+    .alberto-companion.is-speaking .companion-status-badge {
+      background: #dcfce7;
+      color: #15803d;
+      border-color: #86efac;
+      animation: pulse-badge 1s infinite alternate;
+    }
+
+    .alberto-companion.is-thinking .companion-status-badge {
+      background: #e0f2fe;
+      color: #0369a1;
+      border-color: #bae6fd;
+    }
+
+    @keyframes pulse-badge {
+      0% { transform: scale(0.98); opacity: 0.85; }
+      100% { transform: scale(1.04); opacity: 1; }
     }
 
     .companion-info {
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
     }
 
     .companion-title-row {
@@ -384,24 +496,38 @@
     /* Fumetto di Dialogo Interattivo (Speech Bubble) */
     .speech-bubble {
       background: #f0fdf4;
-      border: 1px solid #bbf7d0;
+      border: 1.5px solid #bbf7d0;
       border-radius: var(--radius-md);
       padding: 10px 12px;
       position: relative;
-      box-shadow: 0 1px 4px rgba(22, 101, 52, 0.06);
+      box-shadow: 0 2px 8px rgba(22, 101, 52, 0.07);
+      transition: all 0.25s ease;
+    }
+
+    .alberto-companion.is-speaking .speech-bubble {
+      border-color: #10b981;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25), 0 4px 12px rgba(15, 92, 74, 0.12);
+      background: #ecfdf5;
+    }
+
+    .alberto-companion.is-thinking .speech-bubble {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+      background: #f0f9ff;
     }
 
     .speech-bubble::before {
       content: "";
       position: absolute;
-      top: -6px;
+      top: -7px;
       left: 50%;
       transform: translateX(-50%) rotate(45deg);
-      width: 10px;
-      height: 10px;
-      background: #f0fdf4;
-      border-left: 1px solid #bbf7d0;
-      border-top: 1px solid #bbf7d0;
+      width: 12px;
+      height: 12px;
+      background: inherit;
+      border-left: 1.5px solid inherit;
+      border-top: 1.5px solid inherit;
+      border-color: inherit;
     }
 
     .speech-bubble p {
@@ -818,18 +944,30 @@
         flex-direction: row;
         align-items: center;
         padding: 10px 14px;
-        gap: 14px;
+        gap: 12px;
       }
-      .alberto-portrait-frame {
-        width: 76px;
-        height: 76px;
-        border-radius: 50%;
+      .alberto-stage {
+        width: 82px;
+        height: 88px;
         flex-shrink: 0;
-        box-shadow: 0 4px 12px rgba(15, 92, 74, 0.12);
+      }
+      .alberto-halo {
+        width: 72px;
+        height: 72px;
+      }
+      .alberto-character-img {
+        max-width: 76px;
+        height: 84px;
+      }
+      .alberto-ground-shadow {
+        width: 58px;
+        height: 7px;
+        margin-top: -3px;
       }
       .companion-info {
         flex: 1;
         align-items: flex-start;
+        gap: 6px;
       }
       .companion-title-row {
         align-items: flex-start;
@@ -916,28 +1054,31 @@
 
     <!-- Layout Principale: Companion Alberto + Colonna Orario -->
     <div class="main-layout" id="main-layout">
-      <!-- Companion 2.5D Alta Fedeltà: Alberto Parolini -->
+      <!-- Companion 2.5D Alta Fedeltà: Alberto Parolini Sagomato Senza Sfondo -->
       <aside class="alberto-companion" id="alberto-companion" aria-label="Assistente Virtuale Alberto Parolini">
-        <div class="companion-card">
+        <div class="companion-card" id="companion-card">
           <button class="btn-close-companion" id="btn-close-companion" type="button" title="Disattiva assistente" aria-label="Chiudi assistente">✕</button>
           
-          <div class="alberto-portrait-frame" id="alberto-portrait-frame">
+          <!-- Palcoscenico Trasparente per Alberto 2.5D (Senza cornice con sfondo) -->
+          <div class="alberto-stage" id="alberto-stage" title="Clicca su Alberto per un consiglio!" role="button" tabindex="0" aria-label="Interagisci con Alberto Parolini">
+            <div class="alberto-halo" id="alberto-halo" aria-hidden="true"></div>
             <img 
-              src="./public/img/alberto_parolini.webp" 
-              alt="Alberto Parolini - Naturalista e Botanico" 
-              class="alberto-portrait-img" 
-              id="alberto-portrait-img"
-              width="260" 
-              height="260" 
+              src="./public/img/alberto_parolini_nobg.webp" 
+              alt="Alberto Parolini - Naturalista e Guida Botanica" 
+              class="alberto-character-img" 
+              id="alberto-character-img"
+              width="240" 
+              height="280" 
               loading="eager"
             />
-            <div class="botanical-glow" id="botanical-glow"></div>
+            <div class="alberto-ground-shadow" id="alberto-ground-shadow" aria-hidden="true"></div>
           </div>
 
           <div class="companion-info">
             <div class="companion-title-row">
               <span class="companion-name">Alberto Parolini</span>
               <span class="companion-role">Naturalista &amp; Guida Botanica</span>
+              <span class="companion-status-badge" id="companion-status-badge">🌱 In ascolto</span>
             </div>
             
             <div class="speech-bubble" id="alberto-speech-bubble">
@@ -1043,15 +1184,17 @@
     const voiceStatusBar = document.getElementById('voice-status-bar');
     const stopSpeechBtn = document.getElementById('stop-speech-btn');
 
-    // Controlli Avatar Alberto Parolini (Strada 1)
+    // Controlli Avatar Alberto Parolini (Strada 1 - Living Avatar 2.5D)
     const toggleAvatarBtn = document.getElementById('toggle-avatar-btn');
     const toggleAvatarText = document.getElementById('toggle-avatar-text');
     const btnCloseCompanion = document.getElementById('btn-close-companion');
     const albertoCompanion = document.getElementById('alberto-companion');
+    const albertoStage = document.getElementById('alberto-stage');
+    const albertoCharacterImg = document.getElementById('alberto-character-img');
+    const companionStatusBadge = document.getElementById('companion-status-badge');
     const mainLayout = document.getElementById('main-layout');
     const appWrapper = document.getElementById('app-wrapper');
     const albertoBubbleText = document.getElementById('alberto-bubble-text');
-    const albertoPortraitFrame = document.getElementById('alberto-portrait-frame');
 
     let orarioIdx = null;
     let isSpeaking = false;
@@ -1094,17 +1237,57 @@
       setAvatarVisibility(false);
     });
 
-    // Effetto Parallasse & Micro-Inclinazione 2.5D con movimento cursore
-    if (albertoPortraitFrame) {
+    // -------------------------------------------------------------------------
+    // INTERAZIONE VIVA CON IL PERSONAGGIO (Click, Parallasse, Consigli Botanici)
+    // -------------------------------------------------------------------------
+    const BOTANICAL_TIPS = [
+      "«Hai un'ora libera? Prova a cercare: 'laboratori liberi mercoledì 2 ora'!»",
+      "«Puoi cercare per classe (es. '4AS'), per docente (es. 'Gemin') o per aula!»",
+      "«L'Orto Botanico di Bassano fu fondato nel 1805: esplorare e coltivare è la nostra vocazione.»",
+      "«Imposta il tuo cognome in alto a destra per vedere al volo il tuo orario ovunque tu sia!»",
+      "«Clicca sull'icona del microfono 🎙️ e dettami la tua richiesta a voce.»",
+      "«Chiedimi: 'Dove si trova la 4PT venerdì alla 3ª ora?' e ti risponderò all'istante!»"
+    ];
+    let tipIndex = 0;
+
+    function triggerAlbertoInteraction() {
+      if (!isAvatarVisible) return;
+      albertoCompanion.classList.add('is-nodding');
+      setTimeout(() => albertoCompanion.classList.remove('is-nodding'), 600);
+      
+      const tip = BOTANICAL_TIPS[tipIndex % BOTANICAL_TIPS.length];
+      tipIndex++;
+      albertoBubbleText.textContent = tip;
+      speak(tip);
+    }
+
+    if (albertoStage) {
+      albertoStage.addEventListener('click', triggerAlbertoInteraction);
+      albertoStage.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          triggerAlbertoInteraction();
+        }
+      });
+    }
+
+    // Effetto Parallasse & Micro-Inclinazione 2.5D sulla sagoma del personaggio
+    if (albertoCharacterImg) {
       window.addEventListener('pointermove', (e) => {
-        if (!isAvatarVisible || window.innerWidth < 860) return;
-        const rect = albertoPortraitFrame.getBoundingClientRect();
+        if (!isAvatarVisible || window.innerWidth < 860 || isSpeaking) return;
+        const rect = albertoCharacterImg.getBoundingClientRect();
         if (rect.width === 0) return;
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
         const dx = (e.clientX - centerX) / (window.innerWidth / 2);
         const dy = (e.clientY - centerY) / (window.innerHeight / 2);
-        albertoPortraitFrame.style.transform = `perspective(500px) rotateY(${dx * 9}deg) rotateX(${-dy * 7}deg)`;
+        albertoCharacterImg.style.transform = `perspective(600px) rotateY(${dx * 11}deg) rotateX(${-dy * 8}deg) translateY(-3px) scale(1.015)`;
+      });
+
+      window.addEventListener('pointerleave', () => {
+        if (albertoCharacterImg && !isSpeaking) {
+          albertoCharacterImg.style.transform = '';
+        }
       });
     }
 
@@ -1208,6 +1391,7 @@
       isSpeaking = false;
       voiceStatusBar.style.display = "none";
       albertoCompanion.classList.remove('is-speaking');
+      if (companionStatusBadge) companionStatusBadge.textContent = '🌱 In ascolto';
     }
 
     stopSpeechBtn.addEventListener('click', stopSpeaking);
@@ -1228,16 +1412,20 @@
         isSpeaking = true;
         voiceStatusBar.style.display = "flex";
         albertoCompanion.classList.add('is-speaking');
+        albertoCompanion.classList.remove('is-thinking');
+        if (companionStatusBadge) companionStatusBadge.textContent = '🔊 Alberto spiega';
       };
       utterance.onend = () => {
         isSpeaking = false;
         voiceStatusBar.style.display = "none";
         albertoCompanion.classList.remove('is-speaking');
+        if (companionStatusBadge) companionStatusBadge.textContent = '🌱 In ascolto';
       };
       utterance.onerror = () => {
         isSpeaking = false;
         voiceStatusBar.style.display = "none";
         albertoCompanion.classList.remove('is-speaking');
+        if (companionStatusBadge) companionStatusBadge.textContent = '🌱 In ascolto';
       };
 
       window.speechSynthesis.speak(utterance);
@@ -1365,8 +1553,27 @@
 
     function submitSearch() {
       const val = inputField.value.trim();
+      albertoCompanion.classList.remove('is-thinking');
+      if (companionStatusBadge && !isSpeaking) companionStatusBadge.textContent = '🌱 In ascolto';
       if (val) handleQuery(val);
     }
+
+    let searchInputTimeout = null;
+    inputField.addEventListener('input', () => {
+      const val = inputField.value.trim();
+      if (val.length >= 2) {
+        albertoCompanion.classList.add('is-thinking');
+        if (companionStatusBadge) companionStatusBadge.textContent = '🔍 Consulta orario';
+        clearTimeout(searchInputTimeout);
+        searchInputTimeout = setTimeout(() => {
+          albertoCompanion.classList.remove('is-thinking');
+          if (companionStatusBadge && !isSpeaking) companionStatusBadge.textContent = '🌱 In ascolto';
+        }, 1200);
+      } else {
+        albertoCompanion.classList.remove('is-thinking');
+        if (companionStatusBadge && !isSpeaking) companionStatusBadge.textContent = '🌱 In ascolto';
+      }
+    });
 
     searchBtn.addEventListener('click', submitSearch);
     inputField.addEventListener('keydown', (e) => {
@@ -1396,14 +1603,20 @@
           try { recognizer.stop(); } catch (e) {}
           isListening = false;
           micBtn.classList.remove('listening');
+          albertoCompanion.classList.remove('is-thinking');
+          if (companionStatusBadge) companionStatusBadge.textContent = '🌱 In ascolto';
         } else {
           try {
             recognizer.start();
             isListening = true;
             micBtn.classList.add('listening');
+            albertoCompanion.classList.add('is-thinking');
+            if (companionStatusBadge) companionStatusBadge.textContent = '🎙️ Ti ascolto...';
           } catch (e) {
             isListening = false;
             micBtn.classList.remove('listening');
+            albertoCompanion.classList.remove('is-thinking');
+            if (companionStatusBadge) companionStatusBadge.textContent = '🌱 In ascolto';
           }
         }
       });
@@ -1411,10 +1624,22 @@
       recognizer.onresult = (evt) => {
         const spokenText = evt.results[0][0].transcript;
         inputField.value = spokenText;
+        albertoCompanion.classList.remove('is-thinking');
+        if (companionStatusBadge) companionStatusBadge.textContent = '🌱 In ascolto';
         handleQuery(spokenText);
       };
-      recognizer.onend = () => { isListening = false; micBtn.classList.remove('listening'); };
-      recognizer.onerror = () => { isListening = false; micBtn.classList.remove('listening'); };
+      recognizer.onend = () => { 
+        isListening = false; 
+        micBtn.classList.remove('listening');
+        albertoCompanion.classList.remove('is-thinking');
+        if (companionStatusBadge && !isSpeaking) companionStatusBadge.textContent = '🌱 In ascolto';
+      };
+      recognizer.onerror = () => { 
+        isListening = false; 
+        micBtn.classList.remove('listening');
+        albertoCompanion.classList.remove('is-thinking');
+        if (companionStatusBadge && !isSpeaking) companionStatusBadge.textContent = '🌱 In ascolto';
+      };
     } else {
       micBtn.style.display = 'none';
     }
