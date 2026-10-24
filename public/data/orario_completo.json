@@ -246,10 +246,7 @@
       "materia": "MATEMATICA",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      },
      "3": {
       "tipo": "lezione",
@@ -291,10 +288,7 @@
       "materia": "MATEMATICA",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      }
     },
     "giovedi": {
@@ -328,10 +322,7 @@
       "materia": "MATEMATICA",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      }
     },
     "venerdi": {
@@ -349,10 +340,7 @@
       "materia": "MATEMATICA",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      },
      "4": {
       "tipo": "lezione",
@@ -408,7 +396,7 @@
     },
     "martedi": {
      "6": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4PT",
       "materia": "PROD VEGETALI",
       "aula": "NP6",
@@ -436,7 +424,7 @@
       "fonte": "docenti+classi"
      },
      "3": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4PT",
       "materia": "PROD VEGETALI",
       "aula": "NP6",
@@ -446,7 +434,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5GRFB",
       "materia": "TECNICHE DELLE PROD",
       "aula": "NP5",
@@ -456,7 +444,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5GRFB",
       "materia": "TECNICHE DELLE PROD",
       "aula": "NP5",
@@ -476,7 +464,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "1AT",
       "materia": "FOND SC AGRARIE",
       "aula": "NT1",
@@ -486,7 +474,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4PT",
       "materia": "PROD VEGETALI",
       "aula": "NP6",
@@ -496,7 +484,7 @@
       "fonte": "docenti+classi"
      },
      "6": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5GRFB",
       "materia": "ASSESTAMENTO",
       "aula": "NP5",
@@ -532,7 +520,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5GRFB",
       "materia": "ASSESTAMENTO",
       "aula": "NP5",
@@ -566,10 +554,7 @@
       "materia": "SCIENZE MOTORIE",
       "aula": "PALESTRA",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      },
      "4": {
       "tipo": "lezione",
@@ -577,10 +562,7 @@
       "materia": "SCIENZE MOTORIE",
       "aula": "PALESTRA",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      },
      "5": {
       "tipo": "lezione",
@@ -678,27 +660,27 @@
    "orario": {
     "lunedi": {},
     "martedi": {
-     "2": {
+     "1": {
       "tipo": "lezione",
       "classe": "2AT",
       "materia": "CHIMICA",
       "aula": "NT4",
       "copresenza": [],
       "fonte": "docenti+classi"
-     }
-    },
-    "mercoledi": {},
-    "giovedi": {
-     "3": {
+     },
+     "2": {
       "tipo": "lezione",
       "classe": "2AT",
       "materia": "CHIMICA",
-      "aula": "LAB CHIMICA 1",
+      "aula": "LAB ENOLOGIA",
       "copresenza": [
        "MOSELE LUCA"
       ],
       "fonte": "docenti+classi"
-     },
+     }
+    },
+    "mercoledi": {},
+    "giovedi": {
      "4": {
       "tipo": "lezione",
       "classe": "2AT",
@@ -720,7 +702,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "5FA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NP2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -816,7 +798,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "5FA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NP2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -852,7 +834,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "5FA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NP2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -860,7 +842,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5FA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NP2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1082,7 +1064,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "3VE",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP9",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1126,7 +1108,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "3VE",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP9",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1145,7 +1127,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "3VE",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP9",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1161,7 +1143,7 @@
    }
   },
   "CADO_FRANCESCA": {
-   "nome": "CADO FRANCESCA",
+   "nome": "CADO’ FRANCESCA",
    "senza_nome": false,
    "orario": {
     "lunedi": {
@@ -1432,7 +1414,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "5GRFA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1440,7 +1422,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "5GRFA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1448,7 +1430,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "5FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1456,7 +1438,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "4PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1466,7 +1448,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "5GRFA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1474,7 +1456,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "5FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1482,7 +1464,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "4PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1492,7 +1474,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "4PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1500,7 +1482,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "4PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1508,7 +1490,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "5GRFA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1516,7 +1498,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "5FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1526,7 +1508,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "5GRFA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1534,7 +1516,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "5FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1542,7 +1524,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1550,7 +1532,7 @@
      "8": {
       "tipo": "lezione",
       "classe": "4PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1560,7 +1542,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "5GRFA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1568,7 +1550,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "5FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1576,7 +1558,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "4PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1611,7 +1593,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "3AS",
       "materia": "AGRICOL SOSTENIBILE",
       "aula": "C1",
@@ -1626,17 +1608,17 @@
       "tipo": "lezione",
       "classe": "4GRFA",
       "materia": "LAB DI BIO E CHI",
-      "aula": "LAB CHIMICA 2",
+      "aula": "LAB CHIMICA 2/BIOLOGIA",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "4": {
       "tipo": "lezione",
       "classe": "4GRFA",
       "materia": "LAB DI BIO E CHI",
-      "aula": "LAB CHIMICA 2",
+      "aula": "LAB CHIMICA 2/BIOLOGIA",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "5": {
       "tipo": "compresenza",
@@ -1706,17 +1688,17 @@
       "tipo": "lezione",
       "classe": "4AS",
       "materia": "LAB DI BIO E CHI",
-      "aula": "LAB CHIMICA 2",
+      "aula": "LAB CHIMICA 2/BIOLOGIA",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "7": {
       "tipo": "lezione",
       "classe": "4AS",
       "materia": "LAB DI BIO E CHI",
-      "aula": "LAB CHIMICA 2",
+      "aula": "LAB CHIMICA 2/BIOLOGIA",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "8": {
       "tipo": "compresenza",
@@ -1741,7 +1723,7 @@
       "fonte": "docenti+classi"
      },
      "3": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "3FA",
       "materia": "TECN AGROALIMENTARI",
       "aula": "NP7",
@@ -1782,7 +1764,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "2CT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1790,7 +1772,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "5GRFB",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1798,7 +1780,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "3AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "C1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1808,7 +1790,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5GRFB",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1816,7 +1798,7 @@
      "7": {
       "tipo": "lezione",
       "classe": "2CT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1826,7 +1808,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "3AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "C1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1834,7 +1816,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "2CT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1842,7 +1824,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "2CT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1850,7 +1832,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5GRFB",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1860,7 +1842,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "2CT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1868,7 +1850,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "3AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "C1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1876,7 +1858,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "3AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "C1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1884,7 +1866,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "5GRFB",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1894,7 +1876,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "3AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "C1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1902,7 +1884,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "5GRFB",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1910,7 +1892,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "5GRFB",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1918,7 +1900,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "2CT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1926,7 +1908,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "3AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "C1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -1952,9 +1934,9 @@
       "tipo": "lezione",
       "classe": "3PTA",
       "materia": "PROD ANIMALI",
-      "aula": "NP10",
+      "aula": "AULA MAGNA",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "3": {
       "tipo": "lezione",
@@ -2092,9 +2074,9 @@
       "tipo": "lezione",
       "classe": "3PTA",
       "materia": "PROD ANIMALI",
-      "aula": "NP10",
+      "aula": "AULA MAGNA",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "3": {
       "tipo": "lezione",
@@ -2134,7 +2116,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "4FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "101",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2142,7 +2124,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "5VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2150,7 +2132,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "4VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2160,7 +2142,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "5VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2168,7 +2150,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "4FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "101",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2176,7 +2158,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "4VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2184,7 +2166,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "4VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2194,7 +2176,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "4FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "101",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2202,7 +2184,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "5VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2210,7 +2192,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "4VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2220,7 +2202,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "4FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "101",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2228,7 +2210,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2236,7 +2218,7 @@
      "8": {
       "tipo": "lezione",
       "classe": "4VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2246,7 +2228,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "4VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2254,7 +2236,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "4FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "101",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2262,7 +2244,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "4FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "101",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2270,7 +2252,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "5VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2278,7 +2260,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2315,7 +2297,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "4GRFB",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "103",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2323,7 +2305,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5GRFA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NT7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2333,7 +2315,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "4AS",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "104",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2351,7 +2333,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "5GRFA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NT7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2381,7 +2363,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "4AS",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "104",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2391,7 +2373,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "5GRFA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NT7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2399,7 +2381,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "4AS",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "104",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2407,7 +2389,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "4GRFB",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "103",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2417,7 +2399,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "4AS",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "104",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2445,7 +2427,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "4GRFB",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "103",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2453,7 +2435,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5GRFA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NT7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2611,7 +2593,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "5AET",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NT9",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2619,7 +2601,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "5GRFB",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NP5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2645,7 +2627,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "5GRFB",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NP5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2653,7 +2635,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "3AET",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP12",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2671,7 +2653,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "3AET",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP12",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2689,7 +2671,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "5AET",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NT9",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2715,7 +2697,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "5GRFB",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NP5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2735,7 +2717,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "5AET",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NT9",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2763,7 +2745,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5GRFB",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NP5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2941,7 +2923,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "3PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2949,7 +2931,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "5AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2957,7 +2939,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "4AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "104",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2965,7 +2947,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "4AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "104",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2975,7 +2957,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "3PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2983,7 +2965,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "4AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "104",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -2991,7 +2973,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3001,7 +2983,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "3PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3009,7 +2991,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "5AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3017,7 +2999,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "4AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "104",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3027,7 +3009,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "5AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3035,7 +3017,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "5AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3043,7 +3025,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "3PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3051,7 +3033,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "4AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "104",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3061,7 +3043,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "3PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3069,7 +3051,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "3PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3077,7 +3059,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "4AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "104",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3085,7 +3067,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "5AS",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3197,7 +3179,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "1CP",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NT3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3205,7 +3187,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "3AS",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "C1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3213,7 +3195,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "1AP",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "T1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3221,7 +3203,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "1BT",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NT2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3242,7 +3224,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "3FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3250,7 +3232,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "3FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3292,7 +3274,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "3FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3310,7 +3292,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "3FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3352,7 +3334,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "3FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3370,7 +3352,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "3FA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3407,10 +3389,7 @@
       "materia": "INGLESE",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      },
      "2": {
       "tipo": "lezione",
@@ -3476,10 +3455,7 @@
       "materia": "INGLESE",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      }
     },
     "giovedi": {},
@@ -3490,10 +3466,7 @@
       "materia": "INGLESE",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      },
      "2": {
       "tipo": "lezione",
@@ -3539,7 +3512,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "5AS",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NT11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3547,7 +3520,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "4VE",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3585,7 +3558,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "5AS",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NT11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3595,7 +3568,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "5AS",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NT11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3621,7 +3594,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "4VE",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3667,7 +3640,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5AS",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NT11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3684,7 +3657,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "1CT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT8",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3692,7 +3665,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "3AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP12",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3700,7 +3673,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "3AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP12",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3710,7 +3683,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "3AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP12",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3718,7 +3691,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "1CT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT8",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3726,7 +3699,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "3AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP12",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3734,7 +3707,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "1CT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT8",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3752,7 +3725,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "1CT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT8",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3760,7 +3733,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "3AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP12",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3778,7 +3751,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "3AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP12",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3786,7 +3759,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "1CT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT8",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3794,7 +3767,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "1CT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT8",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -3946,7 +3919,7 @@
       "fonte": "docenti+classi"
      },
      "6": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5GRFB",
       "materia": "ASSESTAMENTO",
       "aula": "NP5",
@@ -3998,7 +3971,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5GRFB",
       "materia": "ASSESTAMENTO",
       "aula": "NP5",
@@ -4170,21 +4143,21 @@
       "tipo": "lezione",
       "classe": "4AET",
       "materia": "TRASF PRODOTTI",
-      "aula": "LAB CHIMICA 1",
+      "aula": "LAB CHI1/CHI2/BIO",
       "copresenza": [
        "ZANNONI JACOPO"
       ],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "3": {
       "tipo": "lezione",
       "classe": "4AET",
       "materia": "TRASF PRODOTTI",
-      "aula": "LAB CHIMICA 1",
+      "aula": "LAB CHI1/CHI2/BIO",
       "copresenza": [
        "ZANNONI JACOPO"
       ],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "5": {
       "tipo": "lezione",
@@ -4227,17 +4200,17 @@
       "tipo": "lezione",
       "classe": "3GRF",
       "materia": "LAB DI BIO E CHI",
-      "aula": "LAB BIOLOGIA",
+      "aula": "LAB BIOLOGIA/CHIMICA 2",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "5": {
       "tipo": "lezione",
       "classe": "3GRF",
       "materia": "LAB DI BIO E CHI",
-      "aula": "LAB BIOLOGIA",
+      "aula": "LAB BIOLOGIA/CHIMICA 2",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      }
     },
     "martedi": {
@@ -4260,7 +4233,7 @@
       "fonte": "docenti+classi"
      },
      "3": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5VE",
       "materia": "ENOLOGIA",
       "aula": "NP4",
@@ -4314,7 +4287,7 @@
       "tipo": "compresenza",
       "classe": "5VE",
       "materia": "ENOLOGIA",
-      "aula": "NP4",
+      "aula": "LAB ENOLOGIA",
       "copresenza": [
        "RONCHI CHIARA"
       ],
@@ -4324,7 +4297,7 @@
       "tipo": "compresenza",
       "classe": "5VE",
       "materia": "ENOLOGIA",
-      "aula": "NP4",
+      "aula": "LAB ENOLOGIA",
       "copresenza": [
        "RONCHI CHIARA"
       ],
@@ -4573,7 +4546,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "4GRFA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "102",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4581,7 +4554,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "2AT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4589,7 +4562,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "2CP",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "T6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4599,7 +4572,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "4GRFA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "102",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4607,7 +4580,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "2CP",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "T6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4615,7 +4588,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "2CP",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "T6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4623,7 +4596,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "2AT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4633,7 +4606,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "4GRFA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "102",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4641,7 +4614,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "2AT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4649,7 +4622,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "2AT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4667,7 +4640,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "2AT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4675,7 +4648,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "4GRFA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "102",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4683,7 +4656,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "4GRFA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "102",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4691,7 +4664,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "2CP",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "T6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4701,7 +4674,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "2CP",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "T6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4709,7 +4682,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "2AT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -4717,7 +4690,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "4GRFA",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "102",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -5124,7 +5097,7 @@
      "1": {
       "tipo": "compresenza",
       "classe": "2BP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "LAB CHIMICA 1",
       "copresenza": [
        "PAN GIUSEPPE"
@@ -5132,7 +5105,7 @@
       "fonte": "docenti+classi"
      },
      "2": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "1CP",
       "materia": "ECOLOGIA E PEDOLOGIA",
       "aula": "NT3",
@@ -5142,7 +5115,7 @@
       "fonte": "docenti+classi"
      },
      "3": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "1CP",
       "materia": "ECOLOGIA E PEDOLOGIA",
       "aula": "NT3",
@@ -5152,9 +5125,9 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5PT",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NT10",
       "copresenza": [
        "PALAZZO ANDREA"
@@ -5184,9 +5157,9 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5PT",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NT10",
       "copresenza": [
        "PALAZZO ANDREA"
@@ -5194,7 +5167,7 @@
       "fonte": "docenti+classi"
      },
      "6": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5VE",
       "materia": "PROD ANIMALI",
       "aula": "NP4",
@@ -5208,7 +5181,7 @@
      "1": {
       "tipo": "compresenza",
       "classe": "2AP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "LAB CHIMICA 1",
       "copresenza": [
        "PAN GIUSEPPE"
@@ -5238,7 +5211,7 @@
      "5": {
       "tipo": "compresenza",
       "classe": "1BP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "LAB CHIMICA 1",
       "copresenza": [
        "PAN GIUSEPPE"
@@ -5248,9 +5221,9 @@
     },
     "giovedi": {
      "2": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5VE",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP4",
       "copresenza": [
        "PALAZZO ANDREA"
@@ -5566,7 +5539,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "2AT",
-      "materia": "SCIENZE INTEGRATE T",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "NT4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -5574,7 +5547,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "2CP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "T6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -5600,7 +5573,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "2BT",
-      "materia": "SCIENZE INTEGRATE T",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "NT5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -5608,7 +5581,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "1CP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "LAB CHIMICA 1",
       "copresenza": [
        "MOSELE LUCA"
@@ -5620,7 +5593,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "2CP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "T6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -5628,7 +5601,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "2CP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "LAB CHIMICA 1",
       "copresenza": [
        "REMONATO VLADIMIRO"
@@ -5638,7 +5611,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "2AT",
-      "materia": "SCIENZE INTEGRATE T",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "NT4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -5646,7 +5619,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "2CT",
-      "materia": "SCIENZE INTEGRATE T",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "NT6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -5656,7 +5629,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "1CP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "NT3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -5664,7 +5637,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "1CP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "NT3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -5674,7 +5647,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "2CT",
-      "materia": "SCIENZE INTEGRATE T",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "NT6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -5682,7 +5655,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "1CP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "NT3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -5690,7 +5663,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "2BT",
-      "materia": "SCIENZE INTEGRATE T",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "NT5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -5698,7 +5671,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "2CP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "T6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -5839,7 +5812,9 @@
       "classe": "3VE",
       "materia": "PROD VEGETALI",
       "aula": "NP9",
-      "copresenza": [],
+      "copresenza": [
+       "PASQUETTI EDDY"
+      ],
       "fonte": "docenti+classi"
      },
      "2": {
@@ -5869,9 +5844,7 @@
       "classe": "3VE",
       "materia": "PROD VEGETALI",
       "aula": "NP9",
-      "copresenza": [
-       "PASQUETTI EDDY"
-      ],
+      "copresenza": [],
       "fonte": "docenti+classi"
      },
      "7": {
@@ -6276,7 +6249,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "5AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT9",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6284,7 +6257,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "5AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT9",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6294,7 +6267,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "5AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT9",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6310,7 +6283,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT9",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6320,7 +6293,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "5AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT9",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6336,7 +6309,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "5AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT9",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6355,7 +6328,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "2BT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6371,7 +6344,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6379,7 +6352,7 @@
      "7": {
       "tipo": "lezione",
       "classe": "1AP",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "T1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6389,7 +6362,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "5PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6397,7 +6370,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "5PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6405,7 +6378,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "2BT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6413,7 +6386,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "2BT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6423,7 +6396,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "1AP",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "T1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6431,7 +6404,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "2BT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6439,7 +6412,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6449,7 +6422,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "5PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6457,7 +6430,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "2BT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6465,7 +6438,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "1AP",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "T1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6473,7 +6446,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "1AP",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "T1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6483,7 +6456,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "2BT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6491,7 +6464,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "1AP",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "T1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6499,7 +6472,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5PT",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NT10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -6514,7 +6487,7 @@
    "orario": {
     "lunedi": {
      "3": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5GRFA",
       "materia": "SELVICOLTURA",
       "aula": "NT7",
@@ -6524,7 +6497,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5GRFA",
       "materia": "SELVICOLTURA",
       "aula": "NT7",
@@ -6534,7 +6507,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4GRFA",
       "materia": "SELVICOLTURA",
       "aula": "102",
@@ -6544,7 +6517,7 @@
       "fonte": "docenti+classi"
      },
      "6": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4GRFA",
       "materia": "SELVICOLTURA",
       "aula": "102",
@@ -6566,7 +6539,7 @@
       "fonte": "docenti+classi"
      },
      "3": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "3GRF",
       "materia": "TECNICHE DELLE PROD",
       "aula": "C4",
@@ -6576,7 +6549,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "3GRF",
       "materia": "TECNICHE DELLE PROD",
       "aula": "C4",
@@ -6588,7 +6561,7 @@
     },
     "mercoledi": {
      "1": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5GRFA",
       "materia": "TECNICHE DELLE PROD",
       "aula": "NT7",
@@ -6598,7 +6571,7 @@
       "fonte": "docenti+classi"
      },
      "2": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5GRFA",
       "materia": "TECNICHE DELLE PROD",
       "aula": "NT7",
@@ -6608,7 +6581,7 @@
       "fonte": "docenti+classi"
      },
      "3": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "3GRF",
       "materia": "SELVICOLTURA",
       "aula": "C4",
@@ -6618,7 +6591,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "3GRF",
       "materia": "SELVICOLTURA",
       "aula": "C4",
@@ -6640,7 +6613,7 @@
     },
     "giovedi": {
      "1": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4GRFB",
       "materia": "SELVICOLTURA",
       "aula": "103",
@@ -6650,7 +6623,7 @@
       "fonte": "docenti+classi"
      },
      "2": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "3GRF",
       "materia": "SELVICOLTURA",
       "aula": "C4",
@@ -6662,7 +6635,7 @@
     },
     "venerdi": {
      "4": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4GRFA",
       "materia": "SELVICOLTURA",
       "aula": "102",
@@ -6672,7 +6645,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4GRFB",
       "materia": "SELVICOLTURA",
       "aula": "103",
@@ -6682,7 +6655,7 @@
       "fonte": "docenti+classi"
      },
      "6": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4GRFB",
       "materia": "SELVICOLTURA",
       "aula": "103",
@@ -6692,7 +6665,7 @@
       "fonte": "docenti+classi"
      },
      "8": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5GRFA",
       "materia": "SELVICOLTURA",
       "aula": "NT7",
@@ -6966,7 +6939,7 @@
       "fonte": "docenti+classi"
      },
      "2": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "1CP",
       "materia": "ECOLOGIA E PEDOLOGIA",
       "aula": "NT3",
@@ -6976,7 +6949,7 @@
       "fonte": "docenti+classi"
      },
      "3": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "1CP",
       "materia": "ECOLOGIA E PEDOLOGIA",
       "aula": "NT3",
@@ -6986,7 +6959,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "3AS",
       "materia": "AGRICOL SOSTENIBILE",
       "aula": "C1",
@@ -7316,7 +7289,7 @@
     },
     "martedi": {
      "1": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5GRFB",
       "materia": "AGRONOMIA",
       "aula": "NP5",
@@ -7326,7 +7299,7 @@
       "fonte": "docenti+classi"
      },
      "2": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5GRFB",
       "materia": "AGRONOMIA",
       "aula": "NP5",
@@ -7410,7 +7383,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5GRFA",
       "materia": "AGRONOMIA",
       "aula": "NT7",
@@ -7420,7 +7393,7 @@
       "fonte": "docenti+classi"
      },
      "6": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "5GRFA",
       "materia": "AGRONOMIA",
       "aula": "NT7",
@@ -7597,7 +7570,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "4PT",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -7625,7 +7598,7 @@
     },
     "venerdi": {
      "3": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "3FA",
       "materia": "TECN AGROALIMENTARI",
       "aula": "NP7",
@@ -7645,7 +7618,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "4PT",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -8342,8 +8315,18 @@
      }
     },
     "martedi": {
-     "3": {
+     "2": {
       "tipo": "compresenza",
+      "classe": "2AT",
+      "materia": "CHIMICA",
+      "aula": "LAB ENOLOGIA",
+      "copresenza": [
+       "BOGNANNI NOEMI"
+      ],
+      "fonte": "docenti+classi"
+     },
+     "3": {
+      "tipo": "lezione",
       "classe": "4AET",
       "materia": "PROD VEGETALI",
       "aula": "NP11",
@@ -8355,7 +8338,7 @@
      "5": {
       "tipo": "compresenza",
       "classe": "1CP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "LAB CHIMICA 1",
       "copresenza": [
        "FURLANETTO LARA"
@@ -8393,7 +8376,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4AET",
       "materia": "PROD VEGETALI",
       "aula": "NP11",
@@ -8403,7 +8386,7 @@
       "fonte": "docenti+classi"
      },
      "6": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4AET",
       "materia": "PROD VEGETALI",
       "aula": "NP11",
@@ -8414,16 +8397,6 @@
      }
     },
     "giovedi": {
-     "3": {
-      "tipo": "compresenza",
-      "classe": "2AT",
-      "materia": "CHIMICA",
-      "aula": "LAB CHIMICA 1",
-      "copresenza": [
-       "BOGNANNI NOEMI"
-      ],
-      "fonte": "docenti+classi"
-     },
      "4": {
       "tipo": "compresenza",
       "classe": "1CT",
@@ -8494,7 +8467,7 @@
    "orario": {
     "lunedi": {
      "3": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4GRFA",
       "materia": "TECNICHE DELLE PROD",
       "aula": "102",
@@ -8504,7 +8477,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4GRFA",
       "materia": "TECNICHE DELLE PROD",
       "aula": "102",
@@ -8514,7 +8487,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4GRFB",
       "materia": "TECNICHE DELLE PROD",
       "aula": "103",
@@ -8556,7 +8529,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4GRFB",
       "materia": "TECNICHE DELLE PROD",
       "aula": "103",
@@ -8870,10 +8843,10 @@
      "1": {
       "tipo": "lezione",
       "classe": "3PTA",
-      "materia": "ECONOMIA TEC",
-      "aula": "NP10",
+      "materia": "ECONOMIA",
+      "aula": "AULA MAGNA",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "2": {
       "tipo": "staff"
@@ -8900,10 +8873,10 @@
      "1": {
       "tipo": "lezione",
       "classe": "3PTA",
-      "materia": "ECONOMIA TEC",
-      "aula": "NP10",
+      "materia": "ECONOMIA",
+      "aula": "AULA MAGNA",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "2": {
       "tipo": "staff"
@@ -8919,10 +8892,10 @@
      "1": {
       "tipo": "lezione",
       "classe": "3PTA",
-      "materia": "ECONOMIA TEC",
-      "aula": "NP10",
+      "materia": "ECONOMIA",
+      "aula": "AULA MAGNA/INFORMATICA 2",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "2": {
       "tipo": "staff"
@@ -8956,15 +8929,15 @@
      "4": {
       "tipo": "lezione",
       "classe": "3PT",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP10",
       "copresenza": [],
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5PT",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NT10",
       "copresenza": [
        "FITTIPALDI GIOACCHINO"
@@ -8974,7 +8947,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "4AET",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -8982,9 +8955,9 @@
     },
     "martedi": {
      "5": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5PT",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NT10",
       "copresenza": [
        "FITTIPALDI GIOACCHINO"
@@ -8994,7 +8967,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "4AET",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9004,7 +8977,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "4AET",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9012,7 +8985,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "3PT",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9020,7 +8993,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "5PT",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NT10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9044,9 +9017,9 @@
       "fonte": "docenti+classi"
      },
      "2": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5VE",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP4",
       "copresenza": [
        "FITTIPALDI GIOACCHINO"
@@ -9078,7 +9051,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "3PT",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9086,7 +9059,7 @@
      "8": {
       "tipo": "lezione",
       "classe": "5VE",
-      "materia": "ECONOMIA TEC",
+      "materia": "ECONOMIA",
       "aula": "NP4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9103,7 +9076,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "2BP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "LAB CHIMICA 1",
       "copresenza": [
        "FITTIPALDI GIOACCHINO"
@@ -9137,7 +9110,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "1BP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "T2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9157,7 +9130,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "2BP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "T4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9165,7 +9138,7 @@
      "7": {
       "tipo": "lezione",
       "classe": "2BP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "T4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9173,7 +9146,7 @@
      "8": {
       "tipo": "lezione",
       "classe": "2AP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "T3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9183,7 +9156,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "2AP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "LAB CHIMICA 1",
       "copresenza": [
        "FITTIPALDI GIOACCHINO"
@@ -9193,7 +9166,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "2BP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "T4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9201,7 +9174,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "1BP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "T2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9209,7 +9182,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "1BP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "LAB CHIMICA 1",
       "copresenza": [
        "FITTIPALDI GIOACCHINO"
@@ -9229,7 +9202,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "1AP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "T1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9239,7 +9212,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "1BP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "T2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9247,7 +9220,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "2AP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "T3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9255,7 +9228,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "2AP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "T3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9272,7 +9245,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "3GRF",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "C4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9280,7 +9253,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "4FA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "101",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9288,7 +9261,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "3FA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NP7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9298,7 +9271,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "3AS",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "C1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9306,7 +9279,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "4GRFA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "102",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9324,7 +9297,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "3GRF",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "C4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9332,7 +9305,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "4FA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "101",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9340,7 +9313,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "4GRFA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "102",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9348,7 +9321,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "3FA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NP7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9366,7 +9339,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "4GRFA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "102",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9374,7 +9347,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "3AS",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "C1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9382,7 +9355,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "4FA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "101",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9390,7 +9363,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "3FA",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "NP7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9400,7 +9373,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "3AS",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "C1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9418,7 +9391,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "3GRF",
-      "materia": "ECONOMIA PROF",
+      "materia": "ECONOMIA",
       "aula": "C4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -9471,7 +9444,7 @@
       "fonte": "docenti+classi"
      },
      "3": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4AET",
       "materia": "PROD VEGETALI",
       "aula": "NP11",
@@ -9509,7 +9482,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4AET",
       "materia": "PROD VEGETALI",
       "aula": "NP11",
@@ -9519,7 +9492,7 @@
       "fonte": "docenti+classi"
      },
      "6": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4AET",
       "materia": "PROD VEGETALI",
       "aula": "NP11",
@@ -9531,7 +9504,7 @@
     },
     "giovedi": {
      "4": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "1AT",
       "materia": "FOND SC AGRARIE",
       "aula": "NT1",
@@ -9604,20 +9577,12 @@
     },
     "martedi": {
      "1": {
-      "tipo": "lezione",
-      "classe": "2AT",
-      "materia": "FISICA",
-      "aula": "NT4",
-      "copresenza": [],
-      "fonte": "docenti+classi"
+      "tipo": "disposizione"
      },
      "2": {
       "tipo": "disposizione"
      },
      "3": {
-      "tipo": "disposizione"
-     },
-     "4": {
       "tipo": "disposizione"
      }
     },
@@ -9647,7 +9612,12 @@
       "tipo": "disposizione"
      },
      "3": {
-      "tipo": "disposizione"
+      "tipo": "lezione",
+      "classe": "2AT",
+      "materia": "FISICA",
+      "aula": "NT4",
+      "copresenza": [],
+      "fonte": "docenti+classi"
      }
     },
     "venerdi": {
@@ -9679,9 +9649,7 @@
       "classe": "5AS",
       "materia": "TECNICHE DELLE PROD",
       "aula": "NT11",
-      "copresenza": [
-       "PASQUETTI EDDY"
-      ],
+      "copresenza": [],
       "fonte": "docenti+classi"
      }
     },
@@ -9707,7 +9675,7 @@
       "fonte": "docenti+classi"
      },
      "6": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4PT",
       "materia": "PROD VEGETALI",
       "aula": "NP6",
@@ -9719,7 +9687,7 @@
     },
     "mercoledi": {
      "3": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4PT",
       "materia": "PROD VEGETALI",
       "aula": "NP6",
@@ -9759,7 +9727,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4PT",
       "materia": "PROD VEGETALI",
       "aula": "NP6",
@@ -9801,7 +9769,9 @@
       "classe": "5AS",
       "materia": "TECNICHE DELLE PROD",
       "aula": "NT11",
-      "copresenza": [],
+      "copresenza": [
+       "PASQUETTI EDDY"
+      ],
       "fonte": "docenti+classi"
      },
      "8": {
@@ -9852,16 +9822,6 @@
        "GAIARSA SIMONE"
       ],
       "fonte": "docenti+classi"
-     },
-     "5": {
-      "tipo": "compresenza",
-      "classe": "5AS",
-      "materia": "TECNICHE DELLE PROD",
-      "aula": "NT11",
-      "copresenza": [
-       "PASCALE NICOLA"
-      ],
-      "fonte": "docenti+classi"
      }
     },
     "martedi": {
@@ -9929,6 +9889,16 @@
      }
     },
     "giovedi": {
+     "1": {
+      "tipo": "compresenza",
+      "classe": "3VE",
+      "materia": "PROD VEGETALI",
+      "aula": "NP9",
+      "copresenza": [
+       "GAIARSA SIMONE"
+      ],
+      "fonte": "docenti+classi"
+     },
      "3": {
       "tipo": "compresenza",
       "classe": "4AS",
@@ -9991,13 +9961,13 @@
       ],
       "fonte": "docenti+classi"
      },
-     "6": {
+     "7": {
       "tipo": "compresenza",
-      "classe": "3VE",
-      "materia": "PROD VEGETALI",
-      "aula": "NP9",
+      "classe": "5AS",
+      "materia": "TECNICHE DELLE PROD",
+      "aula": "NT11",
       "copresenza": [
-       "GAIARSA SIMONE"
+       "PASCALE NICOLA"
       ],
       "fonte": "docenti+classi"
      },
@@ -10021,7 +9991,7 @@
    "orario": {
     "lunedi": {
      "3": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5GRFA",
       "materia": "SELVICOLTURA",
       "aula": "NT7",
@@ -10031,7 +10001,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5GRFA",
       "materia": "SELVICOLTURA",
       "aula": "NT7",
@@ -10041,7 +10011,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4GRFB",
       "materia": "TECNICHE DELLE PROD",
       "aula": "103",
@@ -10069,7 +10039,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4GRFB",
       "materia": "TECNICHE DELLE PROD",
       "aula": "103",
@@ -10099,7 +10069,7 @@
       "fonte": "docenti+classi"
      },
      "3": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "3GRF",
       "materia": "SELVICOLTURA",
       "aula": "C4",
@@ -10109,7 +10079,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "3GRF",
       "materia": "SELVICOLTURA",
       "aula": "C4",
@@ -10137,7 +10107,7 @@
     },
     "giovedi": {
      "1": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4GRFB",
       "materia": "SELVICOLTURA",
       "aula": "103",
@@ -10147,7 +10117,7 @@
       "fonte": "docenti+classi"
      },
      "2": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "3GRF",
       "materia": "SELVICOLTURA",
       "aula": "C4",
@@ -10159,7 +10129,7 @@
     },
     "venerdi": {
      "5": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4GRFB",
       "materia": "SELVICOLTURA",
       "aula": "103",
@@ -10169,7 +10139,7 @@
       "fonte": "docenti+classi"
      },
      "6": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4GRFB",
       "materia": "SELVICOLTURA",
       "aula": "103",
@@ -10187,7 +10157,7 @@
       "fonte": "docenti+classi"
      },
      "8": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5GRFA",
       "materia": "SELVICOLTURA",
       "aula": "NT7",
@@ -10209,17 +10179,17 @@
       "tipo": "lezione",
       "classe": "4GRFB",
       "materia": "LAB DI BIO E CHI",
-      "aula": "LAB BIOLOGIA",
+      "aula": "LAB BIOLOGIA/CHIMICA 1",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "3": {
       "tipo": "lezione",
       "classe": "4GRFB",
       "materia": "LAB DI BIO E CHI",
-      "aula": "LAB BIOLOGIA",
+      "aula": "LAB BIOLOGIA/CHIMICA 1",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "4": {
       "tipo": "compresenza",
@@ -10315,9 +10285,9 @@
       "tipo": "lezione",
       "classe": "3FA",
       "materia": "LAB DI BIO E CHI",
-      "aula": "LAB BIOLOGIA",
+      "aula": "LAB BIOLOGIA/CHIMICA 2",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "2": {
       "tipo": "compresenza",
@@ -10378,17 +10348,17 @@
       "tipo": "lezione",
       "classe": "3FA",
       "materia": "LAB DI BIO E CHI",
-      "aula": "LAB BIOLOGIA",
+      "aula": "LAB BIOLOGIA/CHIMICA 2",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "5": {
       "tipo": "lezione",
       "classe": "3FA",
       "materia": "LAB DI BIO E CHI",
-      "aula": "LAB BIOLOGIA",
+      "aula": "LAB BIOLOGIA/CHIMICA 2",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "6": {
       "tipo": "lezione",
@@ -10474,7 +10444,7 @@
      "3": {
       "tipo": "compresenza",
       "classe": "2CP",
-      "materia": "SCIENZE INTEGRATE P",
+      "materia": "SCIENZE INTEGRATE",
       "aula": "LAB CHIMICA 1",
       "copresenza": [
        "FURLANETTO LARA"
@@ -10524,7 +10494,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "3GRF",
       "materia": "AGRONOMIA",
       "aula": "C4",
@@ -10556,7 +10526,7 @@
     },
     "venerdi": {
      "1": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "3GRF",
       "materia": "AGRONOMIA",
       "aula": "C4",
@@ -10566,7 +10536,7 @@
       "fonte": "docenti+classi"
      },
      "2": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4GRFA",
       "materia": "AGRONOMIA",
       "aula": "102",
@@ -10576,7 +10546,7 @@
       "fonte": "docenti+classi"
      },
      "3": {
-      "tipo": "compresenza",
+      "tipo": "lezione",
       "classe": "4GRFA",
       "materia": "AGRONOMIA",
       "aula": "102",
@@ -10700,7 +10670,7 @@
    "orario": {
     "lunedi": {
      "3": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4GRFA",
       "materia": "TECNICHE DELLE PROD",
       "aula": "102",
@@ -10710,7 +10680,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4GRFA",
       "materia": "TECNICHE DELLE PROD",
       "aula": "102",
@@ -10722,7 +10692,7 @@
     },
     "martedi": {
      "1": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5GRFB",
       "materia": "AGRONOMIA",
       "aula": "NP5",
@@ -10732,7 +10702,7 @@
       "fonte": "docenti+classi"
      },
      "2": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5GRFB",
       "materia": "AGRONOMIA",
       "aula": "NP5",
@@ -10742,7 +10712,7 @@
       "fonte": "docenti+classi"
      },
      "3": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "3GRF",
       "materia": "TECNICHE DELLE PROD",
       "aula": "C4",
@@ -10752,7 +10722,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "3GRF",
       "materia": "TECNICHE DELLE PROD",
       "aula": "C4",
@@ -10764,7 +10734,7 @@
     },
     "mercoledi": {
      "1": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5GRFA",
       "materia": "TECNICHE DELLE PROD",
       "aula": "NT7",
@@ -10774,7 +10744,7 @@
       "fonte": "docenti+classi"
      },
      "2": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5GRFA",
       "materia": "TECNICHE DELLE PROD",
       "aula": "NT7",
@@ -10784,7 +10754,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5GRFB",
       "materia": "TECNICHE DELLE PROD",
       "aula": "NP5",
@@ -10794,7 +10764,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5GRFB",
       "materia": "TECNICHE DELLE PROD",
       "aula": "NP5",
@@ -10822,7 +10792,7 @@
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "3GRF",
       "materia": "AGRONOMIA",
       "aula": "C4",
@@ -10832,7 +10802,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5GRFA",
       "materia": "AGRONOMIA",
       "aula": "NT7",
@@ -10842,7 +10812,7 @@
       "fonte": "docenti+classi"
      },
      "6": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5GRFA",
       "materia": "AGRONOMIA",
       "aula": "NT7",
@@ -10854,7 +10824,7 @@
     },
     "venerdi": {
      "1": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "3GRF",
       "materia": "AGRONOMIA",
       "aula": "C4",
@@ -10864,7 +10834,7 @@
       "fonte": "docenti+classi"
      },
      "2": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4GRFA",
       "materia": "AGRONOMIA",
       "aula": "102",
@@ -10874,7 +10844,7 @@
       "fonte": "docenti+classi"
      },
      "3": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4GRFA",
       "materia": "AGRONOMIA",
       "aula": "102",
@@ -11074,7 +11044,7 @@
       "fonte": "docenti+classi"
      },
      "5": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4GRFA",
       "materia": "SELVICOLTURA",
       "aula": "102",
@@ -11084,7 +11054,7 @@
       "fonte": "docenti+classi"
      },
      "6": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4GRFA",
       "materia": "SELVICOLTURA",
       "aula": "102",
@@ -11116,7 +11086,7 @@
       "fonte": "docenti+classi"
      },
      "3": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5VE",
       "materia": "ENOLOGIA",
       "aula": "NP4",
@@ -11169,7 +11139,7 @@
       "tipo": "lezione",
       "classe": "5VE",
       "materia": "ENOLOGIA",
-      "aula": "NP4",
+      "aula": "LAB ENOLOGIA",
       "copresenza": [],
       "fonte": "docenti+classi"
      },
@@ -11207,7 +11177,7 @@
       "tipo": "lezione",
       "classe": "5VE",
       "materia": "ENOLOGIA",
-      "aula": "NP4",
+      "aula": "LAB ENOLOGIA",
       "copresenza": [
        "DESTRO IMPICCIA STEFANO"
       ],
@@ -11217,14 +11187,14 @@
       "tipo": "lezione",
       "classe": "5VE",
       "materia": "ENOLOGIA",
-      "aula": "NP4",
+      "aula": "LAB ENOLOGIA",
       "copresenza": [
        "DESTRO IMPICCIA STEFANO"
       ],
       "fonte": "docenti+classi"
      },
      "4": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "4GRFA",
       "materia": "SELVICOLTURA",
       "aula": "102",
@@ -11407,7 +11377,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "3FA",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NP7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11415,7 +11385,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "5GRFB",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NP5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11423,7 +11393,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "1AT",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NT1",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11431,7 +11401,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "2CP",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "T6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11439,7 +11409,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "3GRF",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "C4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11450,7 +11420,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "4PT",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NP6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11458,7 +11428,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "4GRFB",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "103",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11468,7 +11438,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "2CT",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NT6",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11476,7 +11446,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "2BT",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NT5",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11484,7 +11454,7 @@
      "7": {
       "tipo": "lezione",
       "classe": "5FA",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NP2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11518,7 +11488,7 @@
       "fonte": "docenti+classi"
      },
      "6": {
-      "tipo": "lezione",
+      "tipo": "compresenza",
       "classe": "5VE",
       "materia": "PROD ANIMALI",
       "aula": "NP4",
@@ -11859,7 +11829,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "5PT",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NT10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11867,7 +11837,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "2AP",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "T3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11875,7 +11845,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "2AT",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NT4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11883,7 +11853,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "5AS",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NT11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11893,7 +11863,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "5VE",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NP4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11901,7 +11871,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "4AS",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "104",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11911,7 +11881,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "5GRFA",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NT7",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11919,7 +11889,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "4GRFA",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "102",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11927,18 +11897,15 @@
      "7": {
       "tipo": "lezione",
       "classe": "3VE",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      },
      "8": {
       "tipo": "lezione",
       "classe": "3PT",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NP10",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11948,7 +11915,7 @@
      "1": {
       "tipo": "lezione",
       "classe": "4VE",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NP3",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11956,7 +11923,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "1CT",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NT8",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11964,7 +11931,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "4AET",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NP11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11972,7 +11939,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "4FA",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "101",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11982,7 +11949,7 @@
      "2": {
       "tipo": "lezione",
       "classe": "2BP",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "T4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11990,7 +11957,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "5AET",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NT9",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -11998,7 +11965,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "3AET",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "NP12",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12006,7 +11973,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "1BP",
-      "materia": "IRC",
+      "materia": "RELIGIONE",
       "aula": "T2",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12023,7 +11990,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "3GRF",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "C4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12031,7 +11998,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "4AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12039,31 +12006,25 @@
      "5": {
       "tipo": "lezione",
       "classe": "3VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      },
      "6": {
       "tipo": "lezione",
       "classe": "3VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      }
     },
     "martedi": {
      "4": {
       "tipo": "lezione",
       "classe": "4AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12071,7 +12032,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "3GRF",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "C4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12079,20 +12040,17 @@
      "6": {
       "tipo": "lezione",
       "classe": "3VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      }
     },
     "mercoledi": {
      "3": {
       "tipo": "lezione",
       "classe": "4AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12100,7 +12058,7 @@
      "4": {
       "tipo": "lezione",
       "classe": "4AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12108,18 +12066,15 @@
      "6": {
       "tipo": "lezione",
       "classe": "3VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      },
      "8": {
       "tipo": "lezione",
       "classe": "3GRF",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "C4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12129,18 +12084,15 @@
      "3": {
       "tipo": "lezione",
       "classe": "3VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      },
      "4": {
       "tipo": "lezione",
       "classe": "4AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12148,7 +12100,7 @@
      "5": {
       "tipo": "lezione",
       "classe": "3GRF",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "C4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12156,7 +12108,7 @@
      "6": {
       "tipo": "lezione",
       "classe": "3GRF",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "C4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12166,7 +12118,7 @@
      "3": {
       "tipo": "lezione",
       "classe": "3GRF",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "C4",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12174,18 +12126,15 @@
      "4": {
       "tipo": "lezione",
       "classe": "3VE",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP9",
       "copresenza": [],
-      "fonte": "docenti+classi",
-      "altre_classi": [
-       "3PTA"
-      ]
+      "fonte": "docenti+classi"
      },
      "6": {
       "tipo": "lezione",
       "classe": "4AET",
-      "materia": "ITALIANOSTORIA",
+      "materia": "ITALIANO/STORIA",
       "aula": "NP11",
       "copresenza": [],
       "fonte": "docenti+classi"
@@ -12295,17 +12244,17 @@
       "tipo": "lezione",
       "classe": "4FA",
       "materia": "LAB DI BIO E CHI",
-      "aula": "LAB CHIMICA 2",
+      "aula": "LAB CHIMICA 2/BIOLOGIA",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      },
      "6": {
       "tipo": "lezione",
       "classe": "4FA",
       "materia": "LAB DI BIO E CHI",
-      "aula": "LAB CHIMICA 2",
+      "aula": "LAB CHIMICA 2/BIOLOGIA",
       "copresenza": [],
-      "fonte": "docenti+classi(conflitto)"
+      "fonte": "docenti+classi"
      }
     },
     "giovedi": {
@@ -12809,7 +12758,7 @@
      "aula": "T1"
     },
     "3": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "DAL GRANDE CRISTIAN"
      ],
@@ -12837,7 +12786,7 @@
      "aula": "LAB INFORMATICA 2"
     },
     "7": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
@@ -12919,7 +12868,7 @@
      "aula": "T1"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
@@ -12965,21 +12914,21 @@
      "aula": "T1"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
      "aula": "T1"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
      "aula": "T1"
     },
     "6": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE"
      ],
@@ -13017,7 +12966,7 @@
      "aula": "LAB INFORMATICA 2"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
@@ -13045,7 +12994,7 @@
     "2": {
      "materia": "INGLESE",
      "docenti": [
-      "CADO FRANCESCA"
+      "CADO’ FRANCESCA"
      ],
      "aula": "NT1"
     },
@@ -13116,7 +13065,7 @@
      "aula": "NT1"
     },
     "4": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "SALVAGNO STEFANO"
      ],
@@ -13132,7 +13081,7 @@
     "6": {
      "materia": "INGLESE",
      "docenti": [
-      "CADO FRANCESCA"
+      "CADO’ FRANCESCA"
      ],
      "aula": "NT1"
     }
@@ -13162,7 +13111,7 @@
     "4": {
      "materia": "INGLESE",
      "docenti": [
-      "CADO FRANCESCA"
+      "CADO’ FRANCESCA"
      ],
      "aula": "NT1"
     },
@@ -13207,8 +13156,8 @@
     "4": {
      "materia": "FOND SC AGRARIE",
      "docenti": [
-      "PAROLIN GIACOMO",
-      "BASSO PAOLO"
+      "BASSO PAOLO",
+      "PAROLIN GIACOMO"
      ],
      "aula": "NT1"
     },
@@ -13313,7 +13262,7 @@
      "aula": "T2"
     },
     "6": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE"
      ],
@@ -13401,14 +13350,14 @@
      "aula": "T2"
     },
     "4": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE"
      ],
      "aula": "T2"
     },
     "5": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE",
       "FITTIPALDI GIOACCHINO"
@@ -13470,7 +13419,7 @@
    },
    "venerdi": {
     "1": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE"
      ],
@@ -13507,7 +13456,7 @@
      "aula": "T2"
     },
     "6": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -13547,7 +13496,7 @@
      "aula": "NT2"
     },
     "5": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "DAL GRANDE CRISTIAN"
      ],
@@ -13761,7 +13710,7 @@
   "1CP": {
    "lunedi": {
     "1": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "DAL GRANDE CRISTIAN"
      ],
@@ -13770,16 +13719,16 @@
     "2": {
      "materia": "ECOLOGIA E PEDOLOGIA",
      "docenti": [
-      "LENNER NICOLO'",
-      "FITTIPALDI GIOACCHINO"
+      "FITTIPALDI GIOACCHINO",
+      "LENNER NICOLO'"
      ],
      "aula": "NT3"
     },
     "3": {
      "materia": "ECOLOGIA E PEDOLOGIA",
      "docenti": [
-      "LENNER NICOLO'",
-      "FITTIPALDI GIOACCHINO"
+      "FITTIPALDI GIOACCHINO",
+      "LENNER NICOLO'"
      ],
      "aula": "NT3"
     },
@@ -13849,7 +13798,7 @@
      "aula": "NT3"
     },
     "5": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA",
       "MOSELE LUCA"
@@ -13924,14 +13873,14 @@
      "aula": "NT3"
     },
     "3": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA"
      ],
      "aula": "NT3"
     },
     "4": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA"
      ],
@@ -13969,7 +13918,7 @@
      "aula": "NT3"
     },
     "3": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA"
      ],
@@ -14016,7 +13965,7 @@
      "aula": "NT8"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DE PAOLI MARIA SERENA"
      ],
@@ -14083,7 +14032,7 @@
      "aula": "LAB INFORMATICA 1"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DE PAOLI MARIA SERENA"
      ],
@@ -14097,7 +14046,7 @@
      "aula": "NT8"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DE PAOLI MARIA SERENA"
      ],
@@ -14135,7 +14084,7 @@
      "aula": "NT8"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DE PAOLI MARIA SERENA"
      ],
@@ -14158,7 +14107,7 @@
      "aula": "NT8"
     },
     "2": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -14180,14 +14129,14 @@
      "aula": "LAB CHIMICA 1"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DE PAOLI MARIA SERENA"
      ],
      "aula": "NT8"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DE PAOLI MARIA SERENA"
      ],
@@ -14265,7 +14214,7 @@
      "aula": "T3"
     },
     "4": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -14339,7 +14288,7 @@
      "aula": "LAB FITOPATOLOGIA"
     },
     "8": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE"
      ],
@@ -14348,7 +14297,7 @@
    },
    "mercoledi": {
     "1": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE",
       "FITTIPALDI GIOACCHINO"
@@ -14445,14 +14394,14 @@
      "aula": "LAB INFORMATICA 2"
     },
     "2": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE"
      ],
      "aula": "T3"
     },
     "3": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE"
      ],
@@ -14493,7 +14442,7 @@
      "aula": "LAB INFORMATICA 2"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
@@ -14507,14 +14456,14 @@
      "aula": "NT4"
     },
     "4": {
-     "materia": "SCIENZE INTEGRATE T",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA"
      ],
      "aula": "NT4"
     },
     "5": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -14530,18 +14479,19 @@
    },
    "martedi": {
     "1": {
-     "materia": "FISICA",
+     "materia": "CHIMICA",
      "docenti": [
-      "PAROLINI FRANCESCA"
+      "BOGNANNI NOEMI"
      ],
      "aula": "NT4"
     },
     "2": {
      "materia": "CHIMICA",
      "docenti": [
-      "BOGNANNI NOEMI"
+      "BOGNANNI NOEMI",
+      "MOSELE LUCA"
      ],
-     "aula": "NT4"
+     "aula": "LAB ENOLOGIA"
     },
     "3": {
      "materia": "MATEMATICA",
@@ -14558,7 +14508,7 @@
      "aula": "NT4"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
@@ -14595,21 +14545,21 @@
      "aula": "NT4"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
      "aula": "NT4"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
      "aula": "NT4"
     },
     "4": {
-     "materia": "SCIENZE INTEGRATE T",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA"
      ],
@@ -14639,19 +14589,18 @@
      "aula": "NT4"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
      "aula": "NT4"
     },
     "3": {
-     "materia": "CHIMICA",
+     "materia": "FISICA",
      "docenti": [
-      "BOGNANNI NOEMI",
-      "MOSELE LUCA"
+      "PAROLINI FRANCESCA"
      ],
-     "aula": "LAB CHIMICA 1"
+     "aula": "NT4"
     },
     "4": {
      "materia": "CHIMICA",
@@ -14699,7 +14648,7 @@
      "aula": "NT4"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
@@ -14725,7 +14674,7 @@
   "2BP": {
    "lunedi": {
     "1": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE",
       "FITTIPALDI GIOACCHINO"
@@ -14805,14 +14754,14 @@
      "aula": "T4"
     },
     "6": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE"
      ],
      "aula": "T4"
     },
     "7": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE"
      ],
@@ -14835,7 +14784,7 @@
      "aula": "T4"
     },
     "2": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE"
      ],
@@ -14926,7 +14875,7 @@
      "aula": "T4"
     },
     "2": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -14988,7 +14937,7 @@
      "aula": "NT5"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
@@ -15032,21 +14981,21 @@
      "aula": "NT5"
     },
     "4": {
-     "materia": "SCIENZE INTEGRATE T",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA"
      ],
      "aula": "NT5"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
      "aula": "NT5"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
@@ -15098,7 +15047,7 @@
      "aula": "NT5"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
@@ -15128,7 +15077,7 @@
      "aula": "NT5"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
@@ -15173,7 +15122,7 @@
      "aula": "LAB FITOPATOLOGIA"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
@@ -15187,14 +15136,14 @@
      "aula": "NT5"
     },
     "5": {
-     "materia": "SCIENZE INTEGRATE T",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA"
      ],
      "aula": "NT5"
     },
     "6": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "SALVAGNO STEFANO"
      ],
@@ -15227,14 +15176,14 @@
      "aula": "T6"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
      "aula": "T6"
     },
     "5": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA"
      ],
@@ -15264,21 +15213,21 @@
      "aula": "T6"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
      "aula": "T6"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
      "aula": "T6"
     },
     "5": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "SALVAGNO STEFANO"
      ],
@@ -15315,14 +15264,14 @@
      "aula": "LAB FITOPATOLOGIA"
     },
     "2": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA"
      ],
      "aula": "T6"
     },
     "3": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA",
       "REMONATO VLADIMIRO"
@@ -15390,7 +15339,7 @@
      "aula": "LAB INFORMATICA 1"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
@@ -15414,7 +15363,7 @@
      "aula": "LAB INFORMATICA 1"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
@@ -15435,7 +15384,7 @@
      "aula": "T6"
     },
     "6": {
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA"
      ],
@@ -15469,7 +15418,7 @@
      "aula": "LAB INFORMATICA 2"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -15536,7 +15485,7 @@
      "aula": "LAB FITOPATOLOGIA"
     },
     "7": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -15566,21 +15515,21 @@
      "aula": "NT6"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
      "aula": "NT6"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
      "aula": "NT6"
     },
     "5": {
-     "materia": "SCIENZE INTEGRATE T",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA"
      ],
@@ -15603,7 +15552,7 @@
      "aula": "NT6"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -15647,7 +15596,7 @@
      "aula": "NT6"
     },
     "2": {
-     "materia": "SCIENZE INTEGRATE T",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA"
      ],
@@ -15661,14 +15610,14 @@
      "aula": "NT6"
     },
     "4": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "SALVAGNO STEFANO"
      ],
      "aula": "NT6"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -15715,14 +15664,14 @@
      "aula": "PALESTRA"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DE PAOLI MARIA SERENA"
      ],
      "aula": "NP12"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DE PAOLI MARIA SERENA"
      ],
@@ -15746,7 +15695,7 @@
      "aula": "NP12"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DE PAOLI MARIA SERENA"
      ],
@@ -15760,14 +15709,14 @@
      "aula": "NP12"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DE PAOLI MARIA SERENA"
      ],
      "aula": "NP12"
     },
     "6": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "CONFORTO MARGHERITA"
      ],
@@ -15805,14 +15754,14 @@
      "aula": "NP12"
     },
     "5": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "CONFORTO MARGHERITA"
      ],
      "aula": "NP12"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DE PAOLI MARIA SERENA"
      ],
@@ -15859,7 +15808,7 @@
      "aula": "LAB INFORMATICA 2"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DE PAOLI MARIA SERENA"
      ],
@@ -15912,7 +15861,7 @@
      "aula": "NP12"
     },
     "5": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -15939,7 +15888,7 @@
      "aula": "C1"
     },
     "2": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "DAL GRANDE CRISTIAN"
      ],
@@ -15955,8 +15904,8 @@
     "4": {
      "materia": "AGRICOL SOSTENIBILE",
      "docenti": [
-      "LENNER NICOLO'",
-      "CARON MIRKO"
+      "CARON MIRKO",
+      "LENNER NICOLO'"
      ],
      "aula": "C1"
     },
@@ -15968,7 +15917,7 @@
      "aula": "C1"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -15998,7 +15947,7 @@
      "aula": "C1"
     },
     "4": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
@@ -16028,7 +15977,7 @@
      "aula": "C1"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -16088,21 +16037,21 @@
      "aula": "C1"
     },
     "2": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
      "aula": "C1"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
      "aula": "C1"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -16127,14 +16076,14 @@
    },
    "venerdi": {
     "1": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
      "aula": "C1"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -16164,7 +16113,7 @@
      "aula": "LAB CHIMICA 1"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -16176,21 +16125,21 @@
   "3FA": {
    "lunedi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DAL MONTE REGINA"
      ],
      "aula": "NP7"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DAL MONTE REGINA"
      ],
      "aula": "NP7"
     },
     "3": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
@@ -16221,7 +16170,7 @@
    },
    "martedi": {
     "1": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "SALVAGNO STEFANO"
      ],
@@ -16242,7 +16191,7 @@
      "aula": "NP7"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DAL MONTE REGINA"
      ],
@@ -16267,7 +16216,7 @@
    },
    "mercoledi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DAL MONTE REGINA"
      ],
@@ -16297,7 +16246,7 @@
      "aula": "NP7"
     },
     "5": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
@@ -16331,7 +16280,7 @@
      "docenti": [
       "PEROTTO ROMINA"
      ],
-     "aula": "LAB BIOLOGIA"
+     "aula": "LAB BIOLOGIA/CHIMICA 2"
     },
     "2": {
      "materia": "MATEMATICA",
@@ -16341,14 +16290,14 @@
      "aula": "NP7"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DAL MONTE REGINA"
      ],
      "aula": "NP7"
     },
     "4": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
@@ -16378,7 +16327,7 @@
      "aula": "NP7"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "DAL MONTE REGINA"
      ],
@@ -16387,8 +16336,8 @@
     "3": {
      "materia": "TECN AGROALIMENTARI",
      "docenti": [
-      "LUPATO FRANCESCA",
-      "CARON MIRKO"
+      "CARON MIRKO",
+      "LUPATO FRANCESCA"
      ],
      "aula": "NP7"
     },
@@ -16397,14 +16346,14 @@
      "docenti": [
       "PEROTTO ROMINA"
      ],
-     "aula": "LAB BIOLOGIA"
+     "aula": "LAB BIOLOGIA/CHIMICA 2"
     },
     "5": {
      "materia": "LAB DI BIO E CHI",
      "docenti": [
       "PEROTTO ROMINA"
      ],
-     "aula": "LAB BIOLOGIA"
+     "aula": "LAB BIOLOGIA/CHIMICA 2"
     },
     "6": {
      "materia": "GEST E VALORIZZ",
@@ -16419,7 +16368,7 @@
   "3GRF": {
    "lunedi": {
     "1": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
@@ -16433,7 +16382,7 @@
      "aula": "C4"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
@@ -16444,14 +16393,14 @@
      "docenti": [
       "DESTRO IMPICCIA STEFANO"
      ],
-     "aula": "LAB BIOLOGIA"
+     "aula": "LAB BIOLOGIA/CHIMICA 2"
     },
     "5": {
      "materia": "LAB DI BIO E CHI",
      "docenti": [
       "DESTRO IMPICCIA STEFANO"
      ],
-     "aula": "LAB BIOLOGIA"
+     "aula": "LAB BIOLOGIA/CHIMICA 2"
     },
     "6": {
      "materia": "MATEMATICA",
@@ -16479,28 +16428,28 @@
     "3": {
      "materia": "TECNICHE DELLE PROD",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "C4"
     },
     "4": {
      "materia": "TECNICHE DELLE PROD",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "C4"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
      "aula": "C4"
     },
     "6": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "SALVAGNO STEFANO"
      ],
@@ -16509,7 +16458,7 @@
    },
    "mercoledi": {
     "1": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
@@ -16525,16 +16474,16 @@
     "3": {
      "materia": "SELVICOLTURA",
      "docenti": [
-      "PERON DIMITRI",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "PERON DIMITRI"
      ],
      "aula": "C4"
     },
     "4": {
      "materia": "SELVICOLTURA",
      "docenti": [
-      "PERON DIMITRI",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "PERON DIMITRI"
      ],
      "aula": "C4"
     },
@@ -16560,7 +16509,7 @@
      "aula": "C4"
     },
     "8": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
@@ -16578,8 +16527,8 @@
     "2": {
      "materia": "SELVICOLTURA",
      "docenti": [
-      "PERON DIMITRI",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "PERON DIMITRI"
      ],
      "aula": "C4"
     },
@@ -16593,20 +16542,20 @@
     "4": {
      "materia": "AGRONOMIA",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "REMONATO VLADIMIRO"
+      "REMONATO VLADIMIRO",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "C4"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
      "aula": "C4"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
@@ -16617,8 +16566,8 @@
     "1": {
      "materia": "AGRONOMIA",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "REMONATO VLADIMIRO"
+      "REMONATO VLADIMIRO",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "C4"
     },
@@ -16630,14 +16579,14 @@
      "aula": "C4"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
      "aula": "C4"
     },
     "4": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
@@ -16670,7 +16619,7 @@
      "aula": "NP10"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
@@ -16685,7 +16634,7 @@
      "aula": "LAB FITOPATOLOGIA"
     },
     "4": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "PALAZZO ANDREA"
      ],
@@ -16729,7 +16678,7 @@
      "aula": "NP10"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
@@ -16753,14 +16702,14 @@
    },
    "mercoledi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
      "aula": "NP10"
     },
     "2": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "PALAZZO ANDREA"
      ],
@@ -16804,7 +16753,7 @@
      "aula": "NP10"
     },
     "8": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -16836,7 +16785,7 @@
      "aula": "LAB CHIMICA 2"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
@@ -16861,14 +16810,14 @@
    },
    "venerdi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
      "aula": "NP10"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
@@ -16896,7 +16845,7 @@
      "aula": "NP10"
     },
     "6": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "PALAZZO ANDREA"
      ],
@@ -16908,61 +16857,49 @@
   "3PTA": {
    "lunedi": {
     "1": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "NEGRELLO MARIA TERESA"
      ],
-     "aula": "NP10"
+     "aula": "AULA MAGNA"
     },
     "2": {
      "materia": "PROD ANIMALI",
      "docenti": [
       "CATTANI MIRKO"
      ],
-     "aula": "NP10"
+     "aula": "AULA MAGNA"
     },
     "3": {
      "materia": "SCIENZE MOTORIE",
-     "docenti": [
-      "BITTANTE ANNAMARIA"
-     ],
-     "aula": "PALESTRA"
+     "docenti": [],
+     "aula": "NP10"
     },
     "4": {
      "materia": "SCIENZE MOTORIE",
-     "docenti": [
-      "BITTANTE ANNAMARIA"
-     ],
-     "aula": "PALESTRA"
+     "docenti": [],
+     "aula": "NP10"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
-     "docenti": [
-      "VASTA ETTORE"
-     ],
+     "materia": "ITALIANO/STORIA",
+     "docenti": [],
      "aula": "NP10"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
-     "docenti": [
-      "VASTA ETTORE"
-     ],
+     "materia": "ITALIANO/STORIA",
+     "docenti": [],
      "aula": "NP10"
     }
    },
    "martedi": {
     "1": {
      "materia": "INGLESE",
-     "docenti": [
-      "DE BENEDET KIM"
-     ],
+     "docenti": [],
      "aula": "NP10"
     },
     "2": {
      "materia": "MATEMATICA",
-     "docenti": [
-      "BALDIN SILVIA"
-     ],
+     "docenti": [],
      "aula": "NP10"
     },
     "3": {
@@ -16989,20 +16926,18 @@
      "aula": "LAB INFORMATICA 2"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
-     "docenti": [
-      "VASTA ETTORE"
-     ],
+     "materia": "ITALIANO/STORIA",
+     "docenti": [],
      "aula": "NP10"
     }
    },
    "mercoledi": {
     "1": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "NEGRELLO MARIA TERESA"
      ],
-     "aula": "NP10"
+     "aula": "AULA MAGNA"
     },
     "2": {
      "materia": "PROD VEGETALI",
@@ -17030,40 +16965,32 @@
     },
     "5": {
      "materia": "MATEMATICA",
-     "docenti": [
-      "BALDIN SILVIA"
-     ],
+     "docenti": [],
      "aula": "NP10"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
-     "docenti": [
-      "VASTA ETTORE"
-     ],
+     "materia": "ITALIANO/STORIA",
+     "docenti": [],
      "aula": "NP10"
     },
     "7": {
-     "materia": "IRC",
-     "docenti": [
-      "VANZO BRIAN"
-     ],
+     "materia": "RELIGIONE",
+     "docenti": [],
      "aula": "NP10"
     },
     "8": {
      "materia": "INGLESE",
-     "docenti": [
-      "DE BENEDET KIM"
-     ],
+     "docenti": [],
      "aula": "NP10"
     }
    },
    "giovedi": {
     "1": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "NEGRELLO MARIA TERESA"
      ],
-     "aula": "NP10"
+     "aula": "AULA MAGNA/INFORMATICA 2"
     },
     "2": {
      "materia": "GENIO RURALE",
@@ -17073,10 +17000,8 @@
      "aula": "LAB INFORMATICA 2"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
-     "docenti": [
-      "VASTA ETTORE"
-     ],
+     "materia": "ITALIANO/STORIA",
+     "docenti": [],
      "aula": "NP10"
     },
     "4": {
@@ -17097,18 +17022,14 @@
     },
     "6": {
      "materia": "MATEMATICA",
-     "docenti": [
-      "BALDIN SILVIA"
-     ],
+     "docenti": [],
      "aula": "NP10"
     }
    },
    "venerdi": {
     "1": {
      "materia": "INGLESE",
-     "docenti": [
-      "DE BENEDET KIM"
-     ],
+     "docenti": [],
      "aula": "NP10"
     },
     "2": {
@@ -17116,20 +17037,16 @@
      "docenti": [
       "CATTANI MIRKO"
      ],
-     "aula": "NP10"
+     "aula": "AULA MAGNA"
     },
     "3": {
      "materia": "MATEMATICA",
-     "docenti": [
-      "BALDIN SILVIA"
-     ],
+     "docenti": [],
      "aula": "NP10"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
-     "docenti": [
-      "VASTA ETTORE"
-     ],
+     "materia": "ITALIANO/STORIA",
+     "docenti": [],
      "aula": "NP10"
     },
     "5": {
@@ -17161,7 +17078,7 @@
      "aula": "NP9"
     },
     "2": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "BUDA GIORGIO"
      ],
@@ -17182,14 +17099,14 @@
      "aula": "PALESTRA"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
      "aula": "NP9"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
@@ -17235,7 +17152,7 @@
      "aula": "LAB FITOPATOLOGIA"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
@@ -17282,14 +17199,14 @@
      "aula": "NP9"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
      "aula": "NP9"
     },
     "7": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -17307,19 +17224,20 @@
     "1": {
      "materia": "PROD VEGETALI",
      "docenti": [
-      "GAIARSA SIMONE"
+      "GAIARSA SIMONE",
+      "PASQUETTI EDDY"
      ],
      "aula": "NP9"
     },
     "2": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "BUDA GIORGIO"
      ],
      "aula": "NP9"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
@@ -17357,7 +17275,7 @@
      "aula": "NP9"
     },
     "2": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "BUDA GIORGIO"
      ],
@@ -17371,7 +17289,7 @@
      "aula": "NP9"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
@@ -17387,8 +17305,7 @@
     "6": {
      "materia": "PROD VEGETALI",
      "docenti": [
-      "GAIARSA SIMONE",
-      "PASQUETTI EDDY"
+      "GAIARSA SIMONE"
      ],
      "aula": "NP9"
     }
@@ -17419,7 +17336,7 @@
      "aula": "NP11"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
@@ -17434,7 +17351,7 @@
      "aula": "LAB FITOPATOLOGIA"
     },
     "6": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "PALAZZO ANDREA"
      ],
@@ -17459,13 +17376,13 @@
     "3": {
      "materia": "PROD VEGETALI",
      "docenti": [
-      "PAROLIN GIACOMO",
-      "MOSELE LUCA"
+      "MOSELE LUCA",
+      "PAROLIN GIACOMO"
      ],
      "aula": "NP11"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
@@ -17480,7 +17397,7 @@
      "aula": "NP11"
     },
     "6": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "PALAZZO ANDREA"
      ],
@@ -17489,7 +17406,7 @@
    },
    "mercoledi": {
     "1": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "PALAZZO ANDREA"
      ],
@@ -17503,14 +17420,14 @@
      "aula": "NP11"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
      "aula": "NP11"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
@@ -17519,16 +17436,16 @@
     "5": {
      "materia": "PROD VEGETALI",
      "docenti": [
-      "PAROLIN GIACOMO",
-      "MOSELE LUCA"
+      "MOSELE LUCA",
+      "PAROLIN GIACOMO"
      ],
      "aula": "NP11"
     },
     "6": {
      "materia": "PROD VEGETALI",
      "docenti": [
-      "PAROLIN GIACOMO",
-      "MOSELE LUCA"
+      "MOSELE LUCA",
+      "PAROLIN GIACOMO"
      ],
      "aula": "NP11"
     }
@@ -17549,14 +17466,14 @@
      "aula": "NP11"
     },
     "3": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
      "aula": "NP11"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
@@ -17632,7 +17549,7 @@
      "aula": "LAB INFORMATICA 1"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "VASTA ETTORE"
      ],
@@ -17674,14 +17591,14 @@
      "aula": "104"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
      "aula": "104"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
@@ -17690,7 +17607,7 @@
    },
    "martedi": {
     "1": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CINQUEMANI CALOGERO"
      ],
@@ -17719,14 +17636,14 @@
      "aula": "104"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
      "aula": "104"
     },
     "6": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -17749,7 +17666,7 @@
      "aula": "PALESTRA"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
@@ -17771,7 +17688,7 @@
      "aula": "LAB INFORMATICA 1"
     },
     "6": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CINQUEMANI CALOGERO"
      ],
@@ -17787,7 +17704,7 @@
      "aula": "104"
     },
     "2": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CINQUEMANI CALOGERO"
      ],
@@ -17810,7 +17727,7 @@
      "aula": "104"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
@@ -17821,14 +17738,14 @@
      "docenti": [
       "CARON MIRKO"
      ],
-     "aula": "LAB CHIMICA 2"
+     "aula": "LAB CHIMICA 2/BIOLOGIA"
     },
     "7": {
      "materia": "LAB DI BIO E CHI",
      "docenti": [
       "CARON MIRKO"
      ],
-     "aula": "LAB CHIMICA 2"
+     "aula": "LAB CHIMICA 2/BIOLOGIA"
     },
     "8": {
      "materia": "GEST E VALORIZZ",
@@ -17840,7 +17757,7 @@
    },
    "venerdi": {
     "1": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CINQUEMANI CALOGERO"
      ],
@@ -17861,7 +17778,7 @@
      "aula": "104"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
@@ -17895,7 +17812,7 @@
      "aula": "101"
     },
     "2": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
@@ -17910,7 +17827,7 @@
      "aula": "101"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -17940,7 +17857,7 @@
      "aula": "101"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -17977,14 +17894,14 @@
    },
    "mercoledi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
      "aula": "101"
     },
     "2": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
@@ -18011,14 +17928,14 @@
      "docenti": [
       "ZANARDO JENNY"
      ],
-     "aula": "LAB CHIMICA 2"
+     "aula": "LAB CHIMICA 2/BIOLOGIA"
     },
     "6": {
      "materia": "LAB DI BIO E CHI",
      "docenti": [
       "ZANARDO JENNY"
      ],
-     "aula": "LAB CHIMICA 2"
+     "aula": "LAB CHIMICA 2/BIOLOGIA"
     }
    },
    "giovedi": {
@@ -18037,21 +17954,21 @@
      "aula": "101"
     },
     "3": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
      "aula": "101"
     },
     "4": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
      "aula": "101"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -18096,14 +18013,14 @@
      "aula": "101"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
      "aula": "101"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -18131,7 +18048,7 @@
   "4GRFA": {
    "lunedi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
@@ -18147,39 +18064,39 @@
     "3": {
      "materia": "TECNICHE DELLE PROD",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "MUSARRA PIZZO GIUSEPPE"
+      "MUSARRA PIZZO GIUSEPPE",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "102"
     },
     "4": {
      "materia": "TECNICHE DELLE PROD",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "MUSARRA PIZZO GIUSEPPE"
+      "MUSARRA PIZZO GIUSEPPE",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "102"
     },
     "5": {
      "materia": "SELVICOLTURA",
      "docenti": [
-      "RONCHI CHIARA",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "RONCHI CHIARA"
      ],
      "aula": "102"
     },
     "6": {
      "materia": "SELVICOLTURA",
      "docenti": [
-      "RONCHI CHIARA",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "RONCHI CHIARA"
      ],
      "aula": "102"
     }
    },
    "martedi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
@@ -18197,14 +18114,14 @@
      "docenti": [
       "CARON MIRKO"
      ],
-     "aula": "LAB CHIMICA 2"
+     "aula": "LAB CHIMICA 2/BIOLOGIA"
     },
     "4": {
      "materia": "LAB DI BIO E CHI",
      "docenti": [
       "CARON MIRKO"
      ],
-     "aula": "LAB CHIMICA 2"
+     "aula": "LAB CHIMICA 2/BIOLOGIA"
     },
     "5": {
      "materia": "GEST E VALORIZZ",
@@ -18214,7 +18131,7 @@
      "aula": "102"
     },
     "6": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
@@ -18223,7 +18140,7 @@
    },
    "mercoledi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
@@ -18237,7 +18154,7 @@
      "aula": "102"
     },
     "3": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
@@ -18258,7 +18175,7 @@
      "aula": "102"
     },
     "6": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -18267,7 +18184,7 @@
    },
    "giovedi": {
     "1": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "PARISI VALENTINO"
      ],
@@ -18288,14 +18205,14 @@
      "aula": "PALESTRA"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
      "aula": "102"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
@@ -18334,29 +18251,29 @@
     "2": {
      "materia": "AGRONOMIA",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "REMONATO VLADIMIRO"
+      "REMONATO VLADIMIRO",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "102"
     },
     "3": {
      "materia": "AGRONOMIA",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "REMONATO VLADIMIRO"
+      "REMONATO VLADIMIRO",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "102"
     },
     "4": {
      "materia": "SELVICOLTURA",
      "docenti": [
-      "RONCHI CHIARA",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "RONCHI CHIARA"
      ],
      "aula": "102"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "FANTINATO MAURO"
      ],
@@ -18386,17 +18303,17 @@
      "docenti": [
       "PEROTTO ROMINA"
      ],
-     "aula": "LAB BIOLOGIA"
+     "aula": "LAB BIOLOGIA/CHIMICA 1"
     },
     "3": {
      "materia": "LAB DI BIO E CHI",
      "docenti": [
       "PEROTTO ROMINA"
      ],
-     "aula": "LAB BIOLOGIA"
+     "aula": "LAB BIOLOGIA/CHIMICA 1"
     },
     "4": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CINQUEMANI CALOGERO"
      ],
@@ -18405,8 +18322,8 @@
     "5": {
      "materia": "TECNICHE DELLE PROD",
      "docenti": [
-      "PERON DIMITRI",
-      "MUSARRA PIZZO GIUSEPPE"
+      "MUSARRA PIZZO GIUSEPPE",
+      "PERON DIMITRI"
      ],
      "aula": "103"
     },
@@ -18450,8 +18367,8 @@
     "5": {
      "materia": "TECNICHE DELLE PROD",
      "docenti": [
-      "PERON DIMITRI",
-      "MUSARRA PIZZO GIUSEPPE"
+      "MUSARRA PIZZO GIUSEPPE",
+      "PERON DIMITRI"
      ],
      "aula": "103"
     },
@@ -18513,13 +18430,13 @@
     "1": {
      "materia": "SELVICOLTURA",
      "docenti": [
-      "PERON DIMITRI",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "PERON DIMITRI"
      ],
      "aula": "103"
     },
     "2": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "SALVAGNO STEFANO"
      ],
@@ -18533,7 +18450,7 @@
      "aula": "103"
     },
     "4": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CINQUEMANI CALOGERO"
      ],
@@ -18591,7 +18508,7 @@
      "aula": "103"
     },
     "4": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CINQUEMANI CALOGERO"
      ],
@@ -18600,16 +18517,16 @@
     "5": {
      "materia": "SELVICOLTURA",
      "docenti": [
-      "PERON DIMITRI",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "PERON DIMITRI"
      ],
      "aula": "103"
     },
     "6": {
      "materia": "SELVICOLTURA",
      "docenti": [
-      "PERON DIMITRI",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "PERON DIMITRI"
      ],
      "aula": "103"
     }
@@ -18644,12 +18561,12 @@
     "4": {
      "materia": "INGLESE",
      "docenti": [
-      "CADO FRANCESCA"
+      "CADO’ FRANCESCA"
      ],
      "aula": "NP6"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -18687,7 +18604,7 @@
      "aula": "NP6"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -18696,29 +18613,29 @@
     "5": {
      "materia": "INGLESE",
      "docenti": [
-      "CADO FRANCESCA"
+      "CADO’ FRANCESCA"
      ],
      "aula": "NP6"
     },
     "6": {
      "materia": "PROD VEGETALI",
      "docenti": [
-      "PASCALE NICOLA",
-      "BASSO PAOLO"
+      "BASSO PAOLO",
+      "PASCALE NICOLA"
      ],
      "aula": "NP6"
     }
    },
    "mercoledi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
      "aula": "NP6"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -18727,8 +18644,8 @@
     "3": {
      "materia": "PROD VEGETALI",
      "docenti": [
-      "PASCALE NICOLA",
-      "BASSO PAOLO"
+      "BASSO PAOLO",
+      "PASCALE NICOLA"
      ],
      "aula": "NP6"
     },
@@ -18749,14 +18666,14 @@
     "6": {
      "materia": "INGLESE",
      "docenti": [
-      "CADO FRANCESCA"
+      "CADO’ FRANCESCA"
      ],
      "aula": "NP6"
     }
    },
    "giovedi": {
     "1": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "SALVAGNO STEFANO"
      ],
@@ -18771,7 +18688,7 @@
      "aula": "LAB BIOLOGIA"
     },
     "3": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "LUPATO FRANCESCA"
      ],
@@ -18787,8 +18704,8 @@
     "5": {
      "materia": "PROD VEGETALI",
      "docenti": [
-      "PASCALE NICOLA",
-      "BASSO PAOLO"
+      "BASSO PAOLO",
+      "PASCALE NICOLA"
      ],
      "aula": "NP6"
     },
@@ -18807,7 +18724,7 @@
      "aula": "NP6"
     },
     "8": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -18839,7 +18756,7 @@
      "aula": "LAB INFORMATICA 2"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -18853,7 +18770,7 @@
      "aula": "NP6"
     },
     "6": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "LUPATO FRANCESCA"
      ],
@@ -18867,7 +18784,7 @@
     "1": {
      "materia": "INGLESE",
      "docenti": [
-      "CADO FRANCESCA"
+      "CADO’ FRANCESCA"
      ],
      "aula": "NP3"
     },
@@ -18879,7 +18796,7 @@
      "aula": "NP3"
     },
     "3": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "DE MATTEIS UMBERTO"
      ],
@@ -18900,7 +18817,7 @@
      "aula": "NP3"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -18927,19 +18844,19 @@
     "3": {
      "materia": "INGLESE",
      "docenti": [
-      "CADO FRANCESCA"
+      "CADO’ FRANCESCA"
      ],
      "aula": "NP3"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
      "aula": "NP3"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -18971,7 +18888,7 @@
      "aula": "LAB INFORMATICA 1"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -18987,7 +18904,7 @@
     "5": {
      "materia": "INGLESE",
      "docenti": [
-      "CADO FRANCESCA"
+      "CADO’ FRANCESCA"
      ],
      "aula": "NP3"
     },
@@ -19002,7 +18919,7 @@
    },
    "giovedi": {
     "1": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -19039,7 +18956,7 @@
      "aula": "NP3"
     },
     "6": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "DE MATTEIS UMBERTO"
      ],
@@ -19053,7 +18970,7 @@
      "aula": "NP3"
     },
     "8": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -19062,7 +18979,7 @@
    },
    "venerdi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -19111,21 +19028,21 @@
   "5AET": {
    "lunedi": {
     "1": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "CONFORTO MARGHERITA"
      ],
      "aula": "NT9"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO DANIELA"
      ],
      "aula": "NT9"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO DANIELA"
      ],
@@ -19172,7 +19089,7 @@
      "aula": "PALESTRA"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO DANIELA"
      ],
@@ -19194,7 +19111,7 @@
      "aula": "NT9"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO DANIELA"
      ],
@@ -19203,7 +19120,7 @@
    },
    "mercoledi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO DANIELA"
      ],
@@ -19217,7 +19134,7 @@
      "aula": "NT9"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO DANIELA"
      ],
@@ -19248,7 +19165,7 @@
    },
    "giovedi": {
     "1": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "CONFORTO MARGHERITA"
      ],
@@ -19301,14 +19218,14 @@
      "aula": "NT9"
     },
     "2": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "CONFORTO MARGHERITA"
      ],
      "aula": "NT9"
     },
     "3": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -19365,7 +19282,7 @@
      "aula": "NT11"
     },
     "2": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "DE MATTEIS UMBERTO"
      ],
@@ -19379,7 +19296,7 @@
      "aula": "NT11"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
@@ -19388,13 +19305,12 @@
     "5": {
      "materia": "TECNICHE DELLE PROD",
      "docenti": [
-      "PASCALE NICOLA",
-      "PASQUETTI EDDY"
+      "PASCALE NICOLA"
      ],
      "aula": "NT11"
     },
     "6": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -19435,14 +19351,14 @@
      "aula": "NT11"
     },
     "5": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "DE MATTEIS UMBERTO"
      ],
      "aula": "NT11"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
@@ -19451,14 +19367,14 @@
    },
    "mercoledi": {
     "1": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "DE MATTEIS UMBERTO"
      ],
      "aula": "NT11"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
@@ -19496,14 +19412,14 @@
    },
    "giovedi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
      "aula": "NT11"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
@@ -19570,14 +19486,14 @@
      "aula": "NT11"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CUCCHINI CHIARA"
      ],
      "aula": "NT11"
     },
     "6": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "DE MATTEIS UMBERTO"
      ],
@@ -19586,7 +19502,8 @@
     "7": {
      "materia": "TECNICHE DELLE PROD",
      "docenti": [
-      "PASCALE NICOLA"
+      "PASCALE NICOLA",
+      "PASQUETTI EDDY"
      ],
      "aula": "NT11"
     },
@@ -19620,14 +19537,14 @@
      "aula": "LAB ENOLOGIA"
     },
     "3": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "BONINCONTRO DOMENICO"
      ],
      "aula": "NP2"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -19658,7 +19575,7 @@
      "aula": "NP2"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -19718,7 +19635,7 @@
      "aula": "NP2"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -19741,7 +19658,7 @@
    },
    "giovedi": {
     "1": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "BONINCONTRO DOMENICO"
      ],
@@ -19770,14 +19687,14 @@
      "aula": "NP2"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
      "aula": "NP2"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -19802,7 +19719,7 @@
      "aula": "NP2"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -19817,21 +19734,21 @@
      "aula": "NP2"
     },
     "5": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "BONINCONTRO DOMENICO"
      ],
      "aula": "NP2"
     },
     "6": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "BONINCONTRO DOMENICO"
      ],
      "aula": "NP2"
     },
     "7": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "SALVAGNO STEFANO"
      ],
@@ -19850,14 +19767,14 @@
   "5GRFA": {
    "lunedi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
      "aula": "NT7"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -19866,16 +19783,16 @@
     "3": {
      "materia": "SELVICOLTURA",
      "docenti": [
-      "PERON DIMITRI",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "PERON DIMITRI"
      ],
      "aula": "NT7"
     },
     "4": {
      "materia": "SELVICOLTURA",
      "docenti": [
-      "PERON DIMITRI",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "PERON DIMITRI"
      ],
      "aula": "NT7"
     },
@@ -19887,7 +19804,7 @@
      "aula": "NT7"
     },
     "6": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CINQUEMANI CALOGERO"
      ],
@@ -19896,7 +19813,7 @@
    },
    "martedi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -19911,7 +19828,7 @@
      "aula": "NT7"
     },
     "3": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CINQUEMANI CALOGERO"
      ],
@@ -19943,28 +19860,28 @@
     "1": {
      "materia": "TECNICHE DELLE PROD",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "NT7"
     },
     "2": {
      "materia": "TECNICHE DELLE PROD",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "NT7"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
      "aula": "NT7"
     },
     "4": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -19988,7 +19905,7 @@
    },
    "giovedi": {
     "1": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CINQUEMANI CALOGERO"
      ],
@@ -20009,7 +19926,7 @@
      "aula": "NT7"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -20018,23 +19935,23 @@
     "5": {
      "materia": "AGRONOMIA",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "LUCIETTO MARCO"
+      "LUCIETTO MARCO",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "NT7"
     },
     "6": {
      "materia": "AGRONOMIA",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "LUCIETTO MARCO"
+      "LUCIETTO MARCO",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "NT7"
     }
    },
    "venerdi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CAROLO CHIARA"
      ],
@@ -20069,7 +19986,7 @@
      "aula": "NT7"
     },
     "6": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CINQUEMANI CALOGERO"
      ],
@@ -20085,8 +20002,8 @@
     "8": {
      "materia": "SELVICOLTURA",
      "docenti": [
-      "PERON DIMITRI",
-      "GUIDOLIN MONICA"
+      "GUIDOLIN MONICA",
+      "PERON DIMITRI"
      ],
      "aula": "NT7"
     }
@@ -20103,7 +20020,7 @@
      "aula": "NP5"
     },
     "2": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CONFORTO MARGHERITA"
      ],
@@ -20125,7 +20042,7 @@
      "aula": "NP5"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -20143,21 +20060,21 @@
     "1": {
      "materia": "AGRONOMIA",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "LUCIETTO MARCO"
+      "LUCIETTO MARCO",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "NP5"
     },
     "2": {
      "materia": "AGRONOMIA",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "LUCIETTO MARCO"
+      "LUCIETTO MARCO",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "NP5"
     },
     "3": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "SALVAGNO STEFANO"
      ],
@@ -20171,14 +20088,14 @@
      "aula": "NP5"
     },
     "5": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CONFORTO MARGHERITA"
      ],
      "aula": "NP5"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -20211,21 +20128,21 @@
     "4": {
      "materia": "TECNICHE DELLE PROD",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "BASSO PAOLO"
+      "BASSO PAOLO",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "NP5"
     },
     "5": {
      "materia": "TECNICHE DELLE PROD",
      "docenti": [
-      "ROBUSTO ALFREDO",
-      "BASSO PAOLO"
+      "BASSO PAOLO",
+      "ROBUSTO ALFREDO"
      ],
      "aula": "NP5"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -20256,14 +20173,14 @@
      "aula": "NP5"
     },
     "4": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CONFORTO MARGHERITA"
      ],
      "aula": "NP5"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -20272,8 +20189,8 @@
     "6": {
      "materia": "ASSESTAMENTO",
      "docenti": [
-      "DE ZEN DAVIDE",
-      "BASSO PAOLO"
+      "BASSO PAOLO",
+      "DE ZEN DAVIDE"
      ],
      "aula": "NP5"
     }
@@ -20294,14 +20211,14 @@
      "aula": "NP5"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
      "aula": "NP5"
     },
     "4": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CATALANO HYLENIA"
      ],
@@ -20310,13 +20227,13 @@
     "5": {
      "materia": "ASSESTAMENTO",
      "docenti": [
-      "DE ZEN DAVIDE",
-      "BASSO PAOLO"
+      "BASSO PAOLO",
+      "DE ZEN DAVIDE"
      ],
      "aula": "NP5"
     },
     "6": {
-     "materia": "ECONOMIA PROF",
+     "materia": "ECONOMIA",
      "docenti": [
       "CONFORTO MARGHERITA"
      ],
@@ -20356,7 +20273,7 @@
      "aula": "NT10"
     },
     "3": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -20370,15 +20287,15 @@
      "aula": "NT10"
     },
     "5": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
-      "PALAZZO ANDREA",
-      "FITTIPALDI GIOACCHINO"
+      "FITTIPALDI GIOACCHINO",
+      "PALAZZO ANDREA"
      ],
      "aula": "NT10"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
@@ -20395,14 +20312,14 @@
      "aula": "NT10"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
      "aula": "NT10"
     },
     "3": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
@@ -20416,10 +20333,10 @@
      "aula": "NT10"
     },
     "5": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
-      "PALAZZO ANDREA",
-      "FITTIPALDI GIOACCHINO"
+      "FITTIPALDI GIOACCHINO",
+      "PALAZZO ANDREA"
      ],
      "aula": "NT10"
     },
@@ -20464,14 +20381,14 @@
      "aula": "LAB CHIMICA 2"
     },
     "5": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "PALAZZO ANDREA"
      ],
      "aula": "NT10"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
@@ -20480,7 +20397,7 @@
    },
    "giovedi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
@@ -20563,7 +20480,7 @@
      "aula": "NT10"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "GNESOTTO FRANCESCA"
      ],
@@ -20620,7 +20537,7 @@
      "aula": "LAB ENOLOGIA"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -20636,7 +20553,7 @@
    },
    "martedi": {
     "1": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -20653,8 +20570,8 @@
     "3": {
      "materia": "ENOLOGIA",
      "docenti": [
-      "RONCHI CHIARA",
-      "DESTRO IMPICCIA STEFANO"
+      "DESTRO IMPICCIA STEFANO",
+      "RONCHI CHIARA"
      ],
      "aula": "NP4"
     },
@@ -20666,7 +20583,7 @@
      "aula": "NP4"
     },
     "5": {
-     "materia": "IRC",
+     "materia": "RELIGIONE",
      "docenti": [
       "VANZO BRIAN"
      ],
@@ -20675,8 +20592,8 @@
     "6": {
      "materia": "PROD ANIMALI",
      "docenti": [
-      "SAMBUGARO ANNA",
-      "FITTIPALDI GIOACCHINO"
+      "FITTIPALDI GIOACCHINO",
+      "SAMBUGARO ANNA"
      ],
      "aula": "NP4"
     }
@@ -20690,7 +20607,7 @@
      "aula": "NP4"
     },
     "2": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -20735,10 +20652,10 @@
      "aula": "NP4"
     },
     "2": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
-      "PALAZZO ANDREA",
-      "FITTIPALDI GIOACCHINO"
+      "FITTIPALDI GIOACCHINO",
+      "PALAZZO ANDREA"
      ],
      "aula": "NP4"
     },
@@ -20761,10 +20678,10 @@
      "docenti": [
       "RONCHI CHIARA"
      ],
-     "aula": "NP4"
+     "aula": "LAB ENOLOGIA"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -20785,7 +20702,7 @@
       "RONCHI CHIARA",
       "DESTRO IMPICCIA STEFANO"
      ],
-     "aula": "NP4"
+     "aula": "LAB ENOLOGIA"
     },
     "3": {
      "materia": "ENOLOGIA",
@@ -20793,7 +20710,7 @@
       "RONCHI CHIARA",
       "DESTRO IMPICCIA STEFANO"
      ],
-     "aula": "NP4"
+     "aula": "LAB ENOLOGIA"
     },
     "4": {
      "materia": "MATEMATICA",
@@ -20803,14 +20720,14 @@
      "aula": "NP4"
     },
     "5": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
      "aula": "NP4"
     },
     "6": {
-     "materia": "ITALIANOSTORIA",
+     "materia": "ITALIANO/STORIA",
      "docenti": [
       "CERANTOLA FABIO"
      ],
@@ -20824,7 +20741,7 @@
      "aula": "NP4"
     },
     "8": {
-     "materia": "ECONOMIA TEC",
+     "materia": "ECONOMIA",
      "docenti": [
       "PALAZZO ANDREA"
      ],
@@ -20864,16 +20781,14 @@
      "classe": "3GRF",
      "materia": "LAB DI BIO E CHI",
      "docenti": [
-      "DESTRO IMPICCIA STEF",
-      "DESTRO IMPICCIA STEFANO"
+      "DESTRO IMPICCIA STEF"
      ]
     },
     "5": {
      "classe": "3GRF",
      "materia": "LAB DI BIO E CHI",
      "docenti": [
-      "DESTRO IMPICCIA STEF",
-      "DESTRO IMPICCIA STEFANO"
+      "DESTRO IMPICCIA STEF"
      ]
     },
     "6": {
@@ -21068,11 +20983,103 @@
    },
    "sabato": {}
   },
+  "LAB BIOLOGIA/CHIMICA 1": {
+   "lunedi": {
+    "2": {
+     "classe": "4GRFB",
+     "materia": "LAB DI BIO E CHI",
+     "docenti": [
+      "PEROTTO ROMINA"
+     ]
+    },
+    "3": {
+     "classe": "4GRFB",
+     "materia": "LAB DI BIO E CHI",
+     "docenti": [
+      "PEROTTO ROMINA"
+     ]
+    }
+   },
+   "martedi": {},
+   "mercoledi": {},
+   "giovedi": {},
+   "venerdi": {},
+   "sabato": {}
+  },
+  "LAB BIOLOGIA/CHIMICA 2": {
+   "lunedi": {
+    "4": {
+     "classe": "3GRF",
+     "materia": "LAB DI BIO E CHI",
+     "docenti": [
+      "DESTRO IMPICCIA STEFANO"
+     ]
+    },
+    "5": {
+     "classe": "3GRF",
+     "materia": "LAB DI BIO E CHI",
+     "docenti": [
+      "DESTRO IMPICCIA STEFANO"
+     ]
+    }
+   },
+   "martedi": {},
+   "mercoledi": {},
+   "giovedi": {
+    "1": {
+     "classe": "3FA",
+     "materia": "LAB DI BIO E CHI",
+     "docenti": [
+      "PEROTTO ROMINA"
+     ]
+    }
+   },
+   "venerdi": {
+    "4": {
+     "classe": "3FA",
+     "materia": "LAB DI BIO E CHI",
+     "docenti": [
+      "PEROTTO ROMINA"
+     ]
+    },
+    "5": {
+     "classe": "3FA",
+     "materia": "LAB DI BIO E CHI",
+     "docenti": [
+      "PEROTTO ROMINA"
+     ]
+    }
+   },
+   "sabato": {}
+  },
+  "LAB CHI1/CHI2/BIO": {
+   "lunedi": {},
+   "martedi": {},
+   "mercoledi": {},
+   "giovedi": {},
+   "venerdi": {
+    "2": {
+     "classe": "4AET",
+     "materia": "TRASF PRODOTTI",
+     "docenti": [
+      "DEGETTO MASSIMO"
+     ]
+    },
+    "3": {
+     "classe": "4AET",
+     "materia": "TRASF PRODOTTI",
+     "docenti": [
+      "DEGETTO MASSIMO"
+     ]
+    }
+   },
+   "sabato": {}
+  },
   "LAB CHIMICA 1": {
    "lunedi": {
     "1": {
      "classe": "2BP",
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE",
       "FITTIPALDI GIOACCHIN",
@@ -21164,7 +21171,7 @@
     },
     "5": {
      "classe": "1CP",
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA",
       "MOSELE LUCA"
@@ -21174,7 +21181,7 @@
    "mercoledi": {
     "1": {
      "classe": "2AP",
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE",
       "FITTIPALDI GIOACCHIN",
@@ -21191,7 +21198,7 @@
     },
     "3": {
      "classe": "2CP",
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "FURLANETTO LARA",
       "REMONATO VLADIMIRO"
@@ -21207,7 +21214,7 @@
     },
     "5": {
      "classe": "1BP",
-     "materia": "SCIENZE INTEGRATE P",
+     "materia": "SCIENZE INTEGRATE",
      "docenti": [
       "PAN GIUSEPPE",
       "FITTIPALDI GIOACCHIN",
@@ -21246,14 +21253,6 @@
      "docenti": [
       "GALVAN ANDREA",
       "REMONATO VLADIMIRO"
-     ]
-    },
-    "3": {
-     "classe": "2AT",
-     "materia": "CHIMICA",
-     "docenti": [
-      "BOGNANNI NOEMI",
-      "MOSELE LUCA"
      ]
     },
     "4": {
@@ -21601,6 +21600,59 @@
    },
    "sabato": {}
   },
+  "LAB CHIMICA 2/BIOLOGIA": {
+   "lunedi": {},
+   "martedi": {
+    "3": {
+     "classe": "4GRFA",
+     "materia": "LAB DI BIO E CHI",
+     "docenti": [
+      "CARON MIRKO"
+     ]
+    },
+    "4": {
+     "classe": "4GRFA",
+     "materia": "LAB DI BIO E CHI",
+     "docenti": [
+      "CARON MIRKO"
+     ]
+    }
+   },
+   "mercoledi": {
+    "5": {
+     "classe": "4FA",
+     "materia": "LAB DI BIO E CHI",
+     "docenti": [
+      "ZANARDO JENNY"
+     ]
+    },
+    "6": {
+     "classe": "4FA",
+     "materia": "LAB DI BIO E CHI",
+     "docenti": [
+      "ZANARDO JENNY"
+     ]
+    }
+   },
+   "giovedi": {
+    "6": {
+     "classe": "4AS",
+     "materia": "LAB DI BIO E CHI",
+     "docenti": [
+      "CARON MIRKO"
+     ]
+    },
+    "7": {
+     "classe": "4AS",
+     "materia": "LAB DI BIO E CHI",
+     "docenti": [
+      "CARON MIRKO"
+     ]
+    }
+   },
+   "venerdi": {},
+   "sabato": {}
+  },
   "LAB ENOLOGIA": {
    "lunedi": {
     "2": {
@@ -21628,7 +21680,16 @@
      ]
     }
    },
-   "martedi": {},
+   "martedi": {
+    "2": {
+     "classe": "2AT",
+     "materia": "CHIMICA",
+     "docenti": [
+      "BOGNANNI NOEMI",
+      "MOSELE LUCA"
+     ]
+    }
+   },
    "mercoledi": {
     "5": {
      "classe": "5VE",
@@ -21639,8 +21700,34 @@
      ]
     }
    },
-   "giovedi": {},
+   "giovedi": {
+    "5": {
+     "classe": "5VE",
+     "materia": "ENOLOGIA",
+     "docenti": [
+      "RONCHI CHIARA"
+     ]
+    }
+   },
    "venerdi": {
+    "2": {
+     "classe": "5VE",
+     "materia": "ENOLOGIA",
+     "docenti": [
+      "RONCHI CHIARA",
+      "DESTRO IMPICCIA STEF",
+      "DESTRO IMPICCIA STEFANO"
+     ]
+    },
+    "3": {
+     "classe": "5VE",
+     "materia": "ENOLOGIA",
+     "docenti": [
+      "RONCHI CHIARA",
+      "DESTRO IMPICCIA STEF",
+      "DESTRO IMPICCIA STEFANO"
+     ]
+    },
     "5": {
      "classe": "5AET",
      "materia": "TRASF PRODOTTI",
@@ -22184,6 +22271,13 @@
     }
    },
    "giovedi": {
+    "1": {
+     "classe": "3PTA",
+     "materia": "ECONOMIA",
+     "docenti": [
+      "NEGRELLO MARIA TERESA"
+     ]
+    },
     "2": {
      "classe": "3PTA",
      "materia": "GENIO RURALE",
@@ -22616,36 +22710,64 @@
  "aule_libere": {
   "lunedi": {
    "1": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB INFORMATICA 1"
    ],
    "2": [
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB INFORMATICA 1"
    ],
    "3": [
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB INFORMATICA 1"
    ],
    "4": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB INFORMATICA 2"
    ],
    "5": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB INFORMATICA 2"
    ],
    "6": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB INFORMATICA 1"
    ],
    "7": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB CHIMICA 1",
     "LAB CHIMICA 2",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB FITOPATOLOGIA",
     "LAB INFORMATICA 1"
    ],
    "8": [
     "LAB BIOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB CHIMICA 2",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB FITOPATOLOGIA",
     "LAB INFORMATICA 1"
@@ -22654,45 +22776,74 @@
   "martedi": {
    "1": [
     "LAB BIOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB FITOPATOLOGIA",
     "LAB INFORMATICA 2"
    ],
    "2": [
-    "LAB ENOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB FITOPATOLOGIA",
     "LAB INFORMATICA 2"
    ],
    "3": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB ENOLOGIA",
     "LAB FITOPATOLOGIA"
    ],
    "4": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB ENOLOGIA"
    ],
    "5": [
     "LAB BIOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA"
    ],
    "6": [
     "LAB BIOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB CHIMICA 1",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB INFORMATICA 1",
     "LAB INFORMATICA 2"
    ],
    "7": [
     "LAB BIOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB CHIMICA 1",
     "LAB CHIMICA 2",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB INFORMATICA 1",
     "LAB INFORMATICA 2"
    ],
    "8": [
     "LAB BIOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB CHIMICA 1",
     "LAB CHIMICA 2",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB INFORMATICA 1",
     "LAB INFORMATICA 2"
@@ -22701,24 +22852,51 @@
   "mercoledi": {
    "1": [
     "LAB BIOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA"
    ],
    "2": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA"
    ],
    "3": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA"
    ],
    "4": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA"
    ],
-   "5": [],
+   "5": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO"
+   ],
    "6": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB ENOLOGIA",
     "LAB INFORMATICA 1"
    ],
    "7": [
     "LAB BIOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB FITOPATOLOGIA",
     "LAB INFORMATICA 1",
@@ -22727,7 +22905,11 @@
    ],
    "8": [
     "LAB BIOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB CHIMICA 1",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB FITOPATOLOGIA",
     "LAB INFORMATICA 1",
@@ -22737,29 +22919,53 @@
   },
   "giovedi": {
    "1": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
-    "LAB INFORMATICA 1",
-    "LAB INFORMATICA 2"
+    "LAB INFORMATICA 1"
    ],
    "2": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA"
    ],
    "3": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 1",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA"
    ],
    "4": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB INFORMATICA 2"
    ],
    "5": [
-    "LAB ENOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB INFORMATICA 2"
    ],
    "6": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB ENOLOGIA",
     "LAB INFORMATICA 2"
    ],
    "7": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB CHIMICA 1",
     "LAB ENOLOGIA",
     "LAB FITOPATOLOGIA",
@@ -22767,8 +22973,12 @@
     "LAB INFORMATICA 2"
    ],
    "8": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB CHIMICA 1",
     "LAB CHIMICA 2",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB FITOPATOLOGIA",
     "LAB INFORMATICA 1",
@@ -22777,37 +22987,63 @@
   },
   "venerdi": {
    "1": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB FITOPATOLOGIA"
    ],
    "2": [
-    "LAB ENOLOGIA"
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHIMICA 2/BIOLOGIA"
    ],
    "3": [
-    "LAB ENOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB FITOPATOLOGIA"
    ],
    "4": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA"
    ],
    "5": [
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB FITOPATOLOGIA"
    ],
    "6": [
-    "LAB CHIMICA 2"
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
+    "LAB CHIMICA 2",
+    "LAB CHIMICA 2/BIOLOGIA"
    ],
    "7": [
     "LAB BIOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB CHIMICA 1",
     "LAB CHIMICA 2",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB FITOPATOLOGIA",
     "LAB INFORMATICA 1"
    ],
    "8": [
     "LAB BIOLOGIA",
+    "LAB BIOLOGIA/CHIMICA 1",
+    "LAB BIOLOGIA/CHIMICA 2",
+    "LAB CHI1/CHI2/BIO",
     "LAB CHIMICA 1",
     "LAB CHIMICA 2",
+    "LAB CHIMICA 2/BIOLOGIA",
     "LAB ENOLOGIA",
     "LAB FITOPATOLOGIA",
     "LAB INFORMATICA 1"

@@ -125,6 +125,35 @@ def parse_classi(report):
     out = {}
     for _, tables in pages_tables(PDF_CLASSI):
         for tb in tables:
+            if not tb or len(tb) < 2:
+                continue
+            
+            # Formato Spaggiari REV_01 (Tabella con 'CLASSE', 'Ora', 'Lunedì', ...)
+            h0 = [cell(c) for c in tb[0]] if tb and tb[0] else []
+            if len(h0) >= 3 and h0[0].upper() == "CLASSE" and "ORA" in h0[1].upper():
+                classe = norm_classe(tb[1][0])
+                giorni = [norm_giorno(h) if h else None for h in h0[2:]]
+                sched = out.setdefault(classe, {g: {} for g in GIORNI})
+                for row in tb[1:]:
+                    ora_str = cell(row[1])
+                    if ora_str in INTERVALLI or ora_str not in ORE:
+                        continue
+                    ora_num = ORE[ora_str]
+                    materie = [cell(c) for c in row[2:]]
+                    for i, g in enumerate(giorni):
+                        if not g or i >= len(materie):
+                            continue
+                        materia = materie[i]
+                        if not materia or materia.lower() == "intervallo":
+                            continue
+                        sched[g][ora_num] = {
+                            "materia": materia,
+                            "docenti": [],
+                            "aula": None
+                        }
+                continue
+
+            # Formato Legacy / Tabellare classico Spaggiari
             if len(tb) < 3 or not tb[0][1] or not tb[0][1].upper().startswith("CLASSE"):
                 report["classi_tabelle_ignorate"].append(cell(tb[0][1] if tb and len(tb[0]) > 1 else ""))
                 continue
@@ -314,8 +343,9 @@ def risolvi_docenti(classi_raw, docenti_raw, report):
     return uniti, canon
 
 
-def riconcilia(classi_raw, docenti_raw, report, aule_classi=None):
+def riconcilia(classi_raw, docenti_raw, report, aule_classi=None, labs_raw=None):
     aule_classi = aule_classi or {}
+    labs_raw = labs_raw or {}
     docenti_raw, canon = risolvi_docenti(classi_raw, docenti_raw, report)
 
     classi = {}
@@ -330,9 +360,34 @@ def riconcilia(classi_raw, docenti_raw, report, aule_classi=None):
                     "aula": s["aula"] or default_aula,
                 }
 
+    # 1) Arricchimento preliminare da Orario-Laboratori.pdf se presente
+    for lab_name, sched in labs_raw.items():
+        for g, ore in sched.items():
+            for ora, s in ore.items():
+                for c in s["classi"]:
+                    if c in classi and ora in classi[c][g]:
+                        classi[c][g][ora]["aula"] = lab_name
+                        for d in s["docenti"]:
+                            can_d = canon(d)
+                            if can_d and can_d not in classi[c][g][ora]["docenti"]:
+                                classi[c][g][ora]["docenti"].append(can_d)
+
+    # 2) Arricchimento bidirezionale da docenti_raw
+    for nome, sched in docenti_raw.items():
+        for g, ore in sched.items():
+            for ora, s in ore.items():
+                if s["tipo"] == "lezione":
+                    cid = s.get("classe")
+                    if cid and cid in classi and ora in classi[cid][g]:
+                        cs = classi[cid][g][ora]
+                        if nome not in cs["docenti"]:
+                            cs["docenti"].append(nome)
+                        if s.get("aula"):
+                            cs["aula"] = s["aula"]
+
     docenti = {n: {g: {} for g in GIORNI} for n in docenti_raw}
 
-    # 1) Orario docente come da PDF docenti, arricchito dalla classe corrispondente
+    # 3) Popola orario docenti con materia, aula e compresenze dalla classe corrispondente
     for nome, sched in docenti_raw.items():
         for g, ore in sched.items():
             for ora, s in ore.items():
@@ -352,23 +407,23 @@ def riconcilia(classi_raw, docenti_raw, report, aule_classi=None):
                     docenti[nome][g][ora] = {"tipo": "lezione", "classe": s["classe"], "materia": None,
                                              "aula": s["aula"] or default_aula, "copresenza": [], "fonte": "docenti"}
                     continue
-                if nome not in cs["docenti"]:
-                    report["docenti_non_presente_nella_classe"].append(
-                        f"{nome} {g} ora {ora}: {s['classe']} ha {cs['docenti']}")
-                aula = cs["aula"] or s["aula"] or default_aula  # il PDF classi prevale sull'aula
-                if s["aula"] and cs["aula"] and s["aula"] != cs["aula"]:
+
+                aula = s["aula"] or cs.get("aula") or default_aula
+                if s["aula"] and cs.get("aula") and s["aula"] != cs["aula"] and cs["aula"] != default_aula:
                     report["conflitti_aula"].append(
                         f"{nome} {g} ora {ora} {s['classe']}: docenti={s['aula']} classi={cs['aula']}")
+
                 altri = [d for d in cs["docenti"] if d != nome]
                 docenti[nome][g][ora] = {
-                    "tipo": "lezione" if cs["docenti"] and cs["docenti"][0] == nome else "compresenza",
-                    "classe": s["classe"], "materia": cs["materia"], "aula": aula,
+                    "tipo": "lezione" if (not cs["docenti"] or cs["docenti"][0] == nome) else "compresenza",
+                    "classe": s["classe"],
+                    "materia": cs["materia"],
+                    "aula": aula,
                     "copresenza": altri,
-                    "fonte": "docenti+classi" if s["aula"] is None or s["aula"] == cs["aula"] or cs["aula"] is None
-                    else "docenti+classi(conflitto)",
+                    "fonte": "docenti+classi",
                 }
 
-    # 2) Slot presenti nelle classi ma assenti dal PDF docenti
+    # 4) Slot presenti nelle classi ma assenti dal PDF docenti
     for cid, sched in classi.items():
         default_aula = aule_classi.get(cid)
         for g, ore in sched.items():
@@ -384,7 +439,6 @@ def riconcilia(classi_raw, docenti_raw, report, aule_classi=None):
                             "classe": cid, "materia": cs["materia"], "aula": cs["aula"] or default_aula,
                             "copresenza": [x for x in cs["docenti"] if x != d], "fonte": "classi"}
                     elif docenti[d][g][ora].get("classe") not in (None, cid):
-                        # stesso docente in due classi nella stessa ora: classi articolate (es. 3VE+3PTA)
                         slot = docenti[d][g][ora]
                         if cid not in slot.setdefault("altre_classi", []):
                             slot["altre_classi"].append(cid)
@@ -461,7 +515,7 @@ def run():
     classi_raw = parse_classi(report)
     docenti_raw, periodo = parse_docenti(report)
     labs_raw = parse_laboratori(report)
-    classi, docenti = riconcilia(classi_raw, docenti_raw, report, aule_classi)
+    classi, docenti = riconcilia(classi_raw, docenti_raw, report, aule_classi, labs_raw)
     aule = costruisci_aule(classi, docenti, labs_raw)
 
     def ids(d):
